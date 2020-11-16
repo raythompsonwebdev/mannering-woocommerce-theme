@@ -1,0 +1,36 @@
+{
+  "name": "storefront",
+  "version": "1.0.0",
+  "main": "index.php",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "author": "raymond thompson",
+  "license": "GPL-3.0",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raythompsonwebdev/mannering-music.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raythompsonwebdev/mannering-music/issues"
+  },
+  "homepage": "https://github.com/raythompsonwebdev/mannering-music#readme",
+  "description": "Online Music Store",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hip Hop",
+    "Jazz"
+  ]
+}

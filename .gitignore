@@ -1,0 +1,49 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+Files/
+.settings/
+.vscode/
+npm-debug.log
+nbproject/
+.phpintel/
+.sass-cache/
+node_modules/
+docs/
+.vscode/
+.project
+test/
+fonts/
+images/
+images/databasepics/
+images/sliderimages/
+images/videoimages/
+js/old-browser-scripts/
+js/bxslider-4-master/
+js/concat/
+js/audio-script.js
+css/old-files/
+css/partials/
+css/svg-partials/
+css/.sass-cache/
+css/media.scss
+vendor/
+
+
+
+
