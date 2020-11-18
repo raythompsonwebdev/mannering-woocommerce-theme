@@ -44,7 +44,9 @@ module.exports = function(grunt){
 
                     files:{
                             'style.css':'css/style.scss',
-                            'ie.css':'css/ie.scss'
+                            'ie.css':'css/ie.scss',
+                            'woocommerce.css':'css/woocommerce.scss',
+                            'style-rtl.css':'css/style-rtl.scss',
                                  
                             
                             /*where file goes-----/where file from*/
@@ -57,7 +59,9 @@ module.exports = function(grunt){
                         },
                         files:{
                             'css/minified/style-min.css':'css/style.scss',
-                            'css/minified/ie-min.css':'css/ie.scss'
+                            'css/minified/ie-min.css':'css/ie.scss',
+                            'css/minified/woocommerce-min.css':'css/woocommerce.scss',
+                            'css/minified/style-rtl-min.css':'css/style-rtl.scss',
                                                
                             /*where file goes-----/where file from*/
                         }

@@ -7,7 +7,7 @@
  * Sidebar | core/sidebar.php.
  *
  * @category   Sidebar
- * @package    Mannering Storefront Child Theme
+ * @package    mannering_music
  * @subpackage Sidebar
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
@@ -15,11 +15,15 @@
  * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
  * @link       http:www.raythompsonwebdev.co.uk.mannering-music
  */
- get_header(); ?>
 
-<aside id="side-bar" class="group" role="complementary">
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
+?>
 
-<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Sidebar Widgets' ) ) : ?>
+<aside id="side-bar" class="widget-area">
+<?php if ( ! function_exists( 'sidebar-1' ) || ! dynamic_sidebar( 'Sidebar Widgets' ) ) : ?>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<?php endif; ?>
 
-		<?php endif; ?>
-</aside>
+</aside><!-- #secondary -->

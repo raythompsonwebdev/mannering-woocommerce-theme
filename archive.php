@@ -5,7 +5,7 @@
  * Archive page | core/archive.php.
  *
  * @category   Archive_Page
- * @package    Mannering Storefront Child Theme
+ * @package    mannering_music
  * @subpackage Archive_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson

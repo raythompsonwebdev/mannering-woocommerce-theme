@@ -7,7 +7,7 @@
  * Front page | core/front-page.php.
  *
  * @category   Front_Page
- * @package    Mannering Storefront Child Theme
+ * @package    mannering_music
  * @subpackage Front_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
@@ -19,10 +19,13 @@
  get_header(); ?>
 
 <!--Slider-->
-<section id="slider">
 
+<section id="slider">
+Yesssssssssssssss
 	<article id="pageContainer">
-		<div class="bx-wrapper">
+
+	Yesssssssssssssss
+		<!-- <div class="bx-wrapper">
 			<div class="bx-viewport">
 				<ul class="bxslider">
 					<li>
@@ -81,7 +84,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</article>
 
 	<figure id="ie8-image">
@@ -89,8 +92,6 @@
 	</figure>
 
 </section>
-
-<div class="clearfix"></div>
 
 <h1><?php esc_html_e( 'Welcome to Mannering Music.', 'mannering-storefront-child-theme' ); ?></h1>
 
@@ -134,9 +135,9 @@
 							<?php the_post_thumbnail(); ?>
 						</a>
 
-					<?php
-}
-?>
+						<?php
+					}
+					?>
 
 					<figcaption class="cap_1_of_5">
 						<h1><?php the_title(); ?></h1>
@@ -159,7 +160,7 @@
 	</div>
 
 </article>
-<!--Hip Hop section end -->
+
 <div class="clearfix"></div>
 
 
@@ -197,9 +198,9 @@
 							<?php the_post_thumbnail(); ?>
 						</a>
 
-					<?php
-}
-?>
+						<?php
+					}
+					?>
 
 					<figcaption class="cap_1_of_5">
 						<h1><?php the_title(); ?></h1>
@@ -219,9 +220,8 @@
 	</div>
 
 </section>
-<!--Jazz section end -->
-<div class="clearfix"></div>
 
+<div class="clearfix"></div>
 
 <!--Jazz section -->
 <article class="section group">
@@ -257,9 +257,9 @@
 							<?php the_post_thumbnail(); ?>
 						</a>
 
-					<?php
-}
-?>
+						<?php
+					}
+					?>
 					<figcaption class="cap_1_of_5">
 						<h1><?php the_title(); ?></h1>
 					</figcaption>
@@ -276,13 +276,8 @@
 	</div>
 
 </article>
-<!--Jazz section end -->
+
 <div class="clearfix"></div>
-<br/>
-
- 
-
-<!--Content End-->
 
 
 <?php get_footer(); ?>

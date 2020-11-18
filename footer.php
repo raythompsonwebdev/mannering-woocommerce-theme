@@ -5,7 +5,7 @@
  * Footer page | core/footer.php.
  *
  * @category   Footer_Page
- * @package    Mannering Storefront Child Theme
+ * @package    mannering_music
  * @subpackage Footer_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
@@ -29,12 +29,16 @@
 		</ul>
 	</div>
 	<?php
-wp_nav_menu(
-	array(
-		'menu'      => 'Secondary',
-		'container' => 'ul',
-	)
-);
+
+if ( has_nav_menu( 'Secondary Menu' ) ) {
+	// If there is, adds the Top Menu area.
+	wp_nav_menu(
+		array(
+			'menu'      => 'secondary',
+			'container' => 'ul',
+		)
+	);
+}
 ?>
 
 

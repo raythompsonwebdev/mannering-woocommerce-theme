@@ -1,71 +1,40 @@
 <?php
 /**
- * *PHP version 5
+ * The template for displaying all single posts
  *
- * The template for displaying single pages
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * Single page | core/single.php.
- *
- * @category   Single_Page
- * @package    Mannering Storefront Child Theme
- * @subpackage Single_Page
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
- * @link       http:www.raythompsonwebdev.co.uk.mannering-music
+ * @package mannering_music
  */
- get_header(); ?>
 
+get_header();
+?>
 
-<!--Content box-->
-  
 <main id="main_text" role="main" >
-</main>
-	<!--main-end-->
-single
+
 		<?php
-		if ( have_posts() ) :
-			while ( have_posts() ) :
-				the_post();
-				?>
+		while ( have_posts() ) :
+			the_post();
 
-				<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			get_template_part( 'template-parts/content', get_post_type() );
 
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			
-				  
-					<?php get_template_part( 'template-parts/content', 'meta' ); ?>
-					
-					<div class="entry">
-						<?php the_content(); ?>
-					</div>
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'mannering_music' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'mannering_music' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
 
-					<div class="postmetadata">
-						<?php the_tags( 'Tags: ', ', ', '<br />' ); ?>
-						Posted in <?php the_category( ', ' ); ?> | 
-						<?php comments_popup_link( 'No Comments &#187;', '1 Comment &#187;', '% Comments &#187;' ); ?>
-					</div>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-				</div>
+		endwhile; // End of the loop.
+		?>
 
-					<?php endwhile; ?>
+	</main><!-- #main -->
 
-			<?php get_template_part( 'template-parts/content', 'nav' ); ?>
-
-		<?php else : ?>
-
-			<h2><?php esc_html_e( 'Not Found', 'mannering-storefront-child-theme' ); ?></h2>
-
-		<?php endif; ?>
-		
-		<div class="group"></div>
-		
-		<?php comments_template(); ?>
-		
-
-
-<!--Content End-->
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();

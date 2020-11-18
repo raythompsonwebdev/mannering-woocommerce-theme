@@ -4,18 +4,10 @@
  *
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
- * *PHP version 7
  *
- * Comments page | core/comments.php.
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @category   Comments_Page
- * @package    Mannering Storefront Child Theme
- * @subpackage Comments_Page
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
- * @link       http:www.raythompsonwebdev.co.uk.mannering-music
+ * @package mannering_music
  */
 
 /*
@@ -34,38 +26,38 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-	 <h2 class="comments-title">
-		<?php
-		$comment_count = get_comments_number();
-		if ( '1' === $comment_count ) {
-			printf(
-				/* translators: 1: title. */
-				esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'mannering-storefront-child-theme' ),
-				'<span>' . get_the_title() . '</span>'
-			);
-		} else {
-			printf( // WPCS: XSS OK.
-				/* translators: 1: comment count number, 2: title. */
-				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'mannering-storefront-child-theme' ) ),
-				number_format_i18n( $comment_count ),
-				'<span>' . get_the_title() . '</span>'
-			);
-		}
-		?>
-	 </h2><!-- .comments-title -->
+		<h2 class="comments-title">
+			<?php
+			$mannering_music_comment_count = get_comments_number();
+			if ( '1' === $mannering_music_comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'mannering_music' ),
+					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+				);
+			} else {
+				printf( 
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $mannering_music_comment_count, 'comments title', 'mannering_music' ) ),
+					number_format_i18n( $mannering_music_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+				);
+			}
+			?>
+		</h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
-	 <ol class="comment-list">
-		<?php
-		wp_list_comments(
-			array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			)
-		);
-		?>
-	 </ol><!-- .comment-list -->
+		<ol class="comment-list">
+			<?php
+			wp_list_comments(
+				array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				)
+			);
+			?>
+		</ol><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
@@ -73,7 +65,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-		 <p class="no-comments"><?php esc_html__( 'Comments are closed.', 'mannering-storefront-child-theme' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'mannering_music' ); ?></p>
 			<?php
 		endif;
 
