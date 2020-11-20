@@ -43,10 +43,10 @@ module.exports = function(grunt){
                     },
 
                     files:{
-                            'style.css':'css/style.scss',
-                            'ie.css':'css/ie.scss',
-                            'woocommerce.css':'css/woocommerce.scss',
-                            'style-rtl.css':'css/style-rtl.scss',
+                            'style.css':'assets/css/style.scss',
+                            'ie.css':'assets/css/ie.scss',
+                            'woocommerce/woocommerce.css':'assets/css/woocommerce.scss',
+                            'woocommerce/style-rtl.css':'assets/css/style-rtl.scss',
                                  
                             
                             /*where file goes-----/where file from*/
@@ -58,10 +58,10 @@ module.exports = function(grunt){
                                 style:"compressed"
                         },
                         files:{
-                            'css/minified/style-min.css':'css/style.scss',
-                            'css/minified/ie-min.css':'css/ie.scss',
-                            'css/minified/woocommerce-min.css':'css/woocommerce.scss',
-                            'css/minified/style-rtl-min.css':'css/style-rtl.scss',
+                            'assets/css/minified/style-min.css':'assets/css/style.scss',
+                            'assets/css/minified/ie-min.css':'assets/css/ie.scss',
+                            'assets/css/minified/woocommerce-min.css':'assets/css/woocommerce.scss',
+                            'assets/css/minified/style-rtl-min.css':'assets/css/style-rtl.scss',
                                                
                             /*where file goes-----/where file from*/
                         }
@@ -72,7 +72,7 @@ module.exports = function(grunt){
             watch:{
 
                 css:{
-                        files:'css/**/*.scss',
+                        files:'assets/css/**/*.scss',
                         tasks:['sass']
                 }
             }

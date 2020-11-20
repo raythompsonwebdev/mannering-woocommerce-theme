@@ -41,7 +41,7 @@
 <header role="banner">
 
 	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		<?php esc_html_e( 'Menu', 'mannering-storefront-child-theme' ); ?></button>
+		<?php esc_html_e( 'Menu', 'mannering_music' ); ?></button>
 
 	<span class="basket">
 		<?php
@@ -71,7 +71,7 @@
 					<div class="screen-reader-text">
 						<?php
 						/* translators: %1$s:, CMSname: WordPress. */
-						printf( esc_html_e( 'Go to the home page of %1$s', 'mannering-storefront-child-theme' ), esc_html( $site_title ) );
+						printf( esc_html_e( 'Go to the home page of %1$s', 'mannering_music' ), esc_html( $site_title ) );
 						?>
 					</div>
 					<?php
@@ -99,7 +99,7 @@
 					<?php
 				endif;
 
-				$description = get_bloginfo( 'description', 'mannering-storefront-child-theme' );
+				$description = get_bloginfo( 'description', 'mannering_music' );
 
 				if ( esc_html( $description ) || is_customize_preview() ) :
 			?>

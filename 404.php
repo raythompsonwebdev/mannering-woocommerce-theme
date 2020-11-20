@@ -22,14 +22,14 @@ get_header(); ?>
 		<section class="error-404 not-found">
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mannering-storefront-child-theme' ); ?>
+					<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mannering_music' ); ?>
 				</h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
 				<p>
 					<?php
-					esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mannering-storefront-child-theme' );
+					esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mannering_music' );
 				?>
 				</p>
 
@@ -41,7 +41,7 @@ get_header(); ?>
 
 				<div class="widget widget_categories">
 					<h2 class="widget-title">
-						<?php esc_html_e( 'Most Used Categories', 'mannering-storefront-child-theme' ); ?>
+						<?php esc_html_e( 'Most Used Categories', 'mannering_music' ); ?>
 					</h2>
 					<ul>
 						<?php
@@ -61,7 +61,7 @@ get_header(); ?>
 				<?php
 
 		/* translators: %1$s: smiley */
-		$archive_content = '<p>' . sprintf( esc_html_e( 'Try looking in the monthly archives. %1$s', 'mannering-storefront-child-theme' ), convert_smilies( ':)' ) ) . '</p>';
+		$archive_content = '<p>' . sprintf( esc_html_e( 'Try looking in the monthly archives. %1$s', 'mannering_music' ), convert_smilies( ':)' ) ) . '</p>';
 
 		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 

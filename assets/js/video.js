@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
   $.get('https://www.googleapis.com/youtube/v3/channels', {
       part:'contentDetails',
       forUsername:channelTitle,
-      key: 'AIzaSyCZmhGKm6qhysaYTP4iZWs5O2Znfhg3pUM'},//
+      key: ''},//
 
       function(data){
 
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
         part:'snippet',
         maxResults: 5,
         playlistId:pid,
-        key:'AIzaSyCZmhGKm6qhysaYTP4iZWs5O2Znfhg3pUM'},////Api Key
+        key:''},////Api Key
 
         function(data){
 

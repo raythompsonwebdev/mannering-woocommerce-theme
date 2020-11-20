@@ -25,11 +25,11 @@ get_header(); ?>
 	<article class="textbox">
 
 		<h1>
-			<?php esc_html_e( 'Music Audio', 'mannering-storefront-child-theme' ); ?>
+			<?php esc_html_e( 'Music Audio', 'mannering_music' ); ?>
 		</h1>
 
 		<p>
-			<?php esc_html_e( 'Listen to samples from our vast collection of classic and latest Country, Hip Hop and Jazz music.', 'mannering-storefront-child-theme' ); ?>
+			<?php esc_html_e( 'Listen to samples from our vast collection of classic and latest Country, Hip Hop and Jazz music.', 'mannering_music' ); ?>
 		</p>
 
 	</article>
@@ -135,7 +135,7 @@ get_header(); ?>
 				<?php wp_reset_postdata(); // 5. ?>
 			<?php else : ?>
 			<p>
-				<?php esc_html__( 'No Products', 'mannering-storefront-child-theme' ); // 6. ?>
+				<?php esc_html__( 'No Products', 'mannering_music' ); // 6. ?>
 			</p>
 			<?php endif; ?>
 
@@ -218,7 +218,7 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php else : ?>
 			<p>
-				<?php esc_html_e( 'No Products', 'mannering-storefront-child-theme' ); ?>
+				<?php esc_html_e( 'No Products', 'mannering_music' ); ?>
 			</p>
 			<?php endif; ?>
 
@@ -306,7 +306,7 @@ get_header(); ?>
 			<?php else : ?>
 
 			<p>
-				<?php esc_html_e( 'No Products', 'mannering-storefront-child-theme' ); ?>
+				<?php esc_html_e( 'No Products', 'mannering_music' ); ?>
 			</p>
 
 			<?php endif; ?>

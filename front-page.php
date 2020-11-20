@@ -33,7 +33,7 @@ Yesssssssssssssss
 							<h1>CLEARANCE <span>SALE</span></h1>
 							<h2>UP TO 10&#37; OFF</h2>
 							<div class="features_list">
-								<h3> <?php esc_html_e( 'Check out our end of season sale on the latest Hip Hop music from our vast collection.', 'mannering-storefront-child-theme' ); ?>
+								<h3> <?php esc_html_e( 'Check out our end of season sale on the latest Hip Hop music from our vast collection.', 'mannering_music' ); ?>
 								</h3>
 							</div>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/shop/" class="button">Shop Now</a>
@@ -48,7 +48,7 @@ Yesssssssssssssss
 							<h2>UP TO 10&#37; OFF</h2>
 							<div class="features_list">
 								<h3>
-								<?php esc_html_e( 'Check out our end of season sale on the latest Jazz music from our vast collection.', 'mannering-storefront-child-theme' ); ?></h3>
+								<?php esc_html_e( 'Check out our end of season sale on the latest Jazz music from our vast collection.', 'mannering_music' ); ?></h3>
 							</div>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/shop/" class="button">Shop Now</a>
 						</article>
@@ -61,7 +61,7 @@ Yesssssssssssssss
 							<h2>UP TO 10&#37; OFF</h2>
 							<div class="features_list">
 								<h3>
-								<?php esc_html_e( 'Check out our end of season sale on the latest Country music from our vast collection.', 'mannering-storefront-child-theme' ); ?>
+								<?php esc_html_e( 'Check out our end of season sale on the latest Country music from our vast collection.', 'mannering_music' ); ?>
 								</h3> 
 							</div>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/shop/" class="button">Shop Now</a>
@@ -75,7 +75,7 @@ Yesssssssssssssss
 							<h2>UP TO 10&#37; OFF</h2>
 							<div class="features_list">
 								<h3>
-								<?php esc_html_e( 'Check out our end of season sale on the latest Jazz music albums from our vast collection.', 'mannering-storefront-child-theme' ); ?>
+								<?php esc_html_e( 'Check out our end of season sale on the latest Jazz music albums from our vast collection.', 'mannering_music' ); ?>
 								</h3>
 							</div>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/shop/" class="button">Shop Now</a>
@@ -93,7 +93,7 @@ Yesssssssssssssss
 
 </section>
 
-<h1><?php esc_html_e( 'Welcome to Mannering Music.', 'mannering-storefront-child-theme' ); ?></h1>
+<h1><?php esc_html_e( 'Welcome to Mannering Music.', 'mannering_music' ); ?></h1>
 
 <!--main-section-->
 <main id="main_text" role="main" >
@@ -104,7 +104,7 @@ Yesssssssssssssss
 <!--Hip Hop section -->
 <article class="section group">
 
-	<h1><?php esc_html_e( 'Featured Hip Hop Albums', 'mannering-storefront-child-theme' ); ?></h1>
+	<h1><?php esc_html_e( 'Featured Hip Hop Albums', 'mannering_music' ); ?></h1>
 
 	<div class="flex-wrapper">
 
@@ -151,7 +151,7 @@ Yesssssssssssssss
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<p>
-				<?php esc_html_e( 'No Products', 'mannering-storefront-child-theme' ); ?>
+				<?php esc_html_e( 'No Products', 'mannering_music' ); ?>
 			</p>
 		<?php endif; ?>
 
@@ -167,7 +167,7 @@ Yesssssssssssssss
 <!--Country section -->
 <section class="section group">
 
-	<h1><?php esc_html_e( 'Featured Country Albums', 'mannering-storefront-child-theme' ); ?></h1>
+	<h1><?php esc_html_e( 'Featured Country Albums', 'mannering_music' ); ?></h1>
 
 	<div class="flex-wrapper">
 
@@ -214,7 +214,7 @@ Yesssssssssssssss
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<p>
-				<?php esc_html_e( 'No Products', 'mannering-storefront-child-theme' ); ?>
+				<?php esc_html_e( 'No Products', 'mannering_music' ); ?>
 			</p>
 		<?php endif; ?>
 	</div>
@@ -226,7 +226,7 @@ Yesssssssssssssss
 <!--Jazz section -->
 <article class="section group">
 
-	<h1><?php esc_html_e( 'Featured Jazz Albums', 'mannering-storefront-child-theme' ); ?></h1>
+	<h1><?php esc_html_e( 'Featured Jazz Albums', 'mannering_music' ); ?></h1>
 
 	<div class="flex-wrapper">
 
@@ -270,7 +270,7 @@ Yesssssssssssssss
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<p>
-				<?php esc_html_e( 'No Products', 'mannering-storefront-child-theme' ); ?>
+				<?php esc_html_e( 'No Products', 'mannering_music' ); ?>
 			</p>
 		<?php endif; ?>
 	</div>

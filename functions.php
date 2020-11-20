@@ -18,6 +18,29 @@
 ?>
 <?php
 
+/**
+* Wootheme support function
+*/
+function mannering_music_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mannering_music_woocommerce_support' );
+
+/**
+ * Set WooCommerce image dimensions upon theme activation
+ */
+// Remove each style one by one
+add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+function jk_dequeue_styles( $enqueue_styles ) {
+	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	return $enqueue_styles;
+}
+
+// Or just remove them all in one line
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -31,7 +54,7 @@ if ( ! defined( '_S_VERSION' ) ) {
  * @param string $sep   Optional separator.
  * @return string Filtered title.
  */
-function mannering_storefront_child_filter_wp_title( $title, $sep ) {
+function mannering_music_filter_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -49,12 +72,12 @@ function mannering_storefront_child_filter_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( esc_html( 'Page %s', 'mannering-storefront-child-theme' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( esc_html( 'Page %s', 'mannering_music' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'mannering_storefront_child_filter_wp_title', 10, 2 );
+add_filter( 'wp_title', 'mannering_music_filter_wp_title', 10, 2 );
 
 // /**
 //  * Wootheme support function
@@ -80,7 +103,7 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 		 * If you're building a theme based on mannering_music, use a find and replace
 		 * to change 'mannering_music' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'mannering-storefront-child-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'mannering_music', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -109,7 +132,7 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'shopper'   => esc_html__( 'Shopper', 'mannering-storefront-child-theme' ),		
+				'shopper'   => esc_html__( 'Shopper', 'mannering_music' ),		
 
 			)
 		);
@@ -138,7 +161,7 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 				'mannering_music_custom_background_args',
 				array(
 					'default-color'          => 'ffffff',
-					'default-image'          => get_stylesheet_directory_uri() . '/images/bg.jpg',
+					'default-image'          => get_stylesheet_directory_uri() . '/assets/images/bg.jpg',
 					'wp-head-callback'       => '_custom_background_cb',
 					'admin-head-callback'    => '',
 					'admin-preview-callback' => '',
@@ -148,24 +171,11 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support(
-			'custom-logo',
-			array(
-				'height'      => 96,
-				'width'       => 96,
-				'flex-width'  => true,
-				'flex-height' => true,
-			)
-		);
+		
 	}
 endif;
 add_action( 'after_setup_theme', 'mannering_music_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -183,11 +193,11 @@ add_action( 'after_setup_theme', 'mannering_music_content_width', 0 );
  *
  * Clean up the <head>.
  */
-function mannering_storefront_child_remove_head_links() {
+function mannering_music_remove_head_links() {
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 }
-add_action( 'init', 'mannering_storefront_child_remove_head_links' );
+add_action( 'init', 'mannering_music_remove_head_links' );
 
 // Remove action.
 remove_action( 'wp_head', 'wp_generator' );
@@ -195,10 +205,10 @@ remove_action( 'wp_head', 'wp_generator' );
 /**
  * Google fonts.
  */
-function mannering_storefront_child_add_google_fonts() {
+function mannering_music_add_google_fonts() {
 	wp_enqueue_style( 'storefront-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins','1.1', false );
 }
-add_action( 'wp_enqueue_scripts', 'mannering_storefront_child_add_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'mannering_music_add_google_fonts' );
 
 
 /**
@@ -209,9 +219,9 @@ add_action( 'wp_enqueue_scripts', 'mannering_storefront_child_add_google_fonts' 
 function mannering_music_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'mannering-storefront-child-theme' ),
+			'name'          => esc_html__( 'Sidebar', 'mannering_music' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'mannering-storefront-child-theme' ),
+			'description'   => esc_html__( 'Add widgets here.', 'mannering_music' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -222,20 +232,32 @@ function mannering_music_widgets_init() {
 add_action( 'widgets_init', 'mannering_music_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+	 * Enqueue style sheets function.
+	 *
+	 * @return void
+	 */
+	function mannering_music_register_styles() {
+
+		wp_enqueue_style( 'mannering-music', get_stylesheet_directory_uri() . '/style.css',false, '1.1', 'all' );
+	
+		wp_enqueue_style( 'woocommerce-css', get_stylesheet_directory_uri() . '/woocommerce/woocommerce.css', false, '1.1', 'all' );
+	
+		wp_enqueue_style( 'bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all' );
+	
+		wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
+	
+	}
+		add_action( 'wp_enqueue_scripts', 'mannering_music_register_styles' );
+
+/**
+ * Enqueue scripts.
  */
 function mannering_music_scripts() {
-	wp_enqueue_style( 'mannering_music-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'mannering_music-style', 'rtl', 'replace' );
+	
 
-	// wp_enqueue_style( 'bx-slider', get_stylesheet_directory_uri() . 
-	//'/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all' );
-	// wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . 
-	//'/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
+	wp_enqueue_script( 'mannering-music', get_stylesheet_directory_uri() . '/assets/js/index.js', array( 'jquery' ), '20161110', true );
 
-	wp_enqueue_script( 'mannering-storefront-child-index', get_stylesheet_directory_uri() . '/js/index.js', array( 'jquery' ), '20161110', true );
-
-	wp_enqueue_script( 'mannering_music-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'mannering_music-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -243,7 +265,7 @@ function mannering_music_scripts() {
 	}
 
 	/**
-	 * Load the html5.
+	 * Load the html5 scripts.
 	 *  */
 
 	$conditional_scripts = array(
@@ -276,33 +298,32 @@ add_action( 'wp_enqueue_scripts', 'mannering_music_scripts' );
  *
  * @return void
  */
-function mannering_storefront_child_front_scripts() {
+function mannering_music_front_scripts() {
 
 	if ( is_front_page() ) {
 
-		// wp_enqueue_script( 'bx-slider', get_stylesheet_directory_uri() . 
-		//'/js/bxslider-4-master/jquery.bxslider.min.js', array( 'jquery' ), '20161110', true );
-		wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.min.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20161110', true );
 
 	}
 }
-		add_action( 'wp_enqueue_scripts', 'mannering_storefront_child_front_scripts' );
+		add_action( 'wp_enqueue_scripts', 'mannering_music_front_scripts' );
 
 /**
 	 * Audio Page functions.
 	 *
 	 * @return void
 	 */
-function mannering_storefront_child_audio_scripts() {
+function mannering_music_audio_scripts() {
 
 if ( is_page( 'audio' ) ) {
-wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/js/tabs.js', array( 'jquery' ), '20161110', true );
+wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/assets/js/tabs.js', array( 'jquery' ), '20161110', true );
 
-wp_enqueue_script( 'audio', get_stylesheet_directory_uri() . '/js/audio-script.js', array( 'jquery' ), '1.1', true );
+wp_enqueue_script( 'audio', get_stylesheet_directory_uri() . '/assets/js/audio-script.js', array( 'jquery' ), '1.1', true );
 
 }
 }
-add_action( 'wp_enqueue_scripts', 'mannering_storefront_child_audio_scripts' );
+add_action( 'wp_enqueue_scripts', 'mannering_music_audio_scripts' );
 
 
 /**
@@ -336,5 +357,5 @@ add_action( 'wp_enqueue_scripts', 'mannering_storefront_child_audio_scripts' );
  * Load WooCommerce compatibility file.
  */
 // if ( class_exists( 'WooCommerce' ) ) {
-// 	require get_template_directory() . '/inc/woocommerce/woocommerce.php';
+// 	require get_stylesheet_directory_uri() . '/woocommerce/woocommerce.php';
 // }
