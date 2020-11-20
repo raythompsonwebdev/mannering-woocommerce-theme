@@ -19,26 +19,26 @@
 <?php
 
 /**
-* Wootheme support function
-*/
+ * Wootheme support function
+ */
 function mannering_music_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mannering_music_woocommerce_support' );
 
 /**
- * Set WooCommerce image dimensions upon theme activation
+ * Set WooCommerce image dimensions upon theme activation.
  */
 // Remove each style one by one
 add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
 function jk_dequeue_styles( $enqueue_styles ) {
-	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
-	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
-	unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	unset( $enqueue_styles['woocommerce-general'] );    // Remove the gloss.
+	unset( $enqueue_styles['woocommerce-layout'] );     // Remove the layout.
+	unset( $enqueue_styles['woocommerce-smallscreen'] );    // Remove the smallscreen optimisation.
 	return $enqueue_styles;
 }
 
-// Or just remove them all in one line
+// Or just remove them all in one line.
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -79,9 +79,9 @@ function mannering_music_filter_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'mannering_music_filter_wp_title', 10, 2 );
 
-// /**
-//  * Wootheme support function
-//  */
+/**
+ * Wootheme support function.
+ */
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
@@ -132,7 +132,7 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'shopper'   => esc_html__( 'Shopper', 'mannering_music' ),		
+				'shopper' => esc_html__( 'Shopper', 'mannering_music' ),
 
 			)
 		);
@@ -171,7 +171,7 @@ if ( ! function_exists( 'mannering_music_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-		
+
 	}
 endif;
 add_action( 'after_setup_theme', 'mannering_music_setup' );
@@ -206,7 +206,7 @@ remove_action( 'wp_head', 'wp_generator' );
  * Google fonts.
  */
 function mannering_music_add_google_fonts() {
-	wp_enqueue_style( 'storefront-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins','1.1', false );
+	wp_enqueue_style( 'storefront-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins', '1.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'mannering_music_add_google_fonts' );
 
@@ -232,28 +232,27 @@ function mannering_music_widgets_init() {
 add_action( 'widgets_init', 'mannering_music_widgets_init' );
 
 /**
-	 * Enqueue style sheets function.
-	 *
-	 * @return void
-	 */
-	function mannering_music_register_styles() {
+ * Enqueue style sheets function.
+ *
+ * @return void
+ */
+function mannering_music_register_styles() {
 
-		wp_enqueue_style( 'mannering-music', get_stylesheet_directory_uri() . '/style.css',false, '1.1', 'all' );
-	
-		wp_enqueue_style( 'woocommerce-css', get_stylesheet_directory_uri() . '/woocommerce/woocommerce.css', false, '1.1', 'all' );
-	
-		wp_enqueue_style( 'bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all' );
-	
-		wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
-	
-	}
+	wp_enqueue_style( 'mannering-music', get_stylesheet_directory_uri() . '/style.css', false, '1.1', 'all' );
+
+	wp_enqueue_style( 'woocommerce-css', get_stylesheet_directory_uri() . '/woocommerce/assets/css/woocommerce.css', false, '1.1', 'all' );
+
+	wp_enqueue_style( 'bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all' );
+
+	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
+
+}
 		add_action( 'wp_enqueue_scripts', 'mannering_music_register_styles' );
 
 /**
  * Enqueue scripts.
  */
 function mannering_music_scripts() {
-	
 
 	wp_enqueue_script( 'mannering-music', get_stylesheet_directory_uri() . '/assets/js/index.js', array( 'jquery' ), '20161110', true );
 
@@ -310,18 +309,18 @@ function mannering_music_front_scripts() {
 		add_action( 'wp_enqueue_scripts', 'mannering_music_front_scripts' );
 
 /**
-	 * Audio Page functions.
-	 *
-	 * @return void
-	 */
+ * Audio Page functions.
+ *
+ * @return void
+ */
 function mannering_music_audio_scripts() {
 
-if ( is_page( 'audio' ) ) {
-wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/assets/js/tabs.js', array( 'jquery' ), '20161110', true );
+	if ( is_page( 'audio' ) ) {
+		wp_enqueue_script( 'tabs', get_stylesheet_directory_uri() . '/assets/js/tabs.js', array( 'jquery' ), '20161110', true );
 
-wp_enqueue_script( 'audio', get_stylesheet_directory_uri() . '/assets/js/audio-script.js', array( 'jquery' ), '1.1', true );
+		wp_enqueue_script( 'audio', get_stylesheet_directory_uri() . '/assets/js/audio-script.js', array( 'jquery' ), '1.1', true );
 
-}
+	}
 }
 add_action( 'wp_enqueue_scripts', 'mannering_music_audio_scripts' );
 
@@ -329,33 +328,33 @@ add_action( 'wp_enqueue_scripts', 'mannering_music_audio_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';.
 
 /**
  * Custom template tags for this theme.
  */
-//require get_template_directory() . '/inc/template-tags.php';
+// require get_template_directory() . '/inc/template-tags.php';.
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-//require get_template_directory() . '/inc/template-functions.php';
+// require get_template_directory() . '/inc/template-functions.php';.
 
 /**
  * Customizer additions.
  */
-//require get_template_directory() . '/inc/customizer.php';
+// require get_template_directory() . '/inc/customizer.php';.
 
 /**
  * Load Jetpack compatibility file.
  */
 // if ( defined( 'JETPACK__VERSION' ) ) {
-// 	//require get_template_directory() . '/inc/jetpack.php';
+// require get_template_directory() . '/inc/jetpack.php';.
 // }
 
 /**
  * Load WooCommerce compatibility file.
  */
 // if ( class_exists( 'WooCommerce' ) ) {
-// 	require get_stylesheet_directory_uri() . '/woocommerce/woocommerce.php';
+// require get_stylesheet_directory_uri() . '/woocommerce/woocommerce.php';.
 // }

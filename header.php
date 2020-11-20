@@ -48,18 +48,18 @@
 			/**
 			 * Checking if there's anything in Top Menu.
 			 */
-			//if ( has_nav_menu( 'shopper' ) ) {
+			// if ( has_nav_menu( 'shopper' ) ) {
 				/**
-				* If there is, adds the Top Menu area.
-				*/
+				 * If there is, adds the Top Menu area.
+				 */
 				wp_nav_menu(
 					array(
 						'menu'      => 'Shopper',
 						'container' => 'ul',
 					)
 				);
-			//}
-		?>
+				// }
+				?>
 	</span>
 
 	<!---logo-->
@@ -75,19 +75,20 @@
 						?>
 					</div>
 					<?php
-						if ( has_custom_logo() ) :
-							the_custom_logo();
+					if ( has_custom_logo() ) :
+						the_custom_logo();
 						else :
-					?>
+							?>
 					<div class="site-firstletter" aria-hidden="true">
-						<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
+							<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
 					</div>
 					<?php endif; ?>
 				</a>
 			</div>
 
-			<?php 
-				if ( is_front_page() || is_page() ) : ?>
+			<?php
+			if ( is_front_page() || is_page() ) :
+				?>
 				<hgroup>
 					<h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
 					<?php elseif ( is_home() ) : ?>
@@ -96,15 +97,15 @@
 					<?php else : ?>
 				<hgroup>
 					<h1 id="logo"><span>MANNERING</span><span>STO</span>RE</h1>
-					<?php
+						<?php
 				endif;
 
-				$description = get_bloginfo( 'description', 'mannering_music' );
+					$description = get_bloginfo( 'description', 'mannering_music' );
 
-				if ( esc_html( $description ) || is_customize_preview() ) :
-			?>
+					if ( esc_html( $description ) || is_customize_preview() ) :
+						?>
 				<h2 class="site-description">
-					<?php echo esc_html( $description ); ?>
+						<?php echo esc_html( $description ); ?>
 				</h2>
 			</hgroup>
 			<?php endif; ?>
@@ -115,17 +116,17 @@
 <nav role="navigation">
 
 	<?php
-// Checking if there's anything in Top Menu.
-//if ( has_nav_menu( 'Primary Menu' ) ) {
-// If there is, adds the Top Menu area.
+	// Checking if there's anything in Top Menu.
+	// if ( has_nav_menu( 'Primary Menu' ) ) {
+	// If there is, adds the Top Menu area.
 	wp_nav_menu(
 		array(
 			'menu'      => 'main',
 			'container' => 'ul',
 		)
 	);
-//}
-?>
+	// }
+	?>
 </nav>
 
 <div id="content" class="group">

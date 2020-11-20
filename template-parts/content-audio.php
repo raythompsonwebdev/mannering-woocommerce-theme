@@ -23,18 +23,18 @@
 		<div class="tab">
 			<?php
 				$params = array(
-				'posts_per_page' => 5,
-				'post_type'      => 'product',
-				'product_cat'    => 'hip-hop',
+					'posts_per_page' => 5,
+					'post_type'      => 'product',
+					'product_cat'    => 'hip-hop',
 
 				); // 1.
 				$wc_query = new WP_Query( $params ); // 2.
-			?>
+				?>
 			<?php if ( $wc_query->have_posts() ) : // 3. ?>
-			<?php
+				<?php
 				while ( $wc_query->have_posts() ) : // 4.
-				$wc_query->the_post(); // 4.1.
-			?>
+					$wc_query->the_post(); // 4.1.
+					?>
 				<article class="hiphop_panel">
 
 					<!-- audio info panel - image & text -->
@@ -109,18 +109,18 @@
 		<!--tab Country-->
 		<div class="tab">
 			<?php
-				$params = array(
+				$params   = array(
 					'posts_per_page' => 5,
 					'post_type'      => 'product',
 					'product_cat'    => 'country',
 				);
 				$wc_query = new WP_Query( $params );
-			?>
+				?>
 			<?php if ( $wc_query->have_posts() ) : ?>
-			<?php
+				<?php
 				while ( $wc_query->have_posts() ) :
-				$wc_query->the_post();
-			?>
+					$wc_query->the_post();
+					?>
 				<article class="hiphop_panel">
 
 					<!-- audio info panel - image & text -->
@@ -200,18 +200,18 @@
 		<div class="tab">
 			<?php
 				$params = array(
-				'posts_per_page' => 5,
-				'post_type'      => 'product',
-				'product_cat'    => 'jazz',
+					'posts_per_page' => 5,
+					'post_type'      => 'product',
+					'product_cat'    => 'jazz',
 
 				);
 				$wc_query = new WP_Query( $params );
-			?>
+				?>
 			<?php if ( $wc_query->have_posts() ) : ?>
-			<?php
+				<?php
 				while ( $wc_query->have_posts() ) :
-				$wc_query->the_post();
-			?>
+					$wc_query->the_post();
+					?>
 				<article class="hiphop_panel">
 					<!-- audio info panel - image & text -->
 					<span class="hiphop_panel_text">
