@@ -38,13 +38,20 @@ function jk_dequeue_styles( $enqueue_styles ) {
 	return $enqueue_styles;
 }
 
-// Or just remove them all in one line.
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
+
+//remove description from category pages
+add_action( 'after_setup_theme', 'my_remove_parent_theme_stuff', 0 );
+function my_remove_parent_theme_stuff() {
+    remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
+    remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
+
+}
+
 
 /**
  * Creates a nicely formatted and more specific title element text

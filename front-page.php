@@ -24,7 +24,6 @@
 Yesssssssssssssss
 	<article id="pageContainer">
 
-	Yesssssssssssssss
 		<!-- <div class="bx-wrapper">
 			<div class="bx-viewport">
 				<ul class="bxslider">

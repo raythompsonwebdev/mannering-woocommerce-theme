@@ -62,5 +62,8 @@ if ( have_posts() ) :
 
 
 <?php
-get_sidebar();
+if ( !is_woocommerce() ) {
+	get_sidebar();
+}
+
 get_footer();
