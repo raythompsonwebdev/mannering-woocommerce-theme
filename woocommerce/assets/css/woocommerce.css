@@ -286,7 +286,7 @@ WooCommerce styles override
   .woocommerce-info,
   .woocommerce-noreviews,
   p.no-comments {
-    background-color: #3d9cd2;
+    background-color: #666666;
   }
 
   .woocommerce-error {
@@ -383,7 +383,6 @@ WooCommerce styles override
     text-align: center;
     margin: 0 auto;
     width: 15%;
-    line-height: 35px;
     background-color: #ECAC00;
     color: #181818;
     -webkit-border-radius: 5px;
@@ -396,14 +395,15 @@ WooCommerce styles override
     transition: all 0.2s ease-in-out;
   }
   #wrapper #content form button.button:hover {
-    line-height: 35px;
+    font-weight: bold;
     background-color: #FFF;
     color: #181818;
-    border: 1px solid #181818;
+    border: 2px solid #181818;
     filter: alpha(opacity=99);
     -moz-opacity: 0.99;
     -khtml-opacity: 0.99;
     opacity: 0.99;
+    cursor: pointer;
   }
   #wrapper #content article.product {
     width: 15%;
@@ -1480,7 +1480,8 @@ WooCommerce styles override
     font-weight: bold;
   }
   #wrapper #content div.entry-content .woocommerce p.cart-empty {
-    color: #3A3A3A;
+    color: #FFF;
+    padding: 0.25em;
   }
   #wrapper #content div.entry-content .woocommerce p.return-to-shop {
     color: #3A3A3A;
@@ -1598,7 +1599,7 @@ WooCommerce styles override
     white-space: normal;
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
+    padding: 1em 0;
     width: 100%;
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -1791,8 +1792,18 @@ WooCommerce styles override
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions input {
     margin: 0;
   }
+  #wrapper #content div.entry-content .woocommerce form.woocommerce-form-login p.form-row {
+    margin: 1.5em 0;
+  }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox {
     width: 40%;
+    display: flex;
+  }
+  #wrapper #content div.entry-content .woocommerce form.woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox input#rememberme {
+    width: 10%;
+  }
+  #wrapper #content div.entry-content .woocommerce form.woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox span {
+    line-height: 15px;
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-form-login p.woocommerce-LostPassword {
     height: 35px;
@@ -2607,9 +2618,6 @@ WooCommerce styles override
   #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper {
     margin: 0;
   }
-  #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
-  }
   #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
     line-height: 40px;
   }
@@ -2667,9 +2675,6 @@ WooCommerce styles override
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
     line-height: 45px;
@@ -3294,9 +3299,6 @@ WooCommerce styles override
   #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper {
     margin: 0;
   }
-  #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
-  }
   #wrapper #content div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
     line-height: 40px;
   }
@@ -3353,9 +3355,6 @@ WooCommerce styles override
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
     line-height: 45px;
@@ -3983,7 +3982,7 @@ WooCommerce styles override
   }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
+    font-size: 0.9em;
   }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
@@ -4060,10 +4059,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -4789,10 +4784,6 @@ WooCommerce styles override
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper {
     margin: 0;
   }
-  #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message,
-  #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
-  }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
     line-height: 40px;
@@ -4868,10 +4859,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -5245,6 +5232,96 @@ WooCommerce styles override
     display: inline-block;
   }
 
+  /**
+	 * Header cart
+	 */
+  .site-header-cart .widget_shopping_cart {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 999999;
+    left: -999em;
+    display: block;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+  .site-header-cart:hover .widget_shopping_cart,
+  .site-header-cart .focus .widget_shopping_cart {
+    left: 0;
+    display: block;
+  }
+
+  ul.products li.product {
+    width: 30.79667%;
+    float: left;
+    margin-right: 3.8%;
+  }
+  ul.products li.product.first {
+    clear: both;
+  }
+  ul.products li.product.last {
+    margin-right: 0;
+  }
+
+  ul.products.columns-1 li.product {
+    float: none;
+    width: 100%;
+  }
+
+  ul.products.columns-2 li.product {
+    width: 48.1%;
+  }
+
+  ul.products.columns-3 li.product {
+    width: 30.79667%;
+  }
+
+  ul.products.columns-4 li.product {
+    width: 22.15%;
+  }
+
+  ul.products.columns-5 li.product {
+    width: 16.96%;
+  }
+
+  ul.products.columns-6 li.product {
+    width: 13.49333%;
+  }
+
+  table.shop_table_responsive thead {
+    display: table-header-group;
+  }
+  table.shop_table_responsive tbody th {
+    display: table-cell;
+  }
+  table.shop_table_responsive tbody tr th,
+  table.shop_table_responsive tbody tr td {
+    text-align: left;
+  }
+  table.shop_table_responsive tbody tr td {
+    display: table-cell;
+  }
+  table.shop_table_responsive tbody tr td::before {
+    display: none;
+  }
+
+ /**
+* Checkout
+*/
+  .col2-set .form-row-first {
+    float: left;
+    margin-right: 3.8%;
+  }
+
+  .col2-set .form-row-last {
+    float: right;
+    margin-right: 0;
+  }
+
+  .col2-set .form-row-first,
+  .col2-set .form-row-last {
+    width: 48.1%;
+  }
+
   #wrapper nav.woocommerce-breadcrumb {
     font-size: 0.7em;
   }
@@ -5600,10 +5677,6 @@ WooCommerce styles override
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper {
     margin: 0;
   }
-  #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message,
-  #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
-  }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
     line-height: 40px;
@@ -5679,10 +5752,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -6060,97 +6129,6 @@ WooCommerce styles override
   }
 
   /*end of wrapper*/
-}
-@media screen and (min-width: 48em) {
-  /**
-	 * Header cart
-	 */
-  .site-header-cart .widget_shopping_cart {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    z-index: 999999;
-    left: -999em;
-    display: block;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  }
-  .site-header-cart:hover .widget_shopping_cart,
-  .site-header-cart .focus .widget_shopping_cart {
-    left: 0;
-    display: block;
-  }
-
-  ul.products li.product {
-    width: 30.79667%;
-    float: left;
-    margin-right: 3.8%;
-  }
-  ul.products li.product.first {
-    clear: both;
-  }
-  ul.products li.product.last {
-    margin-right: 0;
-  }
-
-  ul.products.columns-1 li.product {
-    float: none;
-    width: 100%;
-  }
-
-  ul.products.columns-2 li.product {
-    width: 48.1%;
-  }
-
-  ul.products.columns-3 li.product {
-    width: 30.79667%;
-  }
-
-  ul.products.columns-4 li.product {
-    width: 22.15%;
-  }
-
-  ul.products.columns-5 li.product {
-    width: 16.96%;
-  }
-
-  ul.products.columns-6 li.product {
-    width: 13.49333%;
-  }
-
-  table.shop_table_responsive thead {
-    display: table-header-group;
-  }
-  table.shop_table_responsive tbody th {
-    display: table-cell;
-  }
-  table.shop_table_responsive tbody tr th,
-  table.shop_table_responsive tbody tr td {
-    text-align: left;
-  }
-  table.shop_table_responsive tbody tr td {
-    display: table-cell;
-  }
-  table.shop_table_responsive tbody tr td::before {
-    display: none;
-  }
-
- /**
-* Checkout
-*/
-  .col2-set .form-row-first {
-    float: left;
-    margin-right: 3.8%;
-  }
-
-  .col2-set .form-row-last {
-    float: right;
-    margin-right: 0;
-  }
-
-  .col2-set .form-row-first,
-  .col2-set .form-row-last {
-    width: 48.1%;
-  }
 }
 /* #### Mobile Phones Portrait -Apple iPhone 6#### */
 @media only screen and (max-width: 667px) {
@@ -6556,7 +6534,7 @@ WooCommerce styles override
   }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
-    padding: 0.5em;
+    font-size: 0.85em;
   }
   #wrapper #content div.post div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a,
   #wrapper #content article.page div.entry-content .woocommerce .woocommerce-notices-wrapper .woocommerce-message a {
@@ -6642,10 +6620,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -6770,7 +6744,7 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon button.button,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon button.button {
     font-size: 1em;
-    width: 35%;
+    width: 30%;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-checkout,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-checkout {
@@ -7458,10 +7432,6 @@ WooCommerce styles override
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
   }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
-  }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
     line-height: 45px;
@@ -7562,15 +7532,20 @@ WooCommerce styles override
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions button.button,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions button.button {
-    width: 20%;
+    width: 23%;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions button.button:hover,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions button.button:hover {
     cursor: pointer;
   }
+  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon,
+  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon {
+    width: 75%;
+  }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon label,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon label {
-    width: 25%;
+    width: 20%;
+    font-size: 0.9em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon input[type="text"],
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions div.coupon input[type="password"],
@@ -8291,10 +8266,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -9149,10 +9120,6 @@ WooCommerce styles override
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
   }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
-  }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
     line-height: 45px;
@@ -9965,10 +9932,6 @@ WooCommerce styles override
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
   }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
-  }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
     line-height: 45px;
@@ -10774,10 +10737,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {
@@ -11604,10 +11563,6 @@ WooCommerce styles override
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form {
     padding: 0;
-  }
-  #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table,
-  #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table {
-    padding: 1em;
   }
   #wrapper #content div.post div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead,
   #wrapper #content article.page div.entry-content .woocommerce form.woocommerce-cart-form table.shop_table thead {

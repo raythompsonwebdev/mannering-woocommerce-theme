@@ -43,23 +43,14 @@
 	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 		<?php esc_html_e( 'Menu', 'mannering_music' ); ?></button>
 
-	<span class="basket">
-		<?php
-			/**
-			 * Checking if there's anything in Top Menu.
-			 */
-			// if ( has_nav_menu( 'shopper' ) ) {
-				/**
-				 * If there is, adds the Top Menu area.
-				 */
-				wp_nav_menu(
-					array(
-						'menu'      => 'Shopper',
-						'container' => 'ul',
-					)
-				);
-				// }
-				?>
+	<span class="header_icons">
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
+			<li><a href="#"><i class="fa fa-rss soc"></i></a></li>
+			<li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
+		</ul>
 	</span>
 
 	<!---logo-->

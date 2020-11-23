@@ -211,44 +211,49 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
+      .header_icons {
         height: 40px;
         float: right;
         width: 32%;
         display: block;
         text-align: center;
-
-        ul#menu-shopper {
+        ul {
           width: 100%;
           margin: 0;
           padding: 0;
-          height: 100%;
+          height: auto;
+          display:flex;
 
-          li.menu-item {
-            width: 31%;
+          li {
+            width: 20%;
             float: left;
             display: block;
+            font-size: 1em;
             height: auto;
-            margin-right: 0.2em;
 
             a {
-              background-color: $color4;
               margin: 0;
-              font-size: 0.9em;
+              font-size: 1.3em;
               text-decoration: none;
-              color: $color2;
+              color: $color1;
               display: block;
               width: 100%;
-              height: 100%;
               line-height: 40px;
 
               &:hover {
-                color: $color4;
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 40px;
               }
             }
           }
-        }
+        }        
       }
 
       p.headp {
@@ -270,15 +275,25 @@ License: GNU General Public License v2 or later
         width: 70%;
         height: 100%;
         margin: 0;
-        display: block;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: space;
+        justify-content: space-between;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
 
         li.menu-item {
-          width: 13.5%;
-          display: block;
-          float: left;
+          width: 19.5%;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
           height: 100%;
-          margin-right: 0.25em;
-
           a {
             width: 100%;
             line-height: 45px;
@@ -289,6 +304,7 @@ License: GNU General Public License v2 or later
             letter-spacing: 0.1em;
             font-weight: normal;
             text-align: center;
+            text-decoration:none;
 
             &:hover {
               font-weight: bold;
@@ -319,15 +335,108 @@ License: GNU General Public License v2 or later
       -ms-flex-align: start;
       align-items: flex-start;
 
+      section.widget_shopping_cart{
+        width:25%;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+
+        h2.widget-title{
+          text-align:center;
+          padding:0;
+          margin:0;
+        }
+
+        div.widget_shopping_cart_content{
+
+          ul.woocommerce-mini-cart, ul.cart_list{
+
+            li.woocommerce-mini-cart-item{
+
+              a.remove_from_cart_button{
+                width:100%;
+                text-align:center;
+
+              }
+
+              a{
+                width:100%;
+                text-align:center;
+                img.attachment-woocommerce_thumbnail{                  
+                  width: auto;
+                  margin: auto;
+                  display: block;
+                  
+
+                }
+              }
+
+              span.quantity{
+                width:100%;
+                display:flex;
+                line-height: 35px;
+                span.woocommerce-Price-amount {
+                  width: 80%;
+                  line-height: 35px;
+                  margin: 0 auto;
+                  display: block;
+                  bdi {
+                    display: block;
+                  }
+    
+                  span.woocommerce-Price-currencySymbol {
+                    width: 40%;
+                    display: inline-block;
+                    line-height: 35px;
+                    text-align: center;
+                  }
+                }
+              } 
+
+            }
+
+          }
+          p.woocommerce-mini-cart__total{
+            display:flex;
+            strong{
+              line-height:35px;
+            }
+            span.woocommerce-Price-amount {
+              width: 100%;
+              line-height: 35px;
+              margin: 0 auto;
+              display: block;
+              bdi {
+                display: block;
+                width: 100%;
+              }
+
+              span.woocommerce-Price-currencySymbol {
+                width: 40%;
+                display: inline-block;
+                line-height: 35px;
+                text-align: center;
+              }
+            }
+
+          }
+
+          p.woocommerce-mini-cart__buttons{
+
+          }
+
+        }
+        
+      }
+
       article.side-bar-box {
         width: 32%;
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        display: block;
-        float: left;
         margin: 0.5em;
-
+        
         h2 {
           font-size: 1.3em;
           background-color: $color9;
@@ -2282,23 +2391,33 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 37%;
-
-        ul#menu-shopper {
+      .header_icons {
+        width: 30%;
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.8em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
         }
+
+        
       }
 
       p.headp {
@@ -2310,10 +2429,8 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 70%;
-
+        
         li.menu-item {
-          width: 13.5%;
           height: 45px;
 
           a {
@@ -3366,18 +3483,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 40%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -4437,19 +4564,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 40%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.75em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -5490,19 +5626,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 44%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.75em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -5518,7 +5663,7 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 96%;
+        width: 100%;
 
         li.menu-item {
           height: 45px;
@@ -6552,19 +6697,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 44%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.75em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -6580,8 +6734,7 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 96%;
-
+        
         li.menu-item {
           height: 45px;
 
@@ -7613,19 +7766,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 44%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.75em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -7641,10 +7803,8 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 96%;
-
+        
         li.menu-item {
-          width: 15%;
           height: 45px;
 
           a {
@@ -8695,19 +8855,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 43%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              margin: 0;
-              font-size: 0.55em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -8723,10 +8892,8 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 96%;
-
+        
         li.menu-item {
-          width: 15.5%;
           height: 45px;
 
           a {
@@ -9757,18 +9924,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 38%;
+      .header_icons {
+        width: 30%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 20%;
+            
 
-          li.menu-item {
             a {
-              font-size: 0.5em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -9784,10 +9961,8 @@ License: GNU General Public License v2 or later
       height: 45px;
 
       ul#menu-main {
-        width: 96%;
-
+        
         li.menu-item {
-          width: 15%;
           height: 45px;
 
           a {
@@ -10827,22 +11002,32 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 75%;
+      .header_icons {
+        width: 50%;
         position: absolute;
         z-index: 150;
         left: 0.5em;
         top: 65px;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
+          
+          li {
+            width: 100%;
+            
 
-          li.menu-item {
             a {
-              font-size: 0.7em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -11958,21 +12143,29 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 70%;
+      .header_icons {
+        width: 50%;
         top: 70px;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
-
-          li.menu-item {
-            width: 31%;
+          
+          li {
+            width: 20%;
+            
 
             a {
-              font-size: 0.7em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -13046,20 +13239,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 75%;
+      .header_icons {
+        width: 55%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
-
-          li.menu-item {
-            width: 31%;
+          
+          li {
+            width: 20%;
+            
 
             a {
-              font-size: 0.6em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }
@@ -14152,20 +14353,28 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .basket {
-        width: 70%;
+      .header_icons {
+        width: 50%;
 
-        ul#menu-shopper {
+        ul {
           width: 100%;
-
-          li.menu-item {
-            width: 31%;
+          
+          li {
+            width: 20%;
+            
 
             a {
-              font-size: 0.55em;
+              
+              font-size: 1.3em;
+              
 
               &:hover {
-                background-color: $color2;
+                color: $color2;
+              }
+
+              i {
+               
+                line-height: 40px;
               }
             }
           }

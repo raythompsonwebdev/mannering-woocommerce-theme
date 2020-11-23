@@ -1224,40 +1224,45 @@ body {
     clear: left;
     color: #EBAB00;
   }
-  #wrapper header .basket {
+  #wrapper header .header_icons {
     height: 40px;
     float: right;
     width: 32%;
     display: block;
     text-align: center;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
+    display: flex;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item {
-    width: 31%;
+  #wrapper header .header_icons ul li {
+    width: 20%;
     float: left;
     display: block;
+    font-size: 1em;
     height: auto;
-    margin-right: 0.2em;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    background-color: #3B3B3F;
+  #wrapper header .header_icons ul li a {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1.3em;
     text-decoration: none;
+    color: #ECAC00;
+    display: block;
+    width: 100%;
+    line-height: 40px;
+  }
+  #wrapper header .header_icons ul li a:hover {
     color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
     display: block;
     width: 100%;
     height: 100%;
+    text-align: center;
     line-height: 40px;
-  }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    color: #3B3B3F;
-    background-color: #FFF;
   }
   #wrapper header p.headp {
     font-weight: bold;
@@ -1275,14 +1280,25 @@ body {
     width: 70%;
     height: 100%;
     margin: 0;
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space;
+    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   #wrapper nav ul#menu-main li.menu-item {
-    width: 13.5%;
-    display: block;
-    float: left;
+    width: 19.5%;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     height: 100%;
-    margin-right: 0.25em;
   }
   #wrapper nav ul#menu-main li.menu-item a {
     width: 100%;
@@ -1294,6 +1310,7 @@ body {
     letter-spacing: 0.1em;
     font-weight: normal;
     text-align: center;
+    text-decoration: none;
   }
   #wrapper nav ul#menu-main li.menu-item a:hover {
     font-weight: bold;
@@ -1319,13 +1336,77 @@ body {
     -ms-flex-align: start;
     align-items: flex-start;
   }
+  #wrapper aside#side-bar section.widget_shopping_cart {
+    width: 25%;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart h2.widget-title {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item a.remove_from_cart_button, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item a.remove_from_cart_button {
+    width: 100%;
+    text-align: center;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item a, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item a {
+    width: 100%;
+    text-align: center;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item a img.attachment-woocommerce_thumbnail, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item a img.attachment-woocommerce_thumbnail {
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item span.quantity, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item span.quantity {
+    width: 100%;
+    display: flex;
+    line-height: 35px;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount {
+    width: 80%;
+    line-height: 35px;
+    margin: 0 auto;
+    display: block;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount bdi, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount bdi {
+    display: block;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.woocommerce-mini-cart li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol, #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content ul.cart_list li.woocommerce-mini-cart-item span.quantity span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol {
+    width: 40%;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content p.woocommerce-mini-cart__total {
+    display: flex;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content p.woocommerce-mini-cart__total strong {
+    line-height: 35px;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content p.woocommerce-mini-cart__total span.woocommerce-Price-amount {
+    width: 100%;
+    line-height: 35px;
+    margin: 0 auto;
+    display: block;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content p.woocommerce-mini-cart__total span.woocommerce-Price-amount bdi {
+    display: block;
+    width: 100%;
+  }
+  #wrapper aside#side-bar section.widget_shopping_cart div.widget_shopping_cart_content p.woocommerce-mini-cart__total span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol {
+    width: 40%;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+  }
   #wrapper aside#side-bar article.side-bar-box {
     width: 32%;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    display: block;
-    float: left;
     margin: 0.5em;
   }
   #wrapper aside#side-bar article.side-bar-box h2 {
@@ -3112,18 +3193,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.7em;
   }
-  #wrapper header .basket {
-    width: 37%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.8em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -3131,11 +3217,7 @@ body {
   #wrapper nav {
     height: 45px;
   }
-  #wrapper nav ul#menu-main {
-    width: 70%;
-  }
   #wrapper nav ul#menu-main li.menu-item {
-    width: 13.5%;
     height: 45px;
   }
   #wrapper nav ul#menu-main li.menu-item a {
@@ -3928,17 +4010,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.7em;
   }
-  #wrapper header .basket {
-    width: 40%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -4730,18 +4818,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.65em;
   }
-  #wrapper header .basket {
-    width: 40%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.75em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -5518,18 +5611,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.65em;
   }
-  #wrapper header .basket {
-    width: 44%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.75em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -5538,7 +5636,7 @@ body {
     height: 45px;
   }
   #wrapper nav ul#menu-main {
-    width: 96%;
+    width: 100%;
   }
   #wrapper nav ul#menu-main li.menu-item {
     height: 45px;
@@ -6314,27 +6412,29 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.6em;
   }
-  #wrapper header .basket {
-    width: 44%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.75em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
   }
   #wrapper nav {
     height: 45px;
-  }
-  #wrapper nav ul#menu-main {
-    width: 96%;
   }
   #wrapper nav ul#menu-main li.menu-item {
     height: 45px;
@@ -7108,18 +7208,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.6em;
   }
-  #wrapper header .basket {
-    width: 44%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.75em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -7127,11 +7232,7 @@ body {
   #wrapper nav {
     height: 45px;
   }
-  #wrapper nav ul#menu-main {
-    width: 96%;
-  }
   #wrapper nav ul#menu-main li.menu-item {
-    width: 15%;
     height: 45px;
   }
   #wrapper nav ul#menu-main li.menu-item a {
@@ -7918,18 +8019,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.6em;
   }
-  #wrapper header .basket {
-    width: 43%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    margin: 0;
-    font-size: 0.55em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -7937,11 +8043,7 @@ body {
   #wrapper nav {
     height: 45px;
   }
-  #wrapper nav ul#menu-main {
-    width: 96%;
-  }
   #wrapper nav ul#menu-main li.menu-item {
-    width: 15.5%;
     height: 45px;
   }
   #wrapper nav ul#menu-main li.menu-item a {
@@ -8717,17 +8819,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.55em;
   }
-  #wrapper header .basket {
-    width: 38%;
+  #wrapper header .header_icons {
+    width: 30%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    font-size: 0.5em;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 1em;
@@ -8735,11 +8843,7 @@ body {
   #wrapper nav {
     height: 45px;
   }
-  #wrapper nav ul#menu-main {
-    width: 96%;
-  }
   #wrapper nav ul#menu-main li.menu-item {
-    width: 15%;
     height: 45px;
   }
   #wrapper nav ul#menu-main li.menu-item a {
@@ -9520,21 +9624,27 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.45em;
   }
-  #wrapper header .basket {
-    width: 75%;
+  #wrapper header .header_icons {
+    width: 50%;
     position: absolute;
     z-index: 150;
     left: 0.5em;
     top: 65px;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    font-size: 0.7em;
+  #wrapper header .header_icons ul li {
+    width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
+  }
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper header p.headp {
     font-size: 0.8em;
@@ -10379,21 +10489,24 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.5em;
   }
-  #wrapper header .basket {
-    width: 70%;
+  #wrapper header .header_icons {
+    width: 50%;
     top: 70px;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item {
-    width: 31%;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    font-size: 0.7em;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper .menu-toggle,
   #wrapper .menu-main-container.toggled ul {
@@ -11198,20 +11311,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.5em;
   }
-  #wrapper header .basket {
-    width: 75%;
+  #wrapper header .header_icons {
+    width: 55%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item {
-    width: 31%;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    font-size: 0.6em;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper .menu-toggle,
   #wrapper .menu-main-container.toggled ul {
@@ -12033,20 +12149,23 @@ body {
   #wrapper header hgroup h2 {
     font-size: 0.45em;
   }
-  #wrapper header .basket {
-    width: 70%;
+  #wrapper header .header_icons {
+    width: 50%;
   }
-  #wrapper header .basket ul#menu-shopper {
+  #wrapper header .header_icons ul {
     width: 100%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item {
-    width: 31%;
+  #wrapper header .header_icons ul li {
+    width: 20%;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a {
-    font-size: 0.55em;
+  #wrapper header .header_icons ul li a {
+    font-size: 1.3em;
   }
-  #wrapper header .basket ul#menu-shopper li.menu-item a:hover {
-    background-color: #FFF;
+  #wrapper header .header_icons ul li a:hover {
+    color: #FFF;
+  }
+  #wrapper header .header_icons ul li a i {
+    line-height: 40px;
   }
   #wrapper .menu-toggle,
   #wrapper .menu-main-container.toggled ul {

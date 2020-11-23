@@ -305,7 +305,7 @@ WooCommerce styles override
   .woocommerce-info,
   .woocommerce-noreviews,
   p.no-comments {
-    background-color: #3d9cd2;
+    background-color: $color8;
   }
 
   .woocommerce-error {
@@ -402,22 +402,22 @@ WooCommerce styles override
           display: block;
           text-align: center;
           margin: 0 auto;
-          width: 15%;
-          line-height: 35px;
+          width: 15%;          
           background-color: $color1;
           color: $color7;
           @include boredrady(5px);
           @include transitioner(all 0.2s ease-in-out);
 
           &:hover {
-            line-height: 35px;
+            font-weight:bold;
             background-color: $color2;
             color: $color7;
-            border: 1px solid $color7;
+            border: 2px solid $color7;
             filter: alpha(opacity=99);
             -moz-opacity: 0.99;
             -khtml-opacity: 0.99;
             opacity: 0.99;
+            cursor:pointer;
           }
         }
       }
@@ -1526,7 +1526,8 @@ WooCommerce styles override
           }
 
           p.cart-empty {
-            color: $color3;
+            color: $color2;
+            padding: 0.25em;
           }
 
           p.return-to-shop {
@@ -1672,7 +1673,7 @@ WooCommerce styles override
 
             //billing page
             table.shop_table {
-              padding: 1em;
+              padding: 1em 0;
               width: 100%;
 
               thead {
@@ -1908,11 +1909,19 @@ WooCommerce styles override
               }
             }
           }
-
+          //login form
           form.woocommerce-form-login {
             p.form-row {
+              margin:1.5em 0;
               .woocommerce-form__label-for-checkbox {
                 width: 40%;
+                display: flex;
+                input#rememberme{
+                  width:10%;
+                  }
+                span{
+                  line-height:15px;
+                }
               }
             }
 
@@ -2866,7 +2875,7 @@ WooCommerce styles override
             margin: 0;
 
             .woocommerce-message {
-              padding: 0.5em;
+              
 
               a {
                 line-height: 40px;
@@ -2954,8 +2963,7 @@ WooCommerce styles override
 
             //billing page
             table.shop_table {
-              padding: 1em;
-
+              
               thead {
                 line-height: 45px;
 
@@ -3786,7 +3794,7 @@ WooCommerce styles override
             margin: 0;
 
             .woocommerce-message {
-              padding: 0.5em;
+              
 
               a {
                 line-height: 40px;
@@ -3873,8 +3881,7 @@ WooCommerce styles override
 
             //billing page
             table.shop_table {
-              padding: 1em;
-
+              
               thead {
                 line-height: 45px;
 
@@ -4712,7 +4719,7 @@ WooCommerce styles override
               margin: 0;
 
               .woocommerce-message {
-                padding: 0.5em;
+                font-size: 0.9em;
 
                 a {
                   line-height: 40px;
@@ -4799,8 +4806,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -5650,7 +5656,7 @@ WooCommerce styles override
               margin: 0;
 
               .woocommerce-message {
-                padding: 0.5em;
+                
 
                 a {
                   line-height: 40px;
@@ -5737,8 +5743,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -6171,6 +6176,117 @@ WooCommerce styles override
     }
   }
 
+  /**
+	 * Header cart
+	 */
+   .site-header-cart {
+    .widget_shopping_cart {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      z-index: 999999;
+      left: -999em;
+      display: block;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    }
+    &:hover .widget_shopping_cart,
+    .focus .widget_shopping_cart {
+      left: 0;
+      display: block;
+    }
+  }
+
+  ul.products {
+    li.product {
+      width: 30.79667%;
+      float: left;
+      margin-right: 3.8%;
+    }
+    li.product.first {
+      clear: both;
+    }
+    li.product.last {
+      margin-right: 0;
+    }
+  }
+
+  ul.products.columns-1 {
+    li.product {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  ul.products.columns-2 {
+    li.product {
+      width: 48.1%;
+    }
+  }
+
+  ul.products.columns-3 {
+    li.product {
+      width: 30.79667%;
+    }
+  }
+
+  ul.products.columns-4 {
+    li.product {
+      width: 22.15%;
+    }
+  }
+
+  ul.products.columns-5 {
+    li.product {
+      width: 16.96%;
+    }
+  }
+
+  ul.products.columns-6 {
+    li.product {
+      width: 13.49333%;
+    }
+  }
+
+  table.shop_table_responsive {
+    thead {
+      display: table-header-group;
+    }
+    tbody {
+      th {
+        display: table-cell;
+      }
+      tr {
+        th,
+        td {
+          text-align: left;
+        }
+        td {
+          display: table-cell;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  /**
+ * Checkout
+ */
+  .col2-set .form-row-first {
+    float: left;
+    margin-right: 3.8%;
+  }
+
+  .col2-set .form-row-last {
+    float: right;
+    margin-right: 0;
+  }
+
+  .col2-set .form-row-first,
+  .col2-set .form-row-last {
+    width: 48.1%;
+  }
+
   #wrapper {
     nav.woocommerce-breadcrumb {
       font-size: 0.7em;
@@ -6589,7 +6705,7 @@ WooCommerce styles override
               margin: 0;
 
               .woocommerce-message {
-                padding: 0.5em;
+                
 
                 a {
                   line-height: 40px;
@@ -6676,8 +6792,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -7112,116 +7227,7 @@ WooCommerce styles override
 
 //768px
 @media screen and (min-width: 48em) {
-  /**
-	 * Header cart
-	 */
-  .site-header-cart {
-    .widget_shopping_cart {
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      z-index: 999999;
-      left: -999em;
-      display: block;
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    }
-    &:hover .widget_shopping_cart,
-    .focus .widget_shopping_cart {
-      left: 0;
-      display: block;
-    }
-  }
-
-  ul.products {
-    li.product {
-      width: 30.79667%;
-      float: left;
-      margin-right: 3.8%;
-    }
-    li.product.first {
-      clear: both;
-    }
-    li.product.last {
-      margin-right: 0;
-    }
-  }
-
-  ul.products.columns-1 {
-    li.product {
-      float: none;
-      width: 100%;
-    }
-  }
-
-  ul.products.columns-2 {
-    li.product {
-      width: 48.1%;
-    }
-  }
-
-  ul.products.columns-3 {
-    li.product {
-      width: 30.79667%;
-    }
-  }
-
-  ul.products.columns-4 {
-    li.product {
-      width: 22.15%;
-    }
-  }
-
-  ul.products.columns-5 {
-    li.product {
-      width: 16.96%;
-    }
-  }
-
-  ul.products.columns-6 {
-    li.product {
-      width: 13.49333%;
-    }
-  }
-
-  table.shop_table_responsive {
-    thead {
-      display: table-header-group;
-    }
-    tbody {
-      th {
-        display: table-cell;
-      }
-      tr {
-        th,
-        td {
-          text-align: left;
-        }
-        td {
-          display: table-cell;
-          &::before {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-  /**
- * Checkout
- */
-  .col2-set .form-row-first {
-    float: left;
-    margin-right: 3.8%;
-  }
-
-  .col2-set .form-row-last {
-    float: right;
-    margin-right: 0;
-  }
-
-  .col2-set .form-row-first,
-  .col2-set .form-row-last {
-    width: 48.1%;
-  }
+  
 }
 
 /* #### Mobile Phones Portrait -Apple iPhone 6#### */
@@ -7704,7 +7710,7 @@ WooCommerce styles override
               margin: 0;
 
               .woocommerce-message {
-                padding: 0.5em;
+                font-size: 0.85em;
 
                 a {
                   line-height: 40px;
@@ -7802,8 +7808,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -7932,7 +7937,7 @@ WooCommerce styles override
 
                         button.button {
                           font-size: 1em;
-                          width: 35%;
+                          width: 30%;
                         }
                       }
                     }
@@ -8729,8 +8734,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -8837,7 +8841,7 @@ WooCommerce styles override
 
                     td.actions {
                       button.button {
-                        width: 20%;
+                        width: 23%;
 
                         &:hover {
                           cursor: pointer;
@@ -8845,8 +8849,10 @@ WooCommerce styles override
                       }
 
                       div.coupon {
+                        width: 75%;
                         label {
-                          width: 25%;
+                          width: 20%;
+                          font-size:0.9em;
                         }
 
                         input[type="text"],
@@ -9670,8 +9676,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -10632,8 +10637,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -11550,8 +11554,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -12461,8 +12464,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
@@ -13399,8 +13401,7 @@ WooCommerce styles override
 
               //billing page
               table.shop_table {
-                padding: 1em;
-
+                
                 thead {
                   line-height: 45px;
 
