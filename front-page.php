@@ -21,7 +21,7 @@
 <!--Slider-->
 
 <section id="slider">
-Yesssssssssssssss
+
 	<article id="pageContainer">
 
 		<!-- <div class="bx-wrapper">
