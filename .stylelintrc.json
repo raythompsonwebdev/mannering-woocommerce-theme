@@ -1,16 +1,65 @@
 {
-    "extends": [
-        "stylelint-config-wordpress/scss"
+  "extends": [
+    "stylelint-config-wordpress/scss",
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": ["sass/_normalize.scss"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null,
+    "block-no-empty": null,
+    "no-duplicate-selectors": null,
+    "font-family-no-duplicate-names": null,
+    "selector-class-pattern": null,
+    "number-leading-zero": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "value-list-comma-newline-after": "never-multi-line",
+    "declaration-colon-newline-after": "always-multi-line",
+    "unit-allowed-list": ["em", "rem", "%", "px", "fr", "vh", "s", "vw", "ms"],
+    "at-rule-empty-line-before": [
+      "never",
+      {
+        "ignore": ["after-comment", "inside-block", "blockless-after-blockless"]
+      }
     ],
-    "ignoreFiles": [
-        "sass/_normalize.scss"
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment", "first-nested", "inside-block"]
+      }
     ],
-    "rules": {
-        "font-family-no-missing-generic-family-keyword": null,
-        "no-descending-specificity": null,
-        "block-no-empty": null,
-        "no-duplicate-selectors": null,
-        "font-family-no-duplicate-names": null,
-        "selector-class-pattern": null
+    "declaration-empty-line-before": [
+      "never",
+      {
+        "ignore": [
+          "after-comment",
+          "after-declaration",
+          "inside-single-line-block"
+        ]
+      }
+    ],
+    "indentation": "tab",
+    "color-hex-length": "long",
+    "color-named": null,
+    "selector-no-qualifying-type": [true, { "ignore": ["attribute"] }],
+    "declaration-no-important": true,
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-where-recommended",
+    "comment-whitespace-inside": "always",
+    "comment-empty-line-before": "always",
+    "selector-pseudo-element-colon-notation": "double",
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "keyframe-block-no-duplicate-selectors": true
+  },
+  "overrides": [
+    {
+      "files": ["*.scss", "**/*.scss"],
+      "customSyntax": "postcss-scss"
     }
+  ]
 }

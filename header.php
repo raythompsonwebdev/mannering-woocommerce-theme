@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -20,104 +21,106 @@
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
+
 <head>
-	<?php if ( is_search() ) : ?>
-	<meta name="robots" content="noindex, nofollow" />
+	<?php if (is_search()) : ?>
+		<meta name="robots" content="noindex, nofollow" />
 	<?php endif; ?>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">	
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<title>
-		<?php wp_title( '|', true, 'right' ); ?>
+		<?php wp_title('|', true, 'right'); ?>
 	</title>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>
 
-<div id="wrapper">
+	<div id="wrapper">
 
-<header role="banner">
+		<header role="banner">
 
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		<?php esc_html_e( 'Menu', 'mannering_music' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php esc_html_e('Menu', 'mannering_music'); ?></button>
 
-	<span class="header_icons">
-		<ul>
-			<li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-rss soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
-		</ul>
-	</span>
+			<span class="header_icons">
+				<ul>
+					<li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
+					<li><a href="#"><i class="fa fa-rss soc"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
+				</ul>
+			</span>
 
-	<!---logo-->
+			<!---logo-->
 
-	<?php // Display site icon or first letter as logo. ?>
+			<?php // Display site icon or first letter as logo. 
+			?>
 			<div class="site-logo">
-				<?php $site_title = get_bloginfo( 'name' ); ?>
-				<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php $site_title = get_bloginfo('name'); ?>
+				<a href=" <?php echo esc_url(home_url('/')); ?>" rel="home">
 					<div class="screen-reader-text">
 						<?php
 						/* translators: %1$s:, CMSname: WordPress. */
-						printf( esc_html_e( 'Go to the home page of %1$s', 'mannering_music' ), esc_html( $site_title ) );
+						printf(esc_html_e('Go to the home page of %1$s', 'mannering_music'), esc_html($site_title));
 						?>
 					</div>
 					<?php
-					if ( has_custom_logo() ) :
+					if (has_custom_logo()) :
 						the_custom_logo();
-						else :
-							?>
-					<div class="site-firstletter" aria-hidden="true">
-							<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
-					</div>
+					else :
+					?>
+						<div class="site-firstletter" aria-hidden="true">
+							<?php echo esc_html(substr($site_title, 0, 1)); ?>
+						</div>
 					<?php endif; ?>
 				</a>
 			</div>
 
 			<?php
-			if ( is_front_page() || is_page() ) :
-				?>
+			if (is_front_page() || is_page()) :
+			?>
 				<hgroup>
 					<h1 id="logo"><span>MANNERING</span><span>MU</span>SIC</h1>
-					<?php elseif ( is_home() ) : ?>
-				<hgroup>
-					<h1 id="logo"><span>MANNERING</span><span>BL</span>OG</h1>
+				<?php elseif (is_home()) : ?>
+					<hgroup>
+						<h1 id="logo"><span>MANNERING</span><span>BL</span>OG</h1>
 					<?php else : ?>
-				<hgroup>
-					<h1 id="logo"><span>MANNERING</span><span>STO</span>RE</h1>
+						<hgroup>
+							<h1 id="logo"><span>MANNERING</span><span>STO</span>RE</h1>
 						<?php
-				endif;
+					endif;
 
-					$description = get_bloginfo( 'description', 'mannering_music' );
+					$description = get_bloginfo('description', 'mannering_music');
 
-					if ( esc_html( $description ) || is_customize_preview() ) :
+					if (esc_html($description) || is_customize_preview()) :
 						?>
-				<h2 class="site-description">
-						<?php echo esc_html( $description ); ?>
-				</h2>
-			</hgroup>
-			<?php endif; ?>
+							<h2 class="site-description">
+								<?php echo esc_html($description); ?>
+							</h2>
+						</hgroup>
+					<?php endif; ?>
 
-</header>
+		</header>
 
-<!---navigation-->
-<nav role="navigation">
+		<!---navigation-->
+		<nav>
 
-	<?php
-	// Checking if there's anything in Top Menu.
-	// if ( has_nav_menu( 'Primary Menu' ) ) {
-	// If there is, adds the Top Menu area.
-	wp_nav_menu(
-		array(
-			'menu'      => 'main',
-			'container' => 'ul',
-		)
-	);
-	// }
-	?>
-</nav>
+			<?php
+			// Checking if there's anything in Top Menu.
+			// if ( has_nav_menu( 'Primary Menu' ) ) {
+			// If there is, adds the Top Menu area.
+			wp_nav_menu(
+				array(
+					'menu'      => 'main',
+					'container' => 'ul',
+				)
+			);
+			// }
+			?>
+		</nav>
 
-<div id="content" class="group">
+		<div id="content" class="group">

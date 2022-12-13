@@ -1,69 +1,60 @@
+jQuery(document).ready(($) => {
+	const channelTitle = 'MrBullitan';
 
-jQuery(document).ready(function($){
+	$.get(
+		'https://www.googleapis.com/youtube/v3/channels',
+		{
+			part: 'contentDetails',
+			forUsername: channelTitle,
+			key: '',
+		}, //
 
-  var channelTitle = 'MrBullitan';
+		(data) => {
+			$.each(data.items, (i, item) => {
+				console.log(item);
 
-  $.get('https://www.googleapis.com/youtube/v3/channels', {
-      part:'contentDetails',
-      forUsername:channelTitle,
-      key: ''},//
+				const pid = item.contentDetails.relatedPlaylists.uploads;
 
-      function(data){
+				getVids(pid);
+			}); //each
+		} //function
+	); //get
 
-        $.each(data.items, function(i, item){
+	function getVids(pid) {
+		$.get(
+			'https://www.googleapis.com/youtube/v3/playlistItems',
+			{
+				part: 'snippet',
+				maxResults: 5,
+				playlistId: pid,
+				key: '',
+			}, ////Api Key
 
-          console.log(item);
+			(data) => {
+				let output;
 
-          var pid = item.contentDetails.relatedPlaylists.uploads;
+				$.each(data.items, (i, item) => {
+					//console.log(item);
 
-          getVids(pid);
+					const {VideoId} = item.snippet.resourceId;
+					const videTitle = item.snippet.title;
+					const videDesc = item.snippet.description;
+					const videThumb = item.snippet.thumbnails.default.url;
 
-        })//each
-      }//function
+					output =
+						'<article class="you_tube_box"><h1>' +
+						videTitle +
+						'</h1><figure class="you_tube_thumb"><img src="' +
+						videThumb +
+						'" alt=""><figcaption class="u_tube"><span class="u_tube_button"><a href="">View</a></span></li></figcaption></figure></article>';
 
-  );//get
+					//<li><iframe src\"//www.youtube.cmo/embed/'+VideoId+'\"></iframe></li>
+					//<p>' +videDesc+ '</p>
 
-  function getVids(pid){
-    $.get(
-      "https://www.googleapis.com/youtube/v3/playlistItems",{
-        part:'snippet',
-        maxResults: 5,
-        playlistId:pid,
-        key:''},////Api Key
-
-        function(data){
-
-          var output;
-
-          $.each(data.items, function( i, item){
-
-            //console.log(item);
-
-            var VideoId = item.snippet.resourceId.VideoId;
-            var videTitle = item.snippet.title;
-            var videDesc = item.snippet.description;
-            var videThumb = item.snippet.thumbnails.default.url;
-
-            output = '<article class="you_tube_box"><h1>' +videTitle+ 
-            '</h1><figure class="you_tube_thumb"><img src="' +videThumb+ 
-            '" alt=""><figcaption class="u_tube"><span class="u_tube_button"><a href="">View</a></span></li></figcaption></figure></article>';
-
-            //<li><iframe src\"//www.youtube.cmo/embed/'+VideoId+'\"></iframe></li>
-            //<p>' +videDesc+ '</p>
-
-            //Append to results listStyleType
-                    $('.results').append(output);
-
-
-          })//each
-        }//function
-
-    );//get
-
-  }//function
-
-
+					//Append to results listStyleType
+					$('.results').append(output);
+				}); //each
+			} //function
+		); //get
+	} //function
 });
-
-
-
