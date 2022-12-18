@@ -40,24 +40,33 @@
 
 	<div id="wrapper">
 
-		<header role="banner">
+		<header id="mannering-header">
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<?php esc_html_e('Menu', 'mannering_music'); ?></button>
 
-			<span class="header_icons">
-				<ul>
-					<li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
-					<li><a href="#"><i class="fa fa-rss soc"></i></a></li>
-					<li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
-				</ul>
-			</span>
+
+
+			<?php
+			// Checking if there's anything in Top Menu.
+			// if ( has_nav_menu( 'Primary Menu' ) ) {
+			// If there is, adds the Top Menu area.
+			wp_nav_menu(
+				array(
+					'menu'      => 'shopper',
+					'container' => 'nav',
+					'container_id' => 'shopper-menu',
+					'theme_location' => 'Shopper'
+				)
+			);
+			// }
+			?>
+
+
 
 			<!---logo-->
 
-			<?php // Display site icon or first letter as logo. 
+			<?php // Display site icon or first letter as logo.
 			?>
 			<div class="site-logo">
 				<?php $site_title = get_bloginfo('name'); ?>
@@ -98,16 +107,16 @@
 
 					if (esc_html($description) || is_customize_preview()) :
 						?>
-							<h2 class="site-description">
+							<p class="site-description">
 								<?php echo esc_html($description); ?>
-							</h2>
+							</p>
 						</hgroup>
 					<?php endif; ?>
 
 		</header>
 
 		<!---navigation-->
-		<nav>
+		<nav id="mannering-main-nav">
 
 			<?php
 			// Checking if there's anything in Top Menu.

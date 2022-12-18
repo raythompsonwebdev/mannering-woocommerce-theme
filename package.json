@@ -17,16 +17,10 @@
     "url": "https://github.com/Automattic/mannering_music/issues"
   },
   "devDependencies": {
-    "@csstools/postcss-sass": "^5.0.1",
-    "@wordpress/babel-preset-default": "^7.6.0",
-    "@wordpress/scripts": "^24.6.0",
-    "@wordpress/stylelint-config": "^21.5.0",
-    "dir-archiver": "^2.1.0",
-    "node-sass": "^8.0.0",
-    "rtlcss": "^4.0.0",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "@wordpress/scripts": "^19.2.2",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^7.0.1",
+    "rtlcss": "^3.5.0"
   },
   "rtlcssConfig": {
     "options": {
@@ -42,11 +36,13 @@
     "map": false
   },
   "scripts": {
+    "start": "wp-scripts start",
+    "packages-update": "wp-scripts packages-update",
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'assets/css/*.scss'",
-    "lint:js": "wp-scripts lint-js 'assets/js/*.js'",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../mannering_music.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
   }
 }

@@ -22,7 +22,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Generic
@@ -48,11 +48,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Accessibility
 	- Alignments
 
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Generic
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Normalize
 --------------------------------------------- */
@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -390,9 +390,9 @@ html {
 	box-sizing: border-box;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Base
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Typography
 --------------------------------------------- */
@@ -437,7 +437,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #eeeeee;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -455,7 +455,7 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted #666666;
 	cursor: help;
 }
 
@@ -472,11 +472,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #ffffff;
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #cccccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -562,7 +562,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: #cccccc #cccccc #bbbbbb;
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
@@ -574,7 +574,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	border-color: #cccccc #bbbbbb #aaaaaa;
 }
 
 button:active,
@@ -585,7 +585,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #aaaaaa #bbbbbb #bbbbbb;
 }
 
 input[type="text"],
@@ -604,8 +604,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #666666;
+	border: 1px solid #cccccc;
 	border-radius: 3px;
 	padding: 3px;
 }
@@ -626,24 +626,24 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: #111111;
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 }
 
 textarea {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Layouts
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Components
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Navigation
 --------------------------------------------- */
@@ -702,13 +702,10 @@ textarea {
 .main-navigation.toggled ul {
 	display: block;
 }
-
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
-
 	.main-navigation ul {
 		display: flex;
 	}
@@ -874,9 +871,9 @@ textarea {
 	display: block;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Plugins
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
@@ -892,9 +889,9 @@ textarea {
 	display: block;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Utilities
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 
 /* Accessibility
 --------------------------------------------- */

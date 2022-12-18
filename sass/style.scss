@@ -13,8 +13,8 @@ Domain Path: /languages
 
 mannering-music WordPress Theme, Copyright 2016 WordPress.org
 
-mannering-music is based on Underscores http://underscores.me/, 
-(C) 2012-2017 Automattic, Inc. 
+mannering-music is based on Underscores http://underscores.me/,
+(C) 2012-2017 Automattic, Inc.
 License: GNU General Public License v2 or later
 
 */
@@ -22,7 +22,6 @@ License: GNU General Public License v2 or later
 @import "partials/base";
 @import "partials/fonts";
 @import "partials/variables";
-@import "partials/mixins";
 
 /*1920*/
 @media only screen and (max-width: 1920px) {
@@ -31,7 +30,7 @@ License: GNU General Public License v2 or later
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    width: 80%;
+    width: 90%;
     height: auto;
     font-family: ($FontList);
 
@@ -49,9 +48,8 @@ License: GNU General Public License v2 or later
       box-shadow: 0 0 50px $color5;
     }
 
-    header {
+    #mannering-header {
       height: 90px;
-      clear: both;
 
       .site-logo {
         position: relative;
@@ -73,11 +71,10 @@ License: GNU General Public License v2 or later
           text-decoration: none;
           line-height: 40px;
           width: 83%;
-
           height: auto;
 
           /* Text meant only for screen readers. */
-          div.screen-reader-text {
+          .screen-reader-text {
             clip: rect(1px, 1px, 1px, 1px);
             position: absolute !important;
             height: 1px;
@@ -105,7 +102,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
             font-weight: normal;
             text-align: center;
@@ -134,9 +131,8 @@ License: GNU General Public License v2 or later
         display: block;
         float: left;
         height: 4em;
-        font-family: ($FontList);
 
-        h1#logo {
+        #logo {
           margin: 0;
           font-size: 2.1em;
           width: 100%;
@@ -166,8 +162,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
-          font-family: ($FontList);
+        #logo-blog {
           margin: 0;
           font-size: 2.1em;
           height: 40px;
@@ -195,8 +190,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
-          font-family: ($FontList);
+        .site-description {
           float: none;
           display: block;
           width: 100%;
@@ -211,29 +205,29 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         height: 40px;
         float: right;
-        width: 32%;
+        width: 30%;
         display: block;
         text-align: center;
-        ul {
+        #menu-shopper {
           width: 100%;
           margin: 0;
           padding: 0;
           height: auto;
-          display:flex;
+          display: flex;
+          justify-content: space-between;
 
-          li {
-            width: 20%;
-            float: left;
-            display: block;
+          .menu-item {
+            width: 32%;
             font-size: 1em;
             height: auto;
+            color: $color2;
+            background-color: $color9;
 
             a {
               margin: 0;
-              font-size: 1.3em;
               text-decoration: none;
               color: $color1;
               display: block;
@@ -253,10 +247,10 @@ License: GNU General Public License v2 or later
               }
             }
           }
-        }        
+        }
       }
 
-      p.headp {
+      .headp {
         font-weight: bold;
         font-size: 1em;
       }
@@ -266,32 +260,22 @@ License: GNU General Public License v2 or later
       display: none;
     }
 
-    nav {
+    #mannering-main-nav {
       width: 100%;
       height: 45px;
       margin-bottom: 1em;
 
       ul#menu-main {
-        width: 70%;
+        width: 100%;
         height: 100%;
         margin: 0;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: space;
-        justify-content: space-between;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
         align-items: flex-start;
+        gap: 0.25em;
 
         li.menu-item {
-          width: 19.5%;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
+          width: 12%;
           flex: 0 1 auto;
           height: 100%;
           a {
@@ -304,7 +288,7 @@ License: GNU General Public License v2 or later
             letter-spacing: 0.1em;
             font-weight: normal;
             text-align: center;
-            text-decoration:none;
+            text-decoration: none;
 
             &:hover {
               font-weight: bold;
@@ -317,16 +301,16 @@ License: GNU General Public License v2 or later
     }
 
     aside#side-bar {
-      width:20%;      
+      width: 20%;
       display: inline-block;
       background-color: $color6;
       height: auto;
-      margin: 0; 
+      margin: 0;
 
       article.side-bar-box {
         width: 32%;
         margin: 0.5em;
-        
+
         h2 {
           font-size: 1.3em;
           background-color: $color9;
@@ -432,20 +416,6 @@ License: GNU General Public License v2 or later
       min-height: 600px;
       color: $color2;
 
-      h1 {
-        font-size: 1.5em;
-        width: 100%;
-        color: $color2;
-        height: auto;
-        font-family: ($FontList);
-        line-height: 45px;
-        text-align: center;
-        padding: 0.5em 0;
-        margin: 0;
-        display: block;
-        font-weight: normal;
-      }
-
       h2 {
         font-size: 1.4em;
         margin: 0;
@@ -453,7 +423,6 @@ License: GNU General Public License v2 or later
         color: $color2;
         height: auto;
         display: block;
-        font-family: ($FontList);
         line-height: 40px;
         text-align: left;
         padding: 0.5em 0;
@@ -461,25 +430,15 @@ License: GNU General Public License v2 or later
       }
 
       p {
-        font-size: 0.9em;
-        line-height: 1.6em;
-        width: 100%;
-        color: $color2;
-        letter-spacing: 0.1em;
-        margin: 0 0 0.5em 0;
         font-weight: normal;
         display: block;
-      }      
+      }
 
-      /*global contact form style*/
       form {
-        margin: 0 auto;
         font-weight: normal;
 
         label {
           display: block;
-          line-height: 35px;
-          color: $color7;
           font-size: 1em;
 
           span {
@@ -491,8 +450,6 @@ License: GNU General Public License v2 or later
         input[type="text"],
         input[type="password"],
         input[type="submit"] {
-          font-family: ($FontList);
-
           display: block;
           font-weight: normal;
         }
@@ -503,7 +460,7 @@ License: GNU General Public License v2 or later
         input[type="tel"] {
           width: 100%;
           border: 2px solid $color8;
-          @include boredrady(5px);
+          border-radius: 5px;
           background: $color2;
           display: block;
           padding: 0.2em;
@@ -635,7 +592,7 @@ License: GNU General Public License v2 or later
                       li {
                         color: $color8;
                         padding: 8px 20px;
-                        background: url(../images/list_img.png) no-repeat 0px;
+                        background: url("../images/list_img.png") no-repeat 0px;
                         cursor: pointer;
 
                         &:hover {
@@ -652,10 +609,10 @@ License: GNU General Public License v2 or later
                       background-color: $color7;
                       color: $color2;
                       text-decoration: none;
-                      @include boredrady(5px);
+                      border-radius: 5px;
                       outline: 0;
                       text-align: center;
-                      @include transitioner(all 0.2s ease-in-out);
+                      transition: all 0.2s ease-in-out;
                       margin-top: 0.5em;
                       text-align: center;
 
@@ -670,7 +627,7 @@ License: GNU General Public License v2 or later
 
               .bx-prev {
                 left: 10px;
-                background: url(images/controls.png) no-repeat 0 -32px;
+                background: url("images/controls.png") no-repeat 0 -32px;
               }
             }
 
@@ -680,7 +637,7 @@ License: GNU General Public License v2 or later
 
               .bx-prev {
                 left: 10px;
-                background: url(images/controls.png) no-repeat 0 -32px;
+                background: url("images/controls.png") no-repeat 0 -32px;
               }
             }
 
@@ -1116,12 +1073,11 @@ License: GNU General Public License v2 or later
                 margin: 0px;
                 padding: 0px;
                 border: 2px solid $comment-border;
-                @include boredrady(5px);
-                @include mannshadow(0 0 0.5em rgba(0, 0, 0, 0.8));
+                border-radius: 5px;
+                box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
                 color: $color2;
                 background: $color1;
                 font-weight: bold;
-                -webkit-appearance: none;
                 height: 35px;
               }
             }
@@ -1152,19 +1108,17 @@ License: GNU General Public License v2 or later
       }
 
       /*front-page grid*/
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        /*clear: both;*/
+      .featured-section {
         padding: 0;
         margin: 0 auto;
         width: 100%;
-        height: 380px;
+        height: auto;
 
-        h1 {
-          clear: both;
+        .featured-section-header {
           display: block;
           letter-spacing: 0.1em;
           font-size: 1.2em;
@@ -1179,36 +1133,27 @@ License: GNU General Public License v2 or later
         }
 
         .flex-wrapper {
-          display: block;
           width: 100%;
-          display: -webkit-flex;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-          -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
           justify-content: flex-start;
-          -webkit-align-items: flex-start;
-          -ms-flex-align: start;
           align-items: flex-start;
           border: 2px solid $color5;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 19%;
             -webkit-flex: 1 0 auto;
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
             margin: 0.25em;
-            @include transitioner(all 0.5s ease-in-out);
-            @include boredrady(5px);
+            transition: all 0.5s ease-in-out;
+            border-radius: 5px;
             display: block;
             float: left;
             padding: 0;
             text-align: center;
 
-            a.images_1_of_5 {
+            .album-product-image {
               max-width: 100%;
               margin: 1em 0;
               cursor: pointer;
@@ -1216,12 +1161,12 @@ License: GNU General Public License v2 or later
 
               img {
                 border: 2px solid $color3;
-                @include transitioner(all 0.5s ease-in-out);
+                transition: all 0.5s ease-in-out;
                 max-width: 50%;
                 margin: auto;
 
                 &:hover {
-                  @include transforming-things(scale(1.05));
+                  transform: scale(1.05);
                   border: 3px solid $color1;
                 }
               }
@@ -1243,10 +1188,10 @@ License: GNU General Public License v2 or later
                 color: $color2;
                 text-align: center;
                 cursor: pointer;
-                @include transitioner(all 0.2s ease-in-out);
+                transition: all 0.2s ease-in-out;
                 text-decoration: none;
                 font-size: 0.95em;
-                @include boredrady(0px 0px 3px 3px);
+                border-radius: 0px 0px 3px 3px;
 
                 &:hover {
                   background-color: $color10;
@@ -1260,8 +1205,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 line-height: 25px;
                 margin: 0;
                 background-color: $color5;
@@ -1272,7 +1217,7 @@ License: GNU General Public License v2 or later
                 font-weight: normal;
                 letter-spacing: 0.1em;
                 font-family: ($FontList);
-                @include boredrady(5px);
+                border-radius: 5px;
               }
 
               p {
@@ -1290,14 +1235,6 @@ License: GNU General Public License v2 or later
 
       /*Music-Page-Tabs-Menu*/
       div#container {
-        .audioExcerpt {
-          width: 100%;
-          margin: 5px auto;
-          display: block;
-          height: auto;
-        }
-
-        /* Navigation - Tabs */
         ul#tabs {
           list-style-type: none;
           position: relative;
@@ -1410,7 +1347,7 @@ License: GNU General Public License v2 or later
               font-size: 1.5em;
               text-align: center;
               color: $color9;
-              @include transitioner(all 0.2s ease-in-out);
+              transition: all 0.2s ease-in-out;
               display: block;
               height: 100%;
               line-height: 46px;
@@ -1510,22 +1447,12 @@ License: GNU General Public License v2 or later
         padding: 0;
         margin: 0 auto;
         height: auto;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
         justify-content: flex-start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
         align-items: flex-start;
 
         h1 {
-          -webkit-align-self: center;
-          -ms-flex-item-align: center;
           align-self: center;
           width: 100%;
           padding: 0;
@@ -1541,15 +1468,11 @@ License: GNU General Public License v2 or later
         }
 
         figure.project-item {
-          -webkit-flex: 0 0 auto;
-          -ms-flex: 0 0 auto;
           flex: 0 0 auto;
           margin-bottom: 30px;
           position: relative;
           overflow: hidden;
           border: 3px solid $color4;
-          -moz-backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           width: 18%;
           margin: 1%;
@@ -1572,12 +1495,12 @@ License: GNU General Public License v2 or later
             background: rgba(51, 51, 51, 0.9);
             text-align: center;
             opacity: 0;
-            @include transitioner(all 200ms ease-in-out);
-            @include transforming-things(rotate(45deg));
+            transition: all 200ms ease-in-out;
+            transform: rotate(45deg);
 
             &:hover {
               opacity: 1;
-              @include transforming-things(rotate(0));
+              transform: rotate(0);
               cursor: pointer;
             }
 
@@ -1667,7 +1590,7 @@ License: GNU General Public License v2 or later
         .product-box {
           border: 2px solid $color8;
           padding: 10px 1% 1% 1%;
-          @include boredrady(5px);
+          border-radius: 5px;
           background-color: $color6;
           margin: 0.5em;
           width: 31%;
@@ -1687,7 +1610,7 @@ License: GNU General Public License v2 or later
             width: 100%;
             line-height: 30px;
             font-weight: normal;
-            @include boredrady("none");
+            border-radius: "none";
             text-align: center;
           }
 
@@ -1916,7 +1839,7 @@ License: GNU General Public License v2 or later
               &:hover {
                 background-color: $color4;
                 text-decoration: none !important;
-                @include transitioner(all 0.2s ease-in-out);
+                transition: all 0.2s ease-in-out;
               }
             }
           }
@@ -1928,7 +1851,7 @@ License: GNU General Public License v2 or later
         margin: 5% auto;
         width: 100%;
         display: block;
-        @include boredrady(5px);
+        border-radius: 5px;
 
         h1 {
           background-color: $color6;
@@ -1940,7 +1863,7 @@ License: GNU General Public License v2 or later
           display: inline-block;
           font-size: 1.4em;
           letter-spacing: 0.2em;
-          @include boredrady(5px 5px 0 0);
+          border-radius: 5px 5px 0 0;
           padding: 0.5em 0;
         }
 
@@ -1954,8 +1877,8 @@ License: GNU General Public License v2 or later
           text-align: center;
           line-height: 40px;
           color: $color2;
-          @include boredrady(5px 5px 0 0);
-          @include transitioner(all 0.5s ease-in-out);
+          border-radius: 5px 5px 0 0;
+          transition: all 0.5s ease-in-out;
 
           &:hover {
             background-color: $color2;
@@ -1971,7 +1894,7 @@ License: GNU General Public License v2 or later
           padding: 3%;
           background: $color9;
           display: block;
-          @include boredrady(5px);
+          border-radius: 5px;
 
           #searchForm {
             label {
@@ -1980,7 +1903,7 @@ License: GNU General Public License v2 or later
 
             input[type="text"] {
               border: 2px solid $color8;
-              @include boredrady(5px);
+              border-radius: 5px;
               background: $color2;
               display: inline-block;
               padding: 0;
@@ -1994,7 +1917,7 @@ License: GNU General Public License v2 or later
 
             select {
               border: 2px solid $color8;
-              @include boredrady(5px);
+              border-radius: 5px;
               background: $color2;
               display: inline-block;
               padding: 0;
@@ -2006,7 +1929,6 @@ License: GNU General Public License v2 or later
             }
 
             #search_btn {
-              font-family: ($FontList);
               letter-spacing: 0.1em;
               width: 15%;
               height: 35px;
@@ -2015,9 +1937,8 @@ License: GNU General Public License v2 or later
               font-size: 1em;
               display: inline-block;
               border: 2px solid $comment-border;
-              @include boredrady(5px);
+              border-radius: 5px;
               background-color: $color1;
-              -webkit-appearance: none;
               font-weight: normal;
 
               &:hover {
@@ -2053,7 +1974,7 @@ License: GNU General Public License v2 or later
           width: 98%;
           margin: 5% auto;
           border: solid $color5 1px;
-          @include boredrady(5px);
+          border-radius: 5px;
 
           h2 {
             text-decoration: none;
@@ -2067,7 +1988,7 @@ License: GNU General Public License v2 or later
             margin: 0;
             letter-spacing: 0.2em;
             font-weight: normal;
-            @include boredrady(5px);
+            border-radius: 5px;
           }
 
           span {
@@ -2087,14 +2008,14 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       background-color: $color6;
       clear: both;
       height: 155px;
       width: 100%;
       margin: 0;
       padding: 1%;
-      @include boredrady(5px);
+      border-radius: 5px;
 
       .social-btns {
         height: 40px;
@@ -2189,16 +2110,14 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /*1440*/
 @media only screen and (max-width: 1440px) {
   #wrapper {
-    width: 85%;
+    width: 95%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -2209,7 +2128,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -2217,7 +2136,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -2237,7 +2156,7 @@ License: GNU General Public License v2 or later
         width: 50%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 2em;
 
           span {
@@ -2249,7 +2168,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 2em;
           height: 40px;
 
@@ -2262,50 +2181,43 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.7em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
           }
         }
-
-        
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        
         li.menu-item {
           height: 45px;
 
@@ -2404,10 +2316,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.4em;
-      }
-
       h2 {
         font-size: 1.3em;
       }
@@ -2415,17 +2323,16 @@ License: GNU General Public License v2 or later
       p {
         font-size: 0.85em;
       }
-      
+
       form {
         margin: 0 auto;
-        font-size: 0.9em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
-          height: 100px;
+          display: block;
         }
       }
 
@@ -2757,14 +2664,14 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        height: 320px;
+      .featured-section {
+        height: auto;
 
-        h1 {
+        .featured-section-header {
           font-size: 1.1em;
           padding: 0.5em 0;
         }
@@ -2772,12 +2679,12 @@ License: GNU General Public License v2 or later
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 19%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               max-width: 100%;
 
               cursor: pointer;
@@ -2807,8 +2714,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.75em;
               }
 
@@ -3217,7 +3124,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -3271,16 +3178,14 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /*1280*/
 @media only screen and (max-width: 1280px) {
   #wrapper {
-    width: 90%;
+    width: 95%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -3291,7 +3196,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -3299,7 +3204,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -3319,7 +3224,7 @@ License: GNU General Public License v2 or later
         width: 50%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.9em;
 
           span {
@@ -3331,7 +3236,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.9em;
           height: 40px;
 
@@ -3344,32 +3249,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.7em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -3377,16 +3278,16 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        width: 80%;
+        width: 100%;
 
         li.menu-item {
           height: 45px;
@@ -3486,10 +3387,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.3em;
-      }
-
       h2 {
         font-size: 1.2em;
       }
@@ -3498,13 +3395,11 @@ License: GNU General Public License v2 or later
         font-size: 0.85em;
       }
 
-
       form {
         margin: 0 auto;
-        font-size: 0.9em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -3840,24 +3735,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 19%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               max-width: 100%;
 
               cursor: pointer;
@@ -3885,8 +3780,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.7em;
               }
 
@@ -4289,7 +4184,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -4343,8 +4238,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /*1024*/
@@ -4352,7 +4245,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 96%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -4363,7 +4256,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -4371,7 +4264,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -4391,7 +4284,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.8em;
 
           span {
@@ -4403,7 +4296,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.8em;
           height: 40px;
 
@@ -4416,32 +4309,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.65em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -4449,16 +4338,16 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        width: 90%;
+        width: 100%;
 
         li.menu-item {
           height: 45px;
@@ -4558,10 +4447,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.2em;
-      }
-
       h2 {
         font-size: 1.1em;
       }
@@ -4572,10 +4457,9 @@ License: GNU General Public License v2 or later
 
       form {
         margin: 0 auto;
-        font-size: 0.85em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -4897,26 +4781,26 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        height: 300px;
+      .featured-section {
+        height: auto;
 
-        h1 {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 19%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               max-width: 100%;
 
               cursor: pointer;
@@ -4944,8 +4828,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.65em;
               }
 
@@ -5342,7 +5226,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -5396,15 +5280,13 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 @media only screen and (max-width: 960px) {
   #wrapper {
     width: 96%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -5415,7 +5297,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -5423,7 +5305,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -5443,7 +5325,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.7em;
 
           span {
@@ -5455,7 +5337,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.7em;
           height: 40px;
 
@@ -5468,32 +5350,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.65em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -5501,12 +5379,12 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
@@ -5610,10 +5488,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.3em;
-      }
-
       h2 {
         font-size: 1.2em;
       }
@@ -5622,13 +5496,11 @@ License: GNU General Public License v2 or later
         margin: 0 0 0.5em 0;
       }
 
-
       form {
         margin: 0 auto;
-        font-size: 0.8em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -5962,26 +5834,26 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        height: 280px;
+      .featured-section {
+        height: auto;
 
-        h1 {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 18.5%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -6007,8 +5879,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.6em;
                 line-height: 20px;
               }
@@ -6403,7 +6275,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -6457,8 +6329,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /*800*/
@@ -6466,7 +6336,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -6477,7 +6347,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -6485,7 +6355,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -6505,7 +6375,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.6em;
 
           span {
@@ -6517,7 +6387,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.6em;
           height: 40px;
 
@@ -6530,32 +6400,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.6em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -6563,16 +6429,15 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        
         li.menu-item {
           height: 45px;
 
@@ -6671,10 +6536,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.3em;
-      }
-
       h2 {
         font-size: 1.2em;
       }
@@ -6683,13 +6544,11 @@ License: GNU General Public License v2 or later
         margin: 0 0 0.5em 0;
       }
 
-
       form {
         margin: 0 auto;
-        font-size: 0.8em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -7025,24 +6884,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 18.5%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -7068,8 +6927,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.55em;
               }
 
@@ -7463,7 +7322,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -7517,8 +7376,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait -Apple iPhone 6#### */
@@ -7526,7 +7383,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -7537,7 +7394,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -7545,7 +7402,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -7565,7 +7422,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.5em;
 
           span {
@@ -7577,7 +7434,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.5em;
           height: 40px;
 
@@ -7590,32 +7447,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.6em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -7623,16 +7476,15 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        
         li.menu-item {
           height: 45px;
 
@@ -7731,10 +7583,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.2em;
-      }
-
       h2 {
         font-size: 1.1em;
       }
@@ -7748,7 +7596,7 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -8104,24 +7952,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 31.3%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -8147,8 +7995,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.55em;
               }
 
@@ -8542,7 +8390,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -8596,8 +8444,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait #### */
@@ -8605,7 +8451,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -8615,7 +8461,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -8623,7 +8469,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -8643,7 +8489,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.4em;
           height: 35px;
 
@@ -8656,7 +8502,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.5em;
           height: 35px;
 
@@ -8669,32 +8515,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.6em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -8702,16 +8544,15 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        
         li.menu-item {
           height: 45px;
 
@@ -8810,10 +8651,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.2em;
-      }
-
       h2 {
         font-size: 1.1em;
       }
@@ -8822,12 +8659,11 @@ License: GNU General Public License v2 or later
         margin: 0 0 0.5em 0;
       }
 
-
       form {
         margin: 0 auto;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -9162,26 +8998,26 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        height: 420px;
+      .featured-section {
+        height: auto;
 
-        h1 {
+        .featured-section-header {
           font-size: 1em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 31.3%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -9207,8 +9043,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.5em;
               }
 
@@ -9604,7 +9440,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -9658,8 +9494,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### I Phone 5 Landscape #### */
@@ -9667,7 +9501,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -9677,7 +9511,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -9685,7 +9519,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -9705,7 +9539,7 @@ License: GNU General Public License v2 or later
         width: 47%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.2em;
 
           span {
@@ -9717,7 +9551,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.2em;
 
           span {
@@ -9729,32 +9563,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.55em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 30%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -9762,16 +9592,15 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 1em;
       }
     }
 
-    nav {
+    #mannering-main-nav {
       height: 45px;
 
       ul#menu-main {
-        
         li.menu-item {
           height: 45px;
 
@@ -9870,10 +9699,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1.1em;
-      }
-
       h2 {
         font-size: 1em;
       }
@@ -9882,12 +9707,11 @@ License: GNU General Public License v2 or later
         margin: 0 0 0.5em 0;
       }
 
-
       form {
         margin: 0 auto;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -10226,24 +10050,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 0.9em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 31.3%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -10271,8 +10095,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.5em;
               }
 
@@ -10668,7 +10492,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
 
@@ -10722,8 +10546,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait #### */
@@ -10731,7 +10553,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
       height: 110px;
 
@@ -10742,7 +10564,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -10750,7 +10572,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -10770,7 +10592,7 @@ License: GNU General Public License v2 or later
         width: 84%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.5em;
           height: 30px;
           line-height: 35px;
@@ -10784,7 +10606,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.5em;
           height: 30px;
           line-height: 35px;
@@ -10798,36 +10620,32 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.45em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 50%;
         position: absolute;
         z-index: 150;
         left: 0.5em;
         top: 65px;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 100%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -10835,7 +10653,7 @@ License: GNU General Public License v2 or later
         }
       }
 
-      p.headp {
+      .headp {
         font-size: 0.8em;
       }
     }
@@ -10874,7 +10692,7 @@ License: GNU General Public License v2 or later
       text-decoration: underline;
     }
 
-    nav {
+    #mannering-main-nav {
       position: fixed;
       top: 7.2em;
       z-index: 100;
@@ -10918,7 +10736,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    nav.hide {
+    #mannering-main-nav.hide {
       left: -5.5em;
     }
 
@@ -11006,10 +10824,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1em;
-      }
-
       h2 {
         font-size: 1em;
       }
@@ -11017,7 +10831,6 @@ License: GNU General Public License v2 or later
       p {
         margin: 0 0 0.5em 0;
       }
-
 
       .wp-playlist-item-title {
         font-size: 0.8em;
@@ -11028,7 +10841,7 @@ License: GNU General Public License v2 or later
         font-size: 0.7em;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -11364,24 +11177,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 0.9em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 47.3%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -11407,8 +11220,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.6em;
               }
 
@@ -11805,7 +11618,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
         width: 45%;
@@ -11858,8 +11671,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait #### */
@@ -11867,7 +11678,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
       height: 110px;
 
@@ -11878,7 +11689,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -11886,7 +11697,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -11906,7 +11717,7 @@ License: GNU General Public License v2 or later
         width: 70%;
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.4em;
 
           span {
@@ -11918,7 +11729,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.4em;
 
           span {
@@ -11930,33 +11741,29 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.5em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 50%;
         top: 70px;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -11990,7 +11797,7 @@ License: GNU General Public License v2 or later
       text-decoration: underline;
     }
 
-    nav {
+    #mannering-main-nav {
       top: 7.2em;
 
       ul#menu-main {
@@ -12015,7 +11822,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    nav.hide {
+    #mannering-main-nav.hide {
       left: -5.5em;
     }
 
@@ -12103,10 +11910,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 1em;
-      }
-
       h2 {
         font-size: 1em;
       }
@@ -12115,12 +11918,11 @@ License: GNU General Public License v2 or later
         font-size: 0.8em;
       }
 
-
       form {
         margin: 0 auto;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -12452,24 +12254,24 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 0.9em;
         }
 
         .flex-wrapper {
           display: block;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 47.3%;
 
             margin: 0.25em;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -12495,8 +12297,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.5em;
               }
 
@@ -12893,7 +12695,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
         width: 45%;
@@ -12946,8 +12748,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait #### */
@@ -12955,7 +12755,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -12965,7 +12765,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -12973,7 +12773,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -12993,7 +12793,7 @@ License: GNU General Public License v2 or later
         height: 4em;
         width: 82%;
 
-        h1#logo {
+        #logo {
           font-size: 1.3em;
 
           span {
@@ -13005,7 +12805,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.3em;
 
           span {
@@ -13017,32 +12817,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.5em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 55%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -13077,7 +12873,7 @@ License: GNU General Public License v2 or later
       text-decoration: underline;
     }
 
-    nav {
+    #mannering-main-nav {
       top: 7.2em;
 
       ul#menu-main {
@@ -13102,7 +12898,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    nav.hide {
+    #mannering-main-nav.hide {
       left: -5.5em;
     }
 
@@ -13190,10 +12986,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 0.9em;
-      }
-
       h2 {
         font-size: 0.85em;
       }
@@ -13201,7 +12993,6 @@ License: GNU General Public License v2 or later
       p {
         font-size: 0.8em;
       }
-
 
       .wp-playlist-item-title {
         font-size: 0.7em;
@@ -13211,7 +13002,7 @@ License: GNU General Public License v2 or later
         margin: 0 auto;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -13536,14 +13327,14 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
+      .featured-section {
         height: auto;
 
-        h1 {
+        .featured-section-header {
           font-size: 0.8em;
         }
 
@@ -13560,13 +13351,13 @@ License: GNU General Public License v2 or later
           -ms-flex-align: center;
           align-items: center;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 70%;
             float: none;
             display: block;
             margin: 4em auto;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -13592,8 +13383,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.7em;
               }
 
@@ -13999,7 +13790,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         height: 40px;
         width: 45%;
@@ -14052,8 +13843,6 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }
 
 /* #### Mobile Phones Portrait #### */
@@ -14061,7 +13850,7 @@ License: GNU General Public License v2 or later
   #wrapper {
     width: 98%;
 
-    header {
+    #mannering-header {
       clear: both;
 
       .site-logo {
@@ -14071,7 +13860,7 @@ License: GNU General Public License v2 or later
         a {
           width: 83%;
 
-          div.screen-reader-text {
+          .screen-reader-text {
             overflow: hidden;
 
             &:focus {
@@ -14079,7 +13868,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          div.site-firstletter {
+          .site-firstletter {
             font-size: 1em;
           }
         }
@@ -14098,7 +13887,7 @@ License: GNU General Public License v2 or later
       hgroup {
         height: 4em;
 
-        h1#logo {
+        #logo {
           font-size: 1.2em;
 
           span {
@@ -14110,7 +13899,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h1#logo-blog {
+        #logo-blog {
           font-size: 1.2em;
 
           span {
@@ -14122,32 +13911,28 @@ License: GNU General Public License v2 or later
           }
         }
 
-        h2 {
+        .site-description {
           font-size: 0.45em;
         }
       }
 
-      .header_icons {
+      #shopper-menu {
         width: 50%;
 
-        ul {
+        #menu-shopper {
           width: 100%;
-          
-          li {
-            width: 20%;
-            
+
+          .menu-item {
+            width: 30%;
 
             a {
-              
-              font-size: 1.3em;
-              
+              font-size: 1em;
 
               &:hover {
                 color: $color2;
               }
 
               i {
-               
                 line-height: 40px;
               }
             }
@@ -14182,7 +13967,7 @@ License: GNU General Public License v2 or later
       text-decoration: underline;
     }
 
-    nav {
+    #mannering-main-nav {
       top: 7.2em;
 
       ul#menu-main {
@@ -14207,7 +13992,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    nav.hide {
+    #mannering-main-nav.hide {
       left: -5.5em;
     }
 
@@ -14295,10 +14080,6 @@ License: GNU General Public License v2 or later
     #content {
       min-height: 600px;
 
-      h1 {
-        font-size: 0.9em;
-      }
-
       h2 {
         font-size: 0.85em;
       }
@@ -14306,7 +14087,6 @@ License: GNU General Public License v2 or later
       p {
         font-size: 0.8em;
       }
-
 
       .wp-playlist-item-title {
         font-size: 0.6em;
@@ -14316,7 +14096,7 @@ License: GNU General Public License v2 or later
         margin: 0 auto;
 
         label {
-          line-height: 35px;
+          display: block;
         }
 
         textarea {
@@ -14643,35 +14423,26 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .section:last-of-type {
+      .featured-section:last-of-type {
         margin-bottom: 0%;
       }
 
-      .section {
-        h1 {
+      .featured-section {
+        .featured-section-header {
           font-size: 0.8em;
         }
 
         .flex-wrapper {
-          display: block;
-
-          -webkit-flex-flow: column wrap;
-          -ms-flex-flow: column wrap;
+          display: flex;
           flex-flow: column wrap;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
           justify-content: center;
-          -webkit-align-items: center;
-          -ms-flex-align: center;
           align-items: center;
 
-          .grid_1_of_5 {
+          .album-product {
             width: 80%;
-            float: none;
-            display: block;
             margin: 4em auto;
 
-            a.images_1_of_5 {
+            .album-product-image {
               cursor: pointer;
 
               img {
@@ -14697,8 +14468,8 @@ License: GNU General Public License v2 or later
               }
             }
 
-            figcaption.cap_1_of_5 {
-              h1 {
+            .album-product-caption {
+              .album-product-title {
                 font-size: 0.65em;
               }
 
@@ -15095,7 +14866,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    footer {
+    #mannering-footer {
       .social-btns {
         ul {
           width: 100%;
@@ -15145,6 +14916,4 @@ License: GNU General Public License v2 or later
       }
     }
   }
-
-  /*end of wrapper*/
 }

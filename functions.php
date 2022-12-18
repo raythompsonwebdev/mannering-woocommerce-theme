@@ -168,7 +168,7 @@ if (!function_exists('mannering_music_setup')) :
 				'mannering_music_custom_background_args',
 				array(
 					'default-color'          => 'ffffff',
-					'default-image'          => get_stylesheet_directory_uri() . '/assets/images/bg.jpg',
+					'default-image'          => get_stylesheet_directory_uri() . '/images/bg.jpg',
 					'wp-head-callback'       => '_custom_background_cb',
 					'admin-head-callback'    => '',
 					'admin-preview-callback' => '',
@@ -251,11 +251,9 @@ function mannering_music_register_styles()
 
 	wp_enqueue_style('mannering-music', get_stylesheet_directory_uri() . '/style.css', false, '1.1', 'all');
 
-	wp_enqueue_style('woocommerce-css', get_stylesheet_directory_uri() . '/woocommerce/assets/css/woocommerce.css', false, '1.1', 'all');
+	wp_enqueue_style('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all');
 
-	wp_enqueue_style('bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all');
-
-	wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
+	wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'mannering_music_register_styles');
 
@@ -265,9 +263,9 @@ add_action('wp_enqueue_scripts', 'mannering_music_register_styles');
 function mannering_music_scripts()
 {
 
-	wp_enqueue_script('mannering-music', get_stylesheet_directory_uri() . '/assets/js/index.js', array('jquery'), '20161110', true);
+	wp_enqueue_script('mannering-music', get_stylesheet_directory_uri() . '/js/index.js', array('jquery'), '20161110', true);
 
-	wp_enqueue_script('mannering_music-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script('mannering_music-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -312,8 +310,8 @@ function mannering_music_front_scripts()
 
 	if (is_front_page()) {
 
-		wp_enqueue_script('bx-slider', get_stylesheet_directory_uri() . '/assets/js/bxslider-4-master/jquery.bxslider.min.js', array('jquery'), '20161110', true);
-		wp_enqueue_script('main', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '20161110', true);
+		wp_enqueue_script('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.min.js', array('jquery'), '20161110', true);
+		wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), '20161110', true);
 	}
 }
 add_action('wp_enqueue_scripts', 'mannering_music_front_scripts');
@@ -327,9 +325,9 @@ function mannering_music_audio_scripts()
 {
 
 	if (is_page('audio')) {
-		wp_enqueue_script('tabs', get_stylesheet_directory_uri() . '/assets/js/tabs.js', array('jquery'), '20161110', true);
+		wp_enqueue_script('tabs', get_stylesheet_directory_uri() . '/js/tabs.js', array('jquery'), '20161110', true);
 
-		wp_enqueue_script('audio', get_stylesheet_directory_uri() . '/assets/js/audio-script.js', array('jquery'), '1.1', true);
+		wp_enqueue_script('audio', get_stylesheet_directory_uri() . '/js/audio-script.js', array('jquery'), '1.1', true);
 	}
 }
 add_action('wp_enqueue_scripts', 'mannering_music_audio_scripts');
