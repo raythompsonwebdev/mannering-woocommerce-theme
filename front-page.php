@@ -93,7 +93,7 @@ get_header(); ?>
 
 </section>
 
-<h2><?php esc_html_e('Welcome to Mannering Music.', 'mannering_music'); ?></h2>
+<h2 class="content-header"><?php esc_html_e('Welcome to Mannering Music.', 'mannering_music'); ?></h2>
 
 <!--Hip Hop section -->
 <article class="featured-section">

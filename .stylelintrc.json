@@ -1,8 +1,10 @@
 {
   "extends": [
     "@wordpress/stylelint-config",
+    "stylelint-config-recommended",
     "stylelint-config-recommended-scss"
   ],
+  "plugins": ["stylelint-scss"],
   "ignoreFiles": ["sass/_normalize.scss"],
   "stylelint.validate": ["css", "scss"],
   "rules": {
@@ -53,5 +55,11 @@
     "media-feature-range-operator-space-before": "always",
     "media-feature-range-operator-space-after": "always",
     "keyframe-block-no-duplicate-selectors": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.scss", "**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ]
 }

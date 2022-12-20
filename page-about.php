@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 5
  *
@@ -16,16 +17,16 @@
  * @link       http:www.raythompsonwebdev.co.uk.mannering-music
  */
 
- get_header(); ?>
+get_header(); ?>
 
 
 <main id="main_text" role="main">
 
-	<h1>
+	<h2 class="content-header">
 		<?php the_title(); ?>
-	</h1>
+	</h2>
 
-	<?php get_template_part( 'template-parts/content', 'page' ); ?>
+	<?php get_template_part('template-parts/content', 'page'); ?>
 
 </main>
 

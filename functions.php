@@ -129,10 +129,11 @@ if (!function_exists('mannering_music_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// set post thumbnail size.
-		set_post_thumbnail_size(100, 100, true);
+		set_post_thumbnail_size(150, 150, true);
 
 		// Create three new image sizes.
 		add_image_size('featured-image', 783, 9999);
+		add_image_size('single-product-image', 200, 200);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
