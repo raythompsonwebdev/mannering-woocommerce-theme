@@ -28,7 +28,7 @@ WooCommerce styles override
 		line-height: 20px;
 	}
 	.woocommerce-breadcrumb a {
-		color: #FFF;
+		color: #ffffff;
 		width: auto;
 		display: inline-block;
 		padding: 0;
@@ -39,18 +39,42 @@ WooCommerce styles override
 		margin: 0;
 	}
 	.woocommerce-notices-wrapper .woocommerce-message {
-		color: #3A3A3A;
+		color: #3a3a3a;
 		width: 100%;
 		padding: 0.5em;
 	}
 	.woocommerce-notices-wrapper .woocommerce-message a {
-		color: #3A3A3A;
+		color: #3a3a3a;
 		display: inline-block;
 		line-height: 40px;
 		width: auto;
 	}
 	.woocommerce-notices-wrapper .woocommerce-message a:hover {
 		font-weight: bold;
+	}
+	form {
+		/* Global Button style */
+	}
+	form button.button {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		background-color: #ecac00;
+		color: #181818;
+		border-radius: 5px;
+		width: 20%;
+		transition: all 0.2s ease-in-out;
+	}
+	form button.button:hover {
+		font-weight: bold;
+		background-color: #ffffff;
+		color: #181818;
+		border: 2px solid #181818;
+		filter: alpha(opacity=99);
+		-moz-opacity: 0.99;
+		-khtml-opacity: 0.99;
+		opacity: 0.99;
+		cursor: pointer;
 	}
 	ul.products {
 		margin: 0;
@@ -61,7 +85,7 @@ WooCommerce styles override
 		gap: 0.5em;
 	}
 	ul.products li.type-product {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 0.5em;
 		width: 15.5%;
 		flex: 0 0 auto;
@@ -71,20 +95,20 @@ WooCommerce styles override
 	ul.products li.type-product span.onsale {
 		width: 4em;
 		text-align: center;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 		border-radius: 5px;
 	}
 	ul.products li.type-product img.attachment-woocommerce_thumbnail {
 		width: auto;
-		border: 2px solid #3A3A3A;
+		border: 2px solid #3a3a3a;
 		transition: all 0.5s ease-in-out;
 		display: block;
 		margin: 0.5em auto;
 	}
 	ul.products li.type-product img.attachment-woocommerce_thumbnail:hover {
 		transform: scale(1.05);
-		border: 3px solid #ECAC00;
+		border: 3px solid #ecac00;
 	}
 	ul.products li.type-product a.button {
 		margin-top: 1em;
@@ -96,11 +120,11 @@ WooCommerce styles override
 		transition: all 0.2s ease-in-out;
 		border-radius: 5px;
 		box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
-		color: #FFF;
-		background-color: #ECAC00;
+		color: #ffffff;
+		background-color: #ecac00;
 	}
 	ul.products li.type-product a.button:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #3b3b3b;
 		font-weight: bold;
 		cursor: pointer;
@@ -108,13 +132,13 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.button:active {
 		background-color: #5e0400;
-		color: #EBAB00;
+		color: #ebab00;
 		font-weight: bold;
 		box-shadow: 0 2px 1px rgba(0, 0, 0, 0.8);
 	}
 	ul.products li.type-product span.price {
 		font-size: 1em;
-		color: #fff;
+		color: #ffffff;
 		width: 45%;
 		text-align: left;
 		margin: auto;
@@ -126,7 +150,7 @@ WooCommerce styles override
 		display: block;
 		margin-top: 0.5em;
 		background-color: #181818;
-		color: #FFF;
+		color: #ffffff;
 		border-radius: 5px;
 	}
 	ul.products li.type-product span.price del span.woocommerce-Price-amount,
@@ -170,7 +194,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.woocommerce-LoopProduct-link .woocommerce-loop-product__title {
 		background-color: #2b2b2b;
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1em;
 		line-height: 35px;
 		margin: 0 0 0.5em 0;
@@ -183,8 +207,8 @@ WooCommerce styles override
 		margin: 0.5em auto;
 		line-height: 30px;
 		display: block;
-		background: #ECAC00;
-		color: #FFF;
+		background: #ecac00;
+		color: #ffffff;
 		text-decoration: none;
 		text-align: center;
 		line-height: 35px;
@@ -195,8 +219,8 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		background-color: #FFF;
-		color: #3A3A3A;
+		background-color: #ffffff;
+		color: #3a3a3a;
 	}
 	.product {
 		position: relative;
@@ -269,7 +293,7 @@ WooCommerce styles override
 		width: 4em;
 		padding: 0.25em;
 		text-align: center;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 		border-radius: 5px;
 		position: absolute;
@@ -296,15 +320,15 @@ WooCommerce styles override
 		display: block;
 	}
 	.product .woocommerce-tabs ul.tabs li.active {
-		background: #FFF;
+		background: #ffffff;
 		z-index: 2;
-		border-bottom-color: #FFF;
+		border-bottom-color: #ffffff;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li {
 		line-height: 40px;
 		width: 25%;
 		display: inline-block;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		font-size: 1em;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li a {
@@ -314,11 +338,11 @@ WooCommerce styles override
 		text-shadow: 0px 0px 0px #181818;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li a:hover {
-		background-color: #FFF;
-		color: #3A3A3A;
+		background-color: #ffffff;
+		color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 0.5em;
 		min-height: 400px;
 		margin: 0;
@@ -330,7 +354,7 @@ WooCommerce styles override
 		margin-bottom: 1em;
 	}
 	.product .woocommerce-tabs .panel .wp-playlist-light {
-		background: #FFF;
+		background: #ffffff;
 		color: #181818;
 	}
 	.product .woocommerce-tabs .panel #reviews div#comments,
@@ -364,7 +388,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond span.comment-reply-title {
 		display: block;
 		height: 35px;
-		color: #FFF;
+		color: #ffffff;
 		line-height: 35px;
 		text-indent: 0.5em;
 	}
@@ -377,14 +401,14 @@ WooCommerce styles override
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form {
-		background-color: #FFF;
+		background-color: #ffffff;
 		padding: 0.5em;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form div.comment-form-rating label[for~="rating"],
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form div.comment-form-rating label[for~="rating"] {
 		display: block;
 		line-height: 35px;
-		color: #000;
+		color: #181818;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-cookies-consent,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-cookies-consent {
@@ -410,7 +434,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-email,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-notes {
 		font-size: 0.9em;
-		color: #3A3A3A;
+		color: #3a3a3a;
 		margin: 0;
 		padding: 0;
 	}
@@ -435,7 +459,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-notes label span.required {
 		width: 5%;
 		display: inline-block;
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-comment textarea,
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-author textarea,
@@ -465,8 +489,8 @@ WooCommerce styles override
 		width: 25%;
 		font-size: 1.4em;
 		display: block;
-		background: #ECAC00;
-		color: #FFF;
+		background: #ecac00;
+		color: #ffffff;
 		text-decoration: none;
 		text-align: center;
 		border-radius: 5px;
@@ -477,8 +501,8 @@ WooCommerce styles override
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.form-submit input#submit:hover,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.form-submit input#submit:hover {
-		background: #FFF;
-		color: #ECAC00;
+		background: #ffffff;
+		color: #ecac00;
 		cursor: pointer;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond p.stars,
@@ -497,7 +521,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond p.stars span a {
 		width: 10%;
 		height: 100%;
-		color: #ECAC00;
+		color: #ecac00;
 		display: inline-block;
 		text-align: center;
 		line-height: 40px;
@@ -519,7 +543,7 @@ WooCommerce styles override
 	}
 	.product .summary .product_title {
 		margin: 0;
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1.3em;
 		text-align: left;
 		display: block;
@@ -539,7 +563,7 @@ WooCommerce styles override
 		width: 100%;
 		display: block;
 		font-size: 0.9em;
-		background-color: #FFF;
+		background-color: #ffffff;
 		margin-top: 0.5em;
 		color: #181818;
 	}
@@ -562,7 +586,7 @@ WooCommerce styles override
 		padding: 0.5em;
 		margin: 0;
 		line-height: 2em;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 	}
 	.product .summary .woocommerce-product-details__short-description .mejs-container,
@@ -575,11 +599,11 @@ WooCommerce styles override
 	.product .summary .woocommerce-product-details__short-description .mejs-container .mejs-controls .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed body .mejs-button {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	.product .summary .cart {
 		padding: 0.5em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		width: 100%;
 	}
 	.product .summary .cart .quantity {
@@ -591,7 +615,7 @@ WooCommerce styles override
 		width: 50%;
 		text-align: center;
 		display: block;
-		color: #FFF;
+		color: #ffffff;
 		float: left;
 	}
 	.product .summary .cart .quantity .qty {
@@ -610,7 +634,7 @@ WooCommerce styles override
 	}
 	.product .summary .cart button[name~="add-to-cart"]:hover {
 		cursor: pointer;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 	}
 	.product .summary .product_meta {
@@ -619,14 +643,14 @@ WooCommerce styles override
 		background-color: #2b2b2b;
 	}
 	.product .summary .product_meta .posted_in {
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1em;
 		line-height: 30px;
 		display: block;
 	}
 	.product .summary .product_meta .posted_in a {
 		text-decoration: none;
-		color: #FFF;
+		color: #ffffff;
 		display: inline-block;
 		width: auto;
 		font-size: 1em;
@@ -672,7 +696,7 @@ WooCommerce styles override
 		margin: 0;
 		padding: 1em;
 		background-color: #181818;
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1em;
 		z-index: 9999;
 		line-height: 1.8em;
@@ -757,13 +781,13 @@ WooCommerce styles override
 	.widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a.remove_from_cart_button {
 		width: 100%;
 		text-align: center;
-		background-color: #ECAC00;
+		background-color: #ecac00;
 		color: #181818;
 	}
 	.widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart li.woocommerce-mini-cart-item a.remove_from_cart_button:hover,
 	.widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a.remove_from_cart_button:hover {
 		background-color: #181818;
-		color: #ECAC00;
+		color: #ecac00;
 	}
 	.widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart li.woocommerce-mini-cart-item a,
 	.widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a {
@@ -827,29 +851,6 @@ WooCommerce styles override
 	.widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart__buttons a {
 		text-decoration: none;
 	}
-	#content form {
-		/* Global Button style */
-	}
-	#content form button.button {
-		display: block;
-		text-align: center;
-		margin: 0 auto;
-		background-color: #ECAC00;
-		color: #181818;
-		border-radius: 5px;
-		transition: all 0.2s ease-in-out;
-	}
-	#content form button.button:hover {
-		font-weight: bold;
-		background-color: #FFF;
-		color: #181818;
-		border: 2px solid #181818;
-		filter: alpha(opacity=99);
-		-moz-opacity: 0.99;
-		-khtml-opacity: 0.99;
-		opacity: 0.99;
-		cursor: pointer;
-	}
 	#content .woocommerce-pagination {
 		width: 100%;
 		display: block;
@@ -885,7 +886,7 @@ WooCommerce styles override
 	#content .woocommerce-products-header h1.page-title {
 		font-size: 2em;
 		width: 100%;
-		color: #FFF;
+		color: #ffffff;
 		height: auto;
 		line-height: 45px;
 		text-align: center;
@@ -914,7 +915,7 @@ WooCommerce styles override
 	}
 	#content .related {
 		width: 100%;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 0.5em;
 		margin-bottom: 1em;
 		height: auto;
@@ -924,7 +925,7 @@ WooCommerce styles override
 		font-size: 1.4em;
 		margin: 0 0 0.5em 0;
 		width: 100%;
-		color: #FFF;
+		color: #ffffff;
 		height: auto;
 		line-height: 40px;
 		text-align: left;
@@ -950,12 +951,12 @@ WooCommerce styles override
 	}
 	#content .related ul.products li a img.attachment-woocommerce_thumbnail {
 		margin: 0.5em auto;
-		border: 2px solid #3A3A3A;
+		border: 2px solid #3a3a3a;
 		transition: all 0.5s ease-in-out;
 	}
 	#content .related ul.products li a img.attachment-woocommerce_thumbnail:hover {
 		transform: scale(1.05);
-		border: 3px solid #ECAC00;
+		border: 3px solid #ecac00;
 	}
 	#content .related ul.products li a h2 {
 		font-size: 0.85em;
@@ -990,13 +991,13 @@ WooCommerce styles override
 		line-height: 35px;
 	}
 	#content .related ul.products li a[rel^="nofollow"]:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 	}
 	#content .storefront-product-pagination {
 		height: 130px;
 		width: 100%;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 0.5em;
 		position: unset;
 	}
@@ -1006,10 +1007,10 @@ WooCommerce styles override
 		height: 100%;
 		float: left;
 		margin: 0 0.5em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		display: block;
@@ -1020,13 +1021,14 @@ WooCommerce styles override
 	#content .storefront-product-pagination a span.storefront-product-pagination__title {
 		display: block;
 		background-color: #181818;
-		color: #FFF;
+		color: #ffffff;
 		font-size: 0.9em;
 		text-align: center;
 		line-height: 25px;
 	}
 	#content .entry-content .woocommerce {
 		/* woo-commerce info- checkoutpage */
+		/* woocommerce - my account */
 		/* woocommerce - my account */
 		/* woocommerce - cart table */
 		/* login form */
@@ -1035,11 +1037,11 @@ WooCommerce styles override
 		/* basket total table */
 	}
 	#content .entry-content .woocommerce .cart-empty {
-		color: #FFF;
+		color: #ffffff;
 		padding: 0.25em;
 	}
 	#content .entry-content .woocommerce .return-to-shop {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#content .entry-content .woocommerce .return-to-shop a.wc-backward {
 		display: block;
@@ -1050,13 +1052,16 @@ WooCommerce styles override
 		display: block;
 		height: auto;
 		padding: 0.5em;
-		color: #3A3A3A;
+		color: #3a3a3a;
+		text-indent: 0.5em;
+		width: 100%;
+		line-height: 35px;
 	}
 	#content .entry-content .woocommerce .woocommerce-info a {
 		display: inline-block;
 		padding: 0 0.5em;
 		line-height: 40px;
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#content .entry-content .woocommerce .woocommerce-info a:hover {
 		font-weight: bold;
@@ -1085,12 +1090,12 @@ WooCommerce styles override
 		font-size: 0.9em;
 	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li a {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		width: 100%;
 		height: 100%;
 		text-decoration: none;
 		line-height: 45px;
-		color: #FFF;
+		color: #ffffff;
 		margin: 0;
 		display: block;
 		letter-spacing: 0.1em;
@@ -1100,18 +1105,27 @@ WooCommerce styles override
 		width: 100%;
 		margin-top: 0.5em;
 	}
+	#content .entry-content .woocommerce .woocommerce-MyAccount-content h3 {
+		color: #181818;
+	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-content p {
 		color: #181818;
-		margin: 0;
 		padding: 0;
+		margin: 0;
+	}
+	#content .entry-content .woocommerce .woocommerce-MyAccount-content p label {
+		line-height: 40px;
 	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-content p strong {
-		line-height: 30px;
+		line-height: 40px;
 	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-content p a {
 		width: auto;
 		display: inline-block;
-		line-height: 30px;
+		line-height: 40px;
+	}
+	#content .entry-content .woocommerce .woocommerce-MyAccount-content address {
+		color: #181818;
 	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-content form.woocommerce-EditAccountForm p.form-row {
 		margin: 0;
@@ -1134,7 +1148,7 @@ WooCommerce styles override
 		line-height: 45px;
 	}
 	#content .entry-content .woocommerce .woocommerce-MyAccount-content form.woocommerce-EditAccountForm .woocommerce-Button:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 		cursor: pointer;
 	}
@@ -1148,6 +1162,13 @@ WooCommerce styles override
 		padding: 0.5em;
 		font-size: 0.9em;
 	}
+	#content .entry-content .woocommerce .woocommerce-MyAccount-content .addresses .woocommerce-Address .woocommerce-Address-title {
+		display: block;
+	}
+	#content .entry-content .woocommerce .woocommerce-MyAccount-content button[name~="save_address"] {
+		line-height: 35px;
+		margin: 1em auto;
+	}
 	#content .entry-content .woocommerce .woocommerce-cart-form {
 		padding: 0;
 		white-space: normal;
@@ -1158,10 +1179,10 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents thead {
 		line-height: 45px;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents thead tr {
-		color: #FFF;
+		color: #ffffff;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents thead tr th {
 		text-align: left;
@@ -1200,10 +1221,10 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-remove a {
 		text-align: center;
-		color: #FFF;
+		color: #ffffff;
 		font-weight: bold;
 		font-size: 1.5em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		line-height: 45px;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-thumbnail {
@@ -1277,7 +1298,7 @@ WooCommerce styles override
 		margin: 0;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions {
-		color: #FFF;
+		color: #ffffff;
 		background-color: #181818;
 		padding: 1em 0.5em;
 	}
@@ -1292,7 +1313,7 @@ WooCommerce styles override
 		padding: 0;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions button[name~="update_cart"]:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 		cursor: pointer;
 	}
@@ -1312,7 +1333,7 @@ WooCommerce styles override
 		height: 45px;
 		line-height: 45px;
 		width: 15%;
-		color: #FFF;
+		color: #ffffff;
 		text-align: center;
 		flex: 1 0 auto;
 	}
@@ -1338,26 +1359,56 @@ WooCommerce styles override
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions input {
 		margin: 0;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.form-row {
-		margin: 1.5em 0;
-		color: #000;
+	#content .entry-content .woocommerce #customer_login {
+		display: flex;
+		flex-flow: row;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 1em;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox {
+	#content .entry-content .woocommerce #customer_login p {
+		color: #181818;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column1 {
+		width: 49%;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row {
+		margin: 1.5em 0;
+		color: #181818;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox {
 		width: 40%;
 		display: flex;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox input#rememberme {
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox input#rememberme {
 		width: 10%;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox span {
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox span {
 		line-height: 15px;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.woocommerce-LostPassword {
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row button[name~="login"] {
+		line-height: 35px;
+		width: 30%;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.woocommerce-LostPassword {
 		height: 35px;
 	}
-	#content .entry-content .woocommerce .woocommerce-form-login p.woocommerce-LostPassword a {
+	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.woocommerce-LostPassword a {
 		display: block;
 		line-height: 35px;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column2 {
+		width: 49%;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column2 label {
+		color: #181818;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column2 .form-row button[name~="register"] {
+		line-height: 35px;
+		width: 30%;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column2 .woocommerce-form-register .woocommerce-privcay-policy-text {
+		color: #181818;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout {
 		/* woocommerce-checkout form */
@@ -1372,64 +1423,68 @@ WooCommerce styles override
 		text-align: center;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 1em;
 		/*cols*/
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 {
+		background-color: #ffffff;
 		padding: 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
-		font-size: 1.4em;
-		color: #3A3A3A;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper {
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields {
 		margin: 0;
-		color: #000;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row {
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3 {
+		color: #181818;
+	}
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper {
+		margin: 0;
+		color: #181818;
+	}
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row {
 		font-size: 1em;
 		margin: 0;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row label,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row label {
 		line-height: 40px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper {
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper {
 		margin: 0;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper input.input-text,
-	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper input.input-text {
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row .woocommerce-input-wrapper input.input-text {
 		margin-bottom: 0.5em;
+	}
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
+		margin: 0;
+	}
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-shipping-fields {
+		margin: 0;
+	}
+	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-additional-fields {
+		margin: 0;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review_heading {
 		background-color: #181818;
 		line-height: 40px;
-		color: #FFF;
+		color: #ffffff;
 		text-align: left;
 		text-indent: 0.5em;
 		margin-top: 1em;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review {
-		color: #3A3A3A;
+		color: #3a3a3a;
 		padding: 1em;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
-		color: #3A3A3A;
+		color: #3a3a3a;
 		padding: 1em;
 		width: 100%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table thead {
 		height: 45px;
-		color: #FFF;
+		color: #ffffff;
 		line-height: 45px;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		text-align: left;
 		text-indent: 0.25em;
 	}
@@ -1465,7 +1520,7 @@ WooCommerce styles override
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table tbody tr.cart_item td.product-total span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol {
 		width: 20%;
 		display: inline-block;
-		line-height: 45px;
+		text-align: center;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table tfoot {
 		color: #181818;
@@ -1514,73 +1569,68 @@ WooCommerce styles override
 		font-size: 0.9em;
 		margin: 0;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
-		width: 100%;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 		display: block;
+		background-color: #3a3a3a;
+		color: #ffffff;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_cheque,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_cod,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		display: block;
-		background-color: #3A3A3A;
-		color: #FFF;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
-		display: block;
-		width: 5%;
 		margin: 0.5em;
 		float: left;
 		height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		display: inline-block;
 		margin-bottom: 0.5em;
 		padding: 0.5em;
-		color: #FFF;
+		color: #ffffff;
 		width: 90%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		display: inline-block;
 		height: auto;
 		width: auto;
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 15%;
 		display: inline-block;
 		color: #181818;
 		text-align: center;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal:hover {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal:hover {
 		background-color: #181818;
-		color: #FFF;
+		color: #ffffff;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box {
-		background-color: #3A3A3A;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box {
+		background-color: #3a3a3a;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
-		color: #FFF;
-		background-color: #3A3A3A;
+		color: #ffffff;
+		background-color: #3a3a3a;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 		display: inline-block;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 		font-weight: bold;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order {
 		padding: 1em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text {
@@ -1589,7 +1639,7 @@ WooCommerce styles override
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p {
 		font-size: 0.85em;
-		color: #FFF;
+		color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p a,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p a {
@@ -1598,12 +1648,12 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row #place_order,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order #place_order {
-		font-size: 1em;
+		font-size: 1.3em;
 		line-height: 45px;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row p,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order p {
-		color: #FFF;
+		color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row p label,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order p label {
@@ -1619,13 +1669,13 @@ WooCommerce styles override
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order p label span {
 		width: 90%;
 		display: inline-block;
-		color: #FFF;
+		color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row p label span a.woocommerce-terms-and-conditions-link,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order p label span a.woocommerce-terms-and-conditions-link {
 		width: auto;
 		display: inline;
-		color: #ECAC00;
+		color: #ecac00;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row p label span a.woocommerce-terms-and-conditions-link:hover,
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .place-order p label span a.woocommerce-terms-and-conditions-link:hover {
@@ -1650,16 +1700,16 @@ WooCommerce styles override
 		line-height: 40px;
 		width: 20%;
 		display: inline-block;
-		border: 2px solid #ECAC00;
+		border: 2px solid #ecac00;
 		border-radius: 5px;
 		box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
-		color: #FFF;
-		background-color: #EBAB00;
+		color: #ffffff;
+		background-color: #ebab00;
 		text-align: center;
 	}
 	#content .entry-content .woocommerce .wc-proceed-to-checkout a:hover {
 		cursor: pointer;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #3b3b3b;
 		font-weight: bold;
 		border: 2px solid #3b3b3b;
@@ -1673,15 +1723,11 @@ WooCommerce styles override
 		margin: 0;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals h2 {
-		text-indent: 0.5em;
 		width: 100%;
-		margin-bottom: 1em;
 		margin-top: 0;
-		color: #FFF;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table {
 		width: 100%;
-		padding: 1em 0;
 		color: #181818;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody {
@@ -1690,9 +1736,9 @@ WooCommerce styles override
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.cart-subtotal th,
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.order-total th {
 		width: 20%;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		text-align: left;
-		color: #FFF;
+		color: #ffffff;
 		text-indent: 0.5em;
 		vertical-align: middle;
 	}
@@ -1723,14 +1769,14 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.woocommerce-shipping-totals th {
 		line-height: 0px;
-		color: #FFF;
+		color: #ffffff;
 		text-indent: 0.5em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		text-align: left;
 		vertical-align: middle;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.woocommerce-shipping-totals td {
-		border-right: 1px solid #3A3A3A;
+		border-right: 1px solid #3a3a3a;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.woocommerce-shipping-totals td ul#shipping_method {
 		width: 100%;
@@ -1773,7 +1819,7 @@ WooCommerce styles override
 		margin-top: 0.5em;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody tr.woocommerce-shipping-totals td form.woocommerce-shipping-calculator section.shipping-calculator-form {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		width: 80%;
 		margin: 1em auto;
 		padding: 1em;
@@ -1849,7 +1895,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		position: relative;
@@ -1894,7 +1940,7 @@ WooCommerce styles override
 		width: 4em;
 		padding: 0.5em;
 		text-align: center;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 		border-radius: 5px;
 	}
@@ -1919,15 +1965,15 @@ WooCommerce styles override
 		display: block;
 	}
 	.product .woocommerce-tabs ul.tabs li.active {
-		background: #FFF;
+		background: #ffffff;
 		z-index: 2;
-		border-bottom-color: #FFF;
+		border-bottom-color: #ffffff;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li {
 		line-height: 40px;
 		width: 25%;
 		display: inline-block;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		font-size: 1em;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li a {
@@ -1937,11 +1983,11 @@ WooCommerce styles override
 		text-shadow: 0px 0px 0px #181818;
 	}
 	.product .woocommerce-tabs ul.wc-tabs li a:hover {
-		background-color: #FFF;
-		color: #3A3A3A;
+		background-color: #ffffff;
+		color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 		padding: 0.5em;
 		min-height: 400px;
 		margin: 0;
@@ -1953,7 +1999,7 @@ WooCommerce styles override
 		margin-bottom: 1em;
 	}
 	.product .woocommerce-tabs .panel .wp-playlist-light {
-		background: #FFF;
+		background: #ffffff;
 		color: #181818;
 	}
 	.product .woocommerce-tabs .panel #reviews div#comments,
@@ -1987,7 +2033,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond span.comment-reply-title {
 		display: block;
 		height: 35px;
-		color: #FFF;
+		color: #ffffff;
 		line-height: 35px;
 		text-indent: 0.5em;
 	}
@@ -2000,7 +2046,7 @@ WooCommerce styles override
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form {
-		background-color: #FFF;
+		background-color: #ffffff;
 		padding: 0.5em;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form div.comment-form-rating label[for~="rating"],
@@ -2032,7 +2078,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-email,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-notes {
 		font-size: 0.9em;
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-comment label,
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-author label,
@@ -2054,7 +2100,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-notes label span.required {
 		width: 5%;
 		display: inline-block;
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-comment textarea,
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.comment-form-author textarea,
@@ -2084,8 +2130,8 @@ WooCommerce styles override
 		width: 25%;
 		font-size: 1.4em;
 		display: block;
-		background: #ECAC00;
-		color: #FFF;
+		background: #ecac00;
+		color: #ffffff;
 		text-decoration: none;
 		text-align: center;
 		border-radius: 5px;
@@ -2095,8 +2141,8 @@ WooCommerce styles override
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond form.comment-form p.form-submit input#submit:hover,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond form.comment-form p.form-submit input#submit:hover {
-		background: #FFF;
-		color: #ECAC00;
+		background: #ffffff;
+		color: #ecac00;
 		cursor: pointer;
 	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond p.stars,
@@ -2114,7 +2160,7 @@ WooCommerce styles override
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond p.stars span a {
 		width: 19%;
 		height: 100%;
-		color: #ECAC00;
+		color: #ecac00;
 		display: inline-block;
 		text-align: center;
 		line-height: 40px;
@@ -2166,7 +2212,7 @@ WooCommerce styles override
 	}
 	.product .summary .product_title {
 		padding: 0.5em 0;
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1.3em;
 		text-align: left;
 		display: block;
@@ -2184,7 +2230,7 @@ WooCommerce styles override
 		width: 10%;
 		display: block;
 		font-size: 0.9em;
-		background-color: #FFF;
+		background-color: #ffffff;
 		margin-top: 0.5em;
 		color: #181818;
 	}
@@ -2207,7 +2253,7 @@ WooCommerce styles override
 		padding: 0.5em;
 		margin: 0;
 		line-height: 2em;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 	}
 	.product .summary .woocommerce-product-details__short-description .mejs-container,
@@ -2220,11 +2266,11 @@ WooCommerce styles override
 	.product .summary .woocommerce-product-details__short-description .mejs-container .mejs-controls .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed body .mejs-button {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	.product .summary .cart {
 		padding: 0.5em;
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 	}
 	.product .summary .cart .quantity {
 		margin: 0;
@@ -2235,7 +2281,7 @@ WooCommerce styles override
 		width: 50%;
 		text-align: center;
 		display: block;
-		color: #FFF;
+		color: #ffffff;
 		float: left;
 	}
 	.product .summary .cart .quantity .qty {
@@ -2255,7 +2301,7 @@ WooCommerce styles override
 	}
 	.product .summary .cart button[name~="add-to-cart"]:hover {
 		cursor: pointer;
-		background-color: #FFF;
+		background-color: #ffffff;
 		color: #181818;
 	}
 	.product .summary .product_meta {
@@ -2264,14 +2310,14 @@ WooCommerce styles override
 		background-color: #2b2b2b;
 	}
 	.product .summary .product_meta .posted_in {
-		color: #FFF;
+		color: #ffffff;
 		font-size: 1em;
 		line-height: 30px;
 		display: block;
 	}
 	.product .summary .product_meta .posted_in a {
 		text-decoration: none;
-		color: #FFF;
+		color: #ffffff;
 		display: inline-block;
 		width: auto;
 		font-size: 1em;
@@ -2328,7 +2374,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 26%;
@@ -2486,7 +2532,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -2528,43 +2574,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 15%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -2697,7 +2739,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#content {
 		/*global contact form style*/
@@ -2753,7 +2795,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 25%;
@@ -2908,7 +2950,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -2950,43 +2992,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -3114,7 +3152,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#content {
 		/*global contact form style*/
@@ -3178,16 +3216,13 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 25%;
 	}
 	#content .storefront-product-pagination a span.storefront-product-pagination__title {
 		font-size: 0.8em;
-	}
-	#content .entry-content .woocommerce {
-		/*##woocommerce*/
 	}
 	#content .entry-content .woocommerce .woocommerce-info {
 		padding: 0.5em;
@@ -3333,7 +3368,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -3376,43 +3411,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -3537,7 +3568,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#side-bar {
 		height: auto;
@@ -3577,13 +3608,13 @@ WooCommerce styles override
 	#side-bar .widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a.remove_from_cart_button {
 		width: 100%;
 		text-align: center;
-		background-color: #ECAC00;
+		background-color: #ecac00;
 		color: #181818;
 	}
 	#side-bar .widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart li.woocommerce-mini-cart-item a.remove_from_cart_button:hover,
 	#side-bar .widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a.remove_from_cart_button:hover {
 		background-color: #181818;
-		color: #ECAC00;
+		color: #ecac00;
 	}
 	#side-bar .widget_shopping_cart .widget_shopping_cart_content .woocommerce-mini-cart li.woocommerce-mini-cart-item a,
 	#side-bar .widget_shopping_cart .widget_shopping_cart_content .cart_list li.woocommerce-mini-cart-item a {
@@ -3709,7 +3740,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 30%;
@@ -3864,7 +3895,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -3906,43 +3937,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -4072,7 +4099,7 @@ WooCommerce styles override
 	}
 	.product .woocommerce-tabs .panel #reviews div#comments,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#comments {
-		background-color: #3A3A3A;
+		background-color: #3a3a3a;
 	}
 	.product .woocommerce-tabs .panel #reviews div#comments h2.woocommerce-Reviews-title,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#comments h2.woocommerce-Reviews-title {
@@ -4208,7 +4235,7 @@ WooCommerce styles override
 	.product .summary .woocommerce-product-details__short-description .mejs-container .mejs-controls .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed .mejs-button,
 	.product .summary .woocommerce-product-details__short-description .mejs-embed body .mejs-button {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	.product .summary .cart {
 		padding: 0.5em;
@@ -4238,7 +4265,7 @@ WooCommerce styles override
 		width: 50%;
 	}
 	.product .summary .product_meta .posted_in a:hover {
-		color: #FFF;
+		color: #ffffff;
 	}
 	ul.products li.product {
 		width: 30.79667%;
@@ -4370,7 +4397,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 30%;
@@ -4530,7 +4557,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -4572,43 +4599,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -4740,7 +4763,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -4855,7 +4878,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 30%;
@@ -5020,7 +5043,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -5066,43 +5089,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -5238,7 +5257,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	#content {
 		/*global contact form style*/
@@ -5294,7 +5313,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 45%;
@@ -5459,7 +5478,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -5504,43 +5523,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -5675,7 +5690,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -5737,7 +5752,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 45%;
@@ -5911,7 +5926,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -5956,43 +5971,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -6120,7 +6131,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -6180,7 +6191,7 @@ WooCommerce styles override
 		margin: 0 0.5em;
 	}
 	#content .storefront-product-pagination a:hover {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .storefront-product-pagination a img {
 		width: 50%;
@@ -6374,7 +6385,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -6416,43 +6427,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -6592,7 +6599,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -6804,7 +6811,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -6846,43 +6853,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -7016,7 +7019,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -7240,7 +7243,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -7290,43 +7293,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,
@@ -7460,7 +7459,7 @@ WooCommerce styles override
 	}
 	ul.products li.type-product a.add_to_cart_button:hover,
 	ul.products li.type-product a.added_to_cart:hover {
-		color: #3A3A3A;
+		color: #3a3a3a;
 	}
 	.product {
 		width: 15%;
@@ -7692,7 +7691,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 {
-		background-color: #FFF;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields h3,
 	#content .entry-content .woocommerce form.woocommerce-checkout #customer_details .col-2 .woocommerce-billing-fields h3 {
@@ -7742,43 +7741,39 @@ WooCommerce styles override
 		font-size: 80%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment {
-		background: #3A3A3A;
+		background: #3a3a3a;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods {
 		font-size: 0.9em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .woocommerce-info {
-		text-indent: 0.5em;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method {
 		line-height: 35px;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li {
-		line-height: 35px;
-	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_paypal,
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li #payment_method_bacs {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_paypal,
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method #payment_method_bacs {
 		margin: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label {
 		margin-bottom: 0.5em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label img {
 		margin: 0 1em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li label a.about_paypal {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method label a.about_paypal {
 		width: 20%;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p {
 		line-height: 1.7em;
 		padding: 0.5em;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a {
 		width: auto;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li .payment_box p a:hover {
-		color: #EBAB00;
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method .payment_box p a:hover {
+		color: #ebab00;
 	}
-	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods li img {
+	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment .payment_methods .wc_payment_method img {
 		width: 12%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review #payment div.form-row,

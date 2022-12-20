@@ -54,6 +54,32 @@ WooCommerce styles override
     }
   }
 
+  form {
+    /* Global Button style */
+    button.button {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      background-color: $color1;
+      color: $color7;
+      border-radius: 5px;
+      width: 20%;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        font-weight: bold;
+        background-color: $color2;
+        color: $color7;
+        border: 2px solid $color7;
+        filter: alpha(opacity=99);
+        -moz-opacity: 0.99;
+        -khtml-opacity: 0.99;
+        opacity: 0.99;
+        cursor: pointer;
+      }
+    }
+  }
+
   ul.products {
     margin: 0;
     display: flex;
@@ -120,7 +146,7 @@ WooCommerce styles override
 
       span.price {
         font-size: 1em;
-        color: #fff;
+        color: $color2;
         width: 45%;
         text-align: left;
         margin: auto;
@@ -403,7 +429,7 @@ WooCommerce styles override
                     label[for~="rating"] {
                       display: block;
                       line-height: 35px;
-                      color: #000;
+                      color: $color7;
                     }
                   }
 
@@ -863,31 +889,6 @@ WooCommerce styles override
     }
   }
   #content {
-    form {
-      /* Global Button style */
-      button.button {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        background-color: $color1;
-        color: $color7;
-        border-radius: 5px;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-          font-weight: bold;
-          background-color: $color2;
-          color: $color7;
-          border: 2px solid $color7;
-          filter: alpha(opacity=99);
-          -moz-opacity: 0.99;
-          -khtml-opacity: 0.99;
-          opacity: 0.99;
-          cursor: pointer;
-        }
-      }
-    }
-
     .woocommerce-pagination {
       width: 100%;
       display: block;
@@ -1116,6 +1117,9 @@ WooCommerce styles override
           height: auto;
           padding: 0.5em;
           color: $color3;
+          text-indent: 0.5em;
+          width: 100%;
+          line-height: 35px;
 
           a {
             display: inline-block;
@@ -1169,24 +1173,37 @@ WooCommerce styles override
           }
         }
 
+        /* woocommerce - my account */
         .woocommerce-MyAccount-content {
           width: 100%;
           margin-top: 0.5em;
 
+          h3 {
+            color: $color7;
+          }
+
           p {
             color: $color7;
-            margin: 0;
             padding: 0;
+            margin: 0;
+
+            label {
+              line-height: 40px;
+            }
 
             strong {
-              line-height: 30px;
+              line-height: 40px;
             }
 
             a {
               width: auto;
               display: inline-block;
-              line-height: 30px;
+              line-height: 40px;
             }
+          }
+
+          address {
+            color: $color7;
           }
 
           form.woocommerce-EditAccountForm {
@@ -1230,6 +1247,19 @@ WooCommerce styles override
                 font-size: 0.9em;
               }
             }
+          }
+
+          .addresses {
+            .woocommerce-Address {
+              .woocommerce-Address-title {
+                display: block;
+              }
+            }
+          }
+
+          button[name~="save_address"] {
+            line-height: 35px;
+            margin: 1em auto;
           }
         }
 
@@ -1465,28 +1495,65 @@ WooCommerce styles override
           }
         }
         /* login form */
-        .woocommerce-form-login {
-          p.form-row {
-            margin: 1.5em 0;
-            color: #000;
-            .woocommerce-form__label-for-checkbox {
-              width: 40%;
-              display: flex;
-              input#rememberme {
-                width: 10%;
+        #customer_login {
+          display: flex;
+          flex-flow: row;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 1em;
+          p {
+            color: $color7;
+          }
+
+          .u-column1 {
+            width: 49%;
+
+            .woocommerce-form-login {
+              p.form-row {
+                margin: 1.5em 0;
+                color: $color7;
+                .woocommerce-form__label-for-checkbox {
+                  width: 40%;
+                  display: flex;
+                  input#rememberme {
+                    width: 10%;
+                  }
+                  span {
+                    line-height: 15px;
+                  }
+                }
+                button[name~="login"] {
+                  line-height: 35px;
+                  width: 30%;
+                }
               }
-              span {
-                line-height: 15px;
+
+              p.woocommerce-LostPassword {
+                height: 35px;
+
+                a {
+                  display: block;
+                  line-height: 35px;
+                }
               }
             }
           }
 
-          p.woocommerce-LostPassword {
-            height: 35px;
-
-            a {
-              display: block;
-              line-height: 35px;
+          .u-column2 {
+            width: 49%;
+            label {
+              color: $color7;
+            }
+            .form-row {
+              button[name~="register"] {
+                line-height: 35px;
+                width: 30%;
+              }
+            }
+            .woocommerce-form-register {
+              .woocommerce-privcay-policy-text {
+                color: $color7;
+              }
             }
           }
         }
@@ -1511,20 +1578,20 @@ WooCommerce styles override
             padding: 1em;
 
             /*cols*/
-            .col-1,
-            .col-2 {
+            .col-1 {
               background-color: $color2;
               padding: 1em;
 
               .woocommerce-billing-fields {
+                margin: 0;
+
                 h3 {
-                  font-size: 1.4em;
-                  color: $color3;
+                  color: $color7;
                 }
 
                 .woocommerce-billing-fields__field-wrapper {
                   margin: 0;
-                  color: #000;
+                  color: $color7;
                   p.form-row {
                     font-size: 1em;
                     margin: 0;
@@ -1542,6 +1609,16 @@ WooCommerce styles override
                     }
                   }
                 }
+              }
+            }
+            .col-2 {
+              margin: 0;
+              .woocommerce-shipping-fields {
+                margin: 0;
+              }
+
+              .woocommerce-additional-fields {
+                margin: 0;
               }
             }
           }
@@ -1613,7 +1690,7 @@ WooCommerce styles override
                       span.woocommerce-Price-currencySymbol {
                         width: 20%;
                         display: inline-block;
-                        line-height: 45px;
+                        text-align: center;
                       }
                     }
                   }
@@ -1676,23 +1753,18 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
                 margin: 0;
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  width: 100%;
-                  line-height: 35px;
-                  display: block;
-                }
 
-                li {
+                .wc_payment_method {
                   line-height: 35px;
                   display: block;
                   background-color: $color3;
                   color: $color2;
 
+                  #payment_method_cheque,
                   #payment_method_paypal,
+                  #payment_method_cod,
                   #payment_method_bacs {
                     display: block;
-                    width: 5%;
                     margin: 0.5em;
                     float: left;
                     height: 35px;
@@ -1774,7 +1846,7 @@ WooCommerce styles override
                 }
 
                 #place_order {
-                  font-size: 1em;
+                  font-size: 1.3em;
                   line-height: 45px;
                 }
 
@@ -1858,16 +1930,12 @@ WooCommerce styles override
             margin: 0;
 
             h2 {
-              text-indent: 0.5em;
               width: 100%;
-              margin-bottom: 1em;
               margin-top: 0;
-              color: $color2;
             }
 
             table.shop_table {
               width: 100%;
-              padding: 1em 0;
               color: $color7;
 
               tbody {
@@ -2904,12 +2972,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -3536,12 +3599,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -3885,7 +3943,6 @@ WooCommerce styles override
           }
         }
 
-        /*##woocommerce*/
         .woocommerce-MyAccount-navigation {
           font-size: 85%;
           height: 45px;
@@ -4175,12 +4232,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -4925,12 +4977,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -5842,12 +5889,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -6566,12 +6608,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -7206,12 +7243,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -7863,12 +7895,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -8528,12 +8555,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -9156,12 +9178,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -9796,12 +9813,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,
@@ -10451,12 +10463,7 @@ WooCommerce styles override
               .payment_methods {
                 font-size: 0.9em;
 
-                .woocommerce-info {
-                  text-indent: 0.5em;
-                  line-height: 35px;
-                }
-
-                li {
+                .wc_payment_method {
                   line-height: 35px;
 
                   #payment_method_paypal,

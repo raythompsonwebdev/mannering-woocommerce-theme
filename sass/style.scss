@@ -302,13 +302,14 @@ License: GNU General Public License v2 or later
 
     #side-bar {
       width: 20%;
-      display: inline-block;
+      display: block;
       background-color: $color6;
       height: auto;
       margin: 0;
+      float: left;
 
-      article.side-bar-box {
-        width: 32%;
+      .widget_block {
+        width: 96%;
         margin: 0.5em;
 
         h2 {
@@ -321,7 +322,7 @@ License: GNU General Public License v2 or later
           margin: 0;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             width: 75%;
             height: 35px;
@@ -335,21 +336,22 @@ License: GNU General Public License v2 or later
         ul {
           display: block;
           height: auto;
+          margin: 0;
 
           li {
-            margin: 0.5em;
-            background-color: $color3;
-            width: 96%;
-            padding: 0.5em;
-            float: left;
+            background-color: $color8;
+            width: 100%;
+            margin: 0.25em auto;
+            height: auto;
 
             a {
               width: 100%;
-              font-size: 0.8em;
+              font-size: 1em;
               color: $color2;
-              line-height: 20px;
+              line-height: 40px;
               text-align: center;
               display: block;
+              text-decoration: none;
             }
           }
         }
@@ -392,16 +394,19 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
-          li.recentcomments {
-            span.comment-author-link {
-              width: auto;
-              display: inline-block;
-
-              a.url {
-                display: block;
+          .wp-block-latest-comments__comment {
+            color: $color7;
+            .wp-block-latest-comments__comment-meta {
+              background-color: $color2;
+              padding: 0.5em;
+              width: 96%;
+              margin: auto;
+              a {
+                width: auto;
+                display: inline-block;
               }
             }
           }
@@ -409,87 +414,84 @@ License: GNU General Public License v2 or later
       }
     }
 
-    .post,
-    .page {
-      min-height: 500px;
-      padding: 1em;
+    #post-content {
+      width: 79%;
+      display: inline-block;
 
-      h1 {
-        font-size: 1.6em;
-        line-height: 44px;
-        text-align: center;
-        padding: 1% 0;
-        margin: 0;
-      }
-
-      h2 {
-        margin-bottom: 0.2em;
-        color: $color3;
-
-        a {
-          color: $color3;
-          font-size: 1.6em;
-        }
-      }
-
-      div.meta {
-        height: 100px;
-
-        span {
-          display: block;
-          height: auto;
-          line-height: 30px;
-          background-color: $color3;
-          margin-bottom: 0.2em;
-          text-indent: 0.5em;
-          width: 100%;
-        }
-      }
-
-      div.entry-content {
+      .post {
+        min-height: 500px;
         padding: 1em;
-        background-color: $color2;
-      }
 
-      .postmetadata {
-        height: 100px;
-        background-color: $color3;
-        padding: 0.5em;
-
-        a {
-          width: 25%;
-          display: inline-block;
+        .entry-header {
+          background-color: $color8;
         }
-      }
 
-      footer {
-        background-color: $color9;
-        clear: both;
-        min-height: 100px;
-        width: 100%;
-        margin: 0;
-        padding: 0.5em;
+        .entry-title {
+          margin: 0;
+          color: $color2;
 
-        span.edit-link {
-          height: 40px;
+          a {
+            text-decoration: none;
+            color: $color2;
+            font-size: 1.3em;
+            text-indent: 0.1em;
+          }
+        }
 
-          a.post-edit-link {
+        .entry-meta {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: flex-start;
+          .posted-on,
+          .byline {
+            height: auto;
+            line-height: 50px;
+            background-color: $color3;
+            margin-bottom: 0.2em;
+            text-indent: 0.25em;
+            width: 100%;
+          }
+          a,
+          .vcard {
+            width: auto;
             display: inline-block;
-            width: 20%;
+            text-decoration: none;
+          }
+        }
+
+        .entry-content {
+          background-color: $color2;
+          margin: 0;
+          color: $color7;
+          padding: 1em;
+          p {
+            line-height: 1.7em;
+          }
+        }
+
+        .entry-footer {
+          background-color: $color9;
+          clear: both;
+          min-height: 100px;
+          width: 100%;
+          margin: 0;
+          padding: 0.5em;
+
+          .cat-link,
+          .tag-links,
+          .coment-links {
+            height: 40px;
+          }
+          a[rel~="tag"] {
+            display: inline-block;
+            width: auto;
             line-height: 40px;
-            text-indent: 0.5em;
+            text-indent: 0.1em;
             color: $color2;
 
             &:hover {
               font-weight: bold;
-            }
-
-            span.screen-reader-text {
-              display: inline-block;
-              width: 50%;
-              line-height: 40px;
-              color: $color2;
-              text-align: center;
+              cursor: pointer;
             }
           }
         }
@@ -510,8 +512,8 @@ License: GNU General Public License v2 or later
         color: $color2;
         height: auto;
         display: block;
-        line-height: 40px;
-        text-align: left;
+        line-height: 60px;
+        text-align: center;
         padding: 0.5em 0;
         font-weight: normal;
       }
@@ -587,187 +589,8 @@ License: GNU General Public License v2 or later
         width: 94%;
         margin: 0 auto;
         display: block;
-
-        #pageContainer {
-          display: block;
-
-          .bxslider img {
-            max-width: 100%;
-            display: block;
-            height: auto;
-            margin: 0;
-            padding: 0;
-          }
-
-          .bx-wrapper {
-            left: 0;
-            margin: 0;
-
-            .bx-viewport {
-              background-color: $color9;
-              left: 0;
-
-              ul.bxslider {
-                height: auto;
-                display: inline-block;
-                padding: 0;
-                margin: 0;
-
-                li {
-                  max-height: 300px;
-                  background-color: $color2;
-
-                  .slider-text {
-                    width: 50%;
-                    font-family: ($FontList);
-                    position: absolute;
-                    z-index: 1;
-                    left: 0.5em;
-                    top: 0.5em;
-                    padding: 1%;
-                    opacity: 0.95;
-                    background-color: $color3;
-                    border: 2px solid $color8;
-
-                    h1 {
-                      font-size: 2.7em;
-                      font-weight: normal;
-                      color: $slider-text;
-                      text-align: left;
-                      margin: 0;
-                      padding: 0;
-                      line-height: 40px;
-                      display: block;
-                      height: auto;
-
-                      span {
-                        display: block;
-                        line-height: 40px;
-                        width: 100%;
-                        margin: 0;
-                        font-size: 75%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 1.2em;
-                      color: $color8;
-                      padding: 0;
-                      margin: 0;
-                      text-align: left;
-                      width: 100%;
-                      font-weight: normal;
-                      line-height: 35px;
-                      display: block;
-                      height: auto;
-                      background-color: $color3;
-                      font-family: ($FontList);
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.95em;
-                        margin: 0;
-                        line-height: 30px;
-                        font-weight: normal;
-                        font-family: ($FontList);
-                        color: $color2;
-                      }
-
-                      li {
-                        color: $color8;
-                        padding: 8px 20px;
-                        background: url("../images/list_img.png") no-repeat 0px;
-                        cursor: pointer;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 1.1em;
-                      line-height: 35px;
-                      width: 30%;
-                      display: inline-block;
-                      background-color: $color7;
-                      color: $color2;
-                      text-decoration: none;
-                      border-radius: 5px;
-                      outline: 0;
-                      text-align: center;
-                      transition: all 0.2s ease-in-out;
-                      margin-top: 0.5em;
-                      text-align: center;
-
-                      &:hover {
-                        text-shadow: 0px 1px 1px $color7;
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-
-              .bx-prev {
-                left: 10px;
-                background: url("images/controls.png") no-repeat 0 -32px;
-              }
-            }
-
-            .bx-controls {
-              display: block;
-              height: 35px;
-
-              .bx-prev {
-                left: 10px;
-                background: url("images/controls.png") no-repeat 0 -32px;
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-              padding: 0;
-              display: block;
-
-              .bx-pager-item {
-                width: 3%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            position: absolute;
-            top: 0.5em;
-            right: 0.2em;
-            background: $dark-box;
-            color: $color2;
-            padding: 0.1em 0.5em;
-            font-size: 0.75em;
-            text-transform: uppercase;
-            z-index: 1000;
-          }
-        }
-
-        figure#ie8-image {
-          display: none;
-          img#image-5 {
-            width: 100%;
-            height: 100%;
-            display: none;
-          }
-        }
+        height: 630px;
+        background-color: $color2;
       }
 
       .wp-playlist-item-title {
@@ -1115,8 +938,9 @@ License: GNU General Public License v2 or later
       .featured-section {
         padding: 0;
         margin: 0 auto;
-        width: 100%;
+        width: 33%;
         height: auto;
+        float: left;
 
         .featured-section-header {
           display: block;
@@ -1141,15 +965,11 @@ License: GNU General Public License v2 or later
           border: 2px solid $color5;
 
           .album-product {
-            width: 19%;
-            -webkit-flex: 1 0 auto;
-            -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+            width: 47%;
+            flex: 0 1 auto;
             margin: 0.25em;
             transition: all 0.5s ease-in-out;
             border-radius: 5px;
-            display: block;
-            float: left;
             padding: 0;
             text-align: center;
 
@@ -2235,7 +2055,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -2244,7 +2064,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -2297,7 +2117,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -2350,87 +2170,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 96%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 60%;
-
-                    h1 {
-                      font-size: 2.6em;
-
-                      span {
-                        font-size: 75%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 1.1em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.9em;
-                      }
-
-                      li {
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 1.1em;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-              padding: 0;
-
-              .bx-pager-item {
-                width: 6%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -2534,13 +2273,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.5em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -2557,21 +2291,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.entry-content {
+        .entry-content {
           padding: 1em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -3306,7 +3030,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -3315,7 +3039,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -3368,7 +3092,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -3429,83 +3153,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 98%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 60%;
-
-                    h1 {
-                      font-size: 2.2em;
-                      line-height: 30px;
-
-                      span {
-                        line-height: 30px;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 1em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.9em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 1em;
-                      width: 30%;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .bx-pager {
-            bottom: 1em;
-            padding: 0;
-
-            .bx-pager-item {
-              width: 4%;
-
-              a {
-                text-align: center;
-              }
-            }
-          }
-        }
       }
 
       #main_text {
@@ -3606,13 +3253,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.4em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -3620,30 +3262,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 1em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -4366,7 +3989,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -4375,7 +3998,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -4428,7 +4051,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -4469,89 +4092,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 60%;
-
-                    h1 {
-                      font-size: 2em;
-
-                      span {
-                        font-size: 80%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 1em;
-                      line-height: 30px;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.8em;
-                        line-height: 25px;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      line-height: 30px;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-              padding: 0;
-
-              .bx-pager-item {
-                width: 5%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -4654,13 +4194,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.3em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -4668,30 +4203,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 1em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -5407,7 +4923,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -5416,7 +4932,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -5469,7 +4985,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -5522,89 +5038,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 73%;
-                    top: 0.25em;
-                    left: 0.25em;
-
-                    h1 {
-                      font-size: 1.9em;
-
-                      span {
-                        font-size: 80%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 1em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.8em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 1em;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-              padding: 0;
-
-              .bx-pager-item {
-                width: 6%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -5707,13 +5140,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.3em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -5721,30 +5149,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 1em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -6455,7 +5864,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -6464,7 +5873,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -6517,7 +5926,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -6570,91 +5979,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 75%;
-
-                    h1 {
-                      font-size: 1.6em;
-                      line-height: 25px;
-
-                      span {
-                        font-size: 90%;
-                        line-height: 25px;
-                        display: inline;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.9em;
-                      line-height: 20px;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.75em;
-                        line-height: 20px;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 0.9em;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 6%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -6757,13 +6081,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.2em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -6771,30 +6090,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 1em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -7502,7 +6802,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -7511,7 +6811,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -7564,7 +6864,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -7618,86 +6918,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 75%;
-
-                    h1 {
-                      font-size: 1.4em;
-
-                      span {
-                        line-height: 25px;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.8em;
-                      line-height: 20px;
-                    }
-
-                    .features_list {
-                      h3 {
-                        font-size: 0.7em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 0.85em;
-                      width: 30%;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 7%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -7823,13 +7043,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.2em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -7837,30 +7052,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.5em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -8570,7 +7766,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -8579,7 +7775,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -8632,7 +7828,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -8685,86 +7881,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 75%;
-
-                    h1 {
-                      font-size: 1.3em;
-                      line-height: 0.8em;
-                    }
-
-                    h2 {
-                      font-size: 0.75em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.65em;
-                        line-height: 15px;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 0.8em;
-                      width: 30%;
-                      line-height: 30px;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 8%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -8867,16 +7983,11 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
+      .post {
         min-height: 500px;
         padding: 0.25em;
 
-        h1 {
-          font-size: 1.3em;
-        }
-
-        h2 {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -8884,30 +7995,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.5em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -9618,7 +8710,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -9627,7 +8719,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -9680,7 +8772,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -9733,93 +8825,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              //height: 125px !important;
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 80%;
-                    border: none;
-
-                    h1 {
-                      font-size: 1.1em;
-
-                      span {
-                        font-size: 90%;
-                        line-height: 20px;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.65em;
-                      line-height: 15px;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.55em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      font-size: 0.7em;
-                      width: 25%;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              padding: 0;
-
-              .bx-pager-item {
-                width: 9%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-
-          .button-icon-download {
-            margin-left: 15px;
-          }
-
-          #slider-stopper {
-            right: 0.2em;
-          }
-        }
       }
 
       #main_text {
@@ -9924,11 +8929,7 @@ License: GNU General Public License v2 or later
 
       .post,
       .page {
-        h1 {
-          font-size: 1.3em;
-        }
-
-        h2 {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -9936,30 +8937,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.25em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -10743,7 +9725,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -10752,7 +9734,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -10805,7 +9787,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -10863,86 +9845,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 90%;
-                    top: 0.15em;
-                    left: 0.15em;
-
-                    border: none;
-
-                    h1 {
-                      font-size: 1em;
-
-                      span {
-                        font-size: 90%;
-                        line-height: 15px;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.6em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.5em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      width: 30%;
-                      line-height: 25px;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 9%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-        }
       }
 
       #main_text {
@@ -11047,11 +9949,7 @@ License: GNU General Public License v2 or later
 
       .post,
       .page {
-        h1 {
-          font-size: 1.3em;
-        }
-
-        h2 {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -11059,30 +9957,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.5em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -11829,7 +10708,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -11838,7 +10717,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -11891,7 +10770,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -11944,86 +10823,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 90%;
-                    top: 0;
-                    left: 0;
-
-                    h1 {
-                      font-size: 0.9em;
-
-                      span {
-                        font-size: 90%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.5em;
-                      line-height: 10px;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.45em;
-                        line-height: 10px;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      line-height: 20px;
-                      font-size: 0.6em;
-                      margin-top: 0;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 9%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-        }
       }
 
       #main_text {
@@ -12126,13 +10925,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.2em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -12140,30 +10934,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.5em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -12905,7 +11680,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -12914,7 +11689,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -12967,7 +11742,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -13024,79 +11799,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              //height: 125px !important;
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 90%;
-
-                    h1 {
-                      font-size: 0.85em;
-
-                      span {
-                        font-size: 90%;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.5em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.45em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 9%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-        }
       }
 
       #main_text {
@@ -13199,13 +11901,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.1em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -13213,30 +11910,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.25em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
@@ -13999,7 +12677,7 @@ License: GNU General Public License v2 or later
     #side-bar {
       min-height: 200px;
 
-      article.side-bar-box {
+      .widget_block {
         width: 32%;
         margin: 0.5em;
 
@@ -14008,7 +12686,7 @@ License: GNU General Public License v2 or later
           line-height: 40px;
         }
 
-        form#searchform {
+        .wp-block-search {
           input[type="text"] {
             height: 35px;
           }
@@ -14061,7 +12739,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        ul#recentcomments {
+        .wp-block-latest-comments {
           width: 100%;
 
           li.recentcomments {
@@ -14118,81 +12796,6 @@ License: GNU General Public License v2 or later
 
       #slider {
         width: 100%;
-
-        #pageContainer {
-          margin: 0 auto;
-
-          .bxslider img {
-            max-width: 100%;
-          }
-
-          .bx-wrapper {
-            left: 0;
-
-            .bx-viewport {
-              ul.bxslider {
-                height: auto;
-
-                li {
-                  height: auto;
-
-                  .slider-text {
-                    width: 90%;
-
-                    h1 {
-                      font-size: 0.75em;
-
-                      span {
-                        line-height: 12px;
-                      }
-                    }
-
-                    h2 {
-                      font-size: 0.45em;
-                    }
-
-                    .features_list {
-                      font-size: 1em;
-
-                      h3 {
-                        font-size: 0.4em;
-                      }
-
-                      li {
-                        color: $color8;
-
-                        &:hover {
-                          color: $color10;
-                        }
-                      }
-                    }
-
-                    .button {
-                      display: block;
-                      line-height: 15px;
-
-                      &:hover {
-                        background-color: $color1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .bx-pager {
-              bottom: 1em;
-
-              .bx-pager-item {
-                width: 9%;
-
-                a {
-                  text-align: center;
-                }
-              }
-            }
-          }
-        }
       }
 
       #main_text {
@@ -14295,13 +12898,8 @@ License: GNU General Public License v2 or later
         }
       }
 
-      .post,
-      .page {
-        h1 {
-          font-size: 1.1em;
-        }
-
-        h2 {
+      .post {
+        .entry-title {
           margin-bottom: 0.2em;
 
           a {
@@ -14309,30 +12907,11 @@ License: GNU General Public License v2 or later
           }
         }
 
-        div.meta {
-          height: 100px;
-
-          span {
-            margin-bottom: 0.2em;
-            text-indent: 0.5em;
-          }
-        }
-
-        div.entry-content {
+        .entry-content {
           padding: 0.25em;
         }
 
-        .postmetadata {
-          height: 100px;
-
-          padding: 0.5em;
-
-          a {
-            width: 25%;
-          }
-        }
-
-        footer {
+        .entry-footer {
           padding: 0.5em;
 
           span.edit-link {
