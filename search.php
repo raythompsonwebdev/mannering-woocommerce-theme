@@ -18,7 +18,7 @@
  */
 get_header(); ?>
 
-<main id="main_text" class="site-main">
+<div id="post-content">
 
 	<?php if (have_posts()) : ?>
 
@@ -54,7 +54,7 @@ get_header(); ?>
 	endif;
 	?>
 
-</main><!-- #main -->
+</div><!-- #main -->
 
 <?php
 get_sidebar();

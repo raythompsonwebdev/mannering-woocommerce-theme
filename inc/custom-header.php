@@ -27,7 +27,7 @@ function mannering_music_custom_header_setup()
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1600,
-				'height'             => 250,
+				'height'             => 90,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'mannering_music_header_style',
 

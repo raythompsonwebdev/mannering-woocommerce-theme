@@ -162,6 +162,21 @@ if (!function_exists('mannering_music_setup')) :
 			)
 		);
 
+		// Add post formats.
+		add_theme_support(
+			'post-formats',
+			array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+				'gallery',
+				'status',
+				'audio',
+			)
+		);
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background',
@@ -179,6 +194,30 @@ if (!function_exists('mannering_music_setup')) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 90,
+				'width'       => 90,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
+
+		// Enable block editor styles to match the front end.
+		add_theme_support('wp-block-styles');
+
+		// Enable wide alignments in block editor.
+		add_theme_support('align-wide');
+
+		// allow embeds to be responsive.
+		add_theme_support('responsive_embeds');
 	}
 endif;
 add_action('after_setup_theme', 'mannering_music_setup');
@@ -208,6 +247,9 @@ function mannering_music_remove_head_links()
 }
 add_action('init', 'mannering_music_remove_head_links');
 
+// remove version from rss.
+add_filter('the_generator', '__return_empty_string');
+
 // Remove action.
 remove_action('wp_head', 'wp_generator');
 
@@ -219,6 +261,13 @@ function mannering_music_add_google_fonts()
 	wp_enqueue_style('storefront-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins', '1.1', true);
 }
 add_action('wp_enqueue_scripts', 'mannering_music_add_google_fonts');
+
+// Enqueue the Dashicons script.
+add_action('wp_enqueue_scripts', 'mannering_load_dashicons_front_end');
+function mannering_load_dashicons_front_end()
+{
+	wp_enqueue_style('dashicons');
+}
 
 
 /**
@@ -252,7 +301,7 @@ function mannering_music_register_styles()
 
 	wp_enqueue_style('mannering-music', get_stylesheet_directory_uri() . '/style.css', false, '1.1', 'all');
 
-	wp_enqueue_style('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all');
+	//wp_enqueue_style('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.css', false, '1.1', 'all');
 
 	wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
 }
@@ -311,7 +360,7 @@ function mannering_music_front_scripts()
 
 	if (is_front_page()) {
 
-		wp_enqueue_script('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.min.js', array('jquery'), '20161110', true);
+		//wp_enqueue_script('bx-slider', get_stylesheet_directory_uri() . '/js/bxslider-4-master/jquery.bxslider.min.js', array('jquery'), '20161110', true);
 		wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), '20161110', true);
 	}
 }
@@ -328,7 +377,7 @@ function mannering_music_audio_scripts()
 	if (is_page('audio')) {
 		wp_enqueue_script('tabs', get_stylesheet_directory_uri() . '/js/tabs.js', array('jquery'), '20161110', true);
 
-		wp_enqueue_script('audio', get_stylesheet_directory_uri() . '/js/audio-script.js', array('jquery'), '1.1', true);
+		//wp_enqueue_script('audio', get_stylesheet_directory_uri() . '/js/audio-script.js', array('jquery'), '1.1', true);
 	}
 }
 add_action('wp_enqueue_scripts', 'mannering_music_audio_scripts');

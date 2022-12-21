@@ -20,7 +20,7 @@
 get_header(); ?>
 
 
-<main id="main_text" role="main">
+<main id="main_text">
 
 	<h2 class="content-header">
 		<?php the_title(); ?>

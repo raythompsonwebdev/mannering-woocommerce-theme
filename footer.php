@@ -22,11 +22,11 @@
 
 	<div class="social-btns">
 		<ul>
-			<li><a href="#"><i class="fa fa-twitter soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-rss soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-dribbble soc"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram soc"></i></a></li>
+			<li><a href="#"><span class="dashicons dashicons-twitter"></span></a></li>
+			<li><a href="#"><span class="dashicons dashicons-facebook"></span></a></li>
+			<li><a href="#"><span class="dashicons dashicons-rss"></span></i></a></li>
+			<li><a href="#"><span class="dashicons dashicons-instagram"></span></a></li>
+			<li><a href="#"><span class="dashicons dashicons-youtube"></span></a></li>
 		</ul>
 	</div>
 	<?php

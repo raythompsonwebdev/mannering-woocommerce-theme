@@ -195,7 +195,7 @@ get_header(); ?>
 					?>
 
 					<figcaption class="album-product-caption">
-						<h4><?php the_title(); ?></h4>
+						<h4 class="album-product-title"><?php the_title(); ?></h4>
 
 
 
@@ -251,7 +251,7 @@ get_header(); ?>
 					}
 					?>
 					<figcaption class="album-product-caption">
-						<h4><?php the_title(); ?></h4>
+						<h4 class="album-product-title"><?php the_title(); ?></h4>
 					</figcaption>
 
 				</figure>
