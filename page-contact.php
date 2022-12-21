@@ -27,7 +27,6 @@ get_header(); ?>
 		<?php esc_html_e('Contact Us', 'mannering_music'); ?>
 	</h2>
 
-	<br />
 
 	<div id="summary"></div>
 
@@ -51,32 +50,31 @@ get_header(); ?>
 		<label for="message">
 			<?php esc_html_e('Message', 'mannering_music'); ?>
 		</label>
-		<textarea name="message" id="message" cols="30" rows="10" placeholder="Write message here (No HTML Allowed)"><?php //echo esc_textarea( $text );
-																																																									?></textarea>
+		<textarea name="message" id="message" cols="30" rows="5" placeholder="Write message here (No HTML Allowed)"><?php //echo esc_textarea( $text );
+																																																								?></textarea>
 
-		<br /><br />
 
 		<input class="submit" name="submit" type="submit" value="Submit" id="contact_btn">
 	</form>
 
 
-	<ul id="contact-details">
-		<li>
+	<address id="contact-details">
+		<p>
 			<?php esc_html_e('Mannering Music Agency', 'mannering_music'); ?>
-		</li>
-		<li>
+		</p>
+		<p>
 			<?php esc_html_e('1 Somewhere', 'mannering_music'); ?>
-		</li>
-		<li>
+		</p>
+		<p>
 			<?php esc_html_e('London', 'mannering_music'); ?>
-		</li>
-		<li>
+		</p>
+		<p>
 			<?php esc_html_e('E8 2GF', 'mannering_music'); ?>
-		</li>
-		<li>
+		</p>
+		<p>
 			<?php esc_html_e('Tel No: 0208 123 4567', 'mannering_music'); ?>
-		</li>
-	</ul>
+		</p>
+	</address>
 
 	<!--Main text end-->
 

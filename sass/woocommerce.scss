@@ -413,6 +413,11 @@ WooCommerce styles override
                   line-height: 35px;
                   text-indent: 0.5em;
                 }
+                .must-log-in {
+                  a {
+                    display: inline-block;
+                  }
+                }
 
                 input#submit {
                   height: 45px;
@@ -1116,7 +1121,7 @@ WooCommerce styles override
           display: block;
           height: auto;
           padding: 0.5em;
-          color: $color3;
+          color: $color2;
           text-indent: 0.5em;
           width: 100%;
           line-height: 35px;
@@ -1125,7 +1130,7 @@ WooCommerce styles override
             display: inline-block;
             padding: 0 0.5em;
             line-height: 40px;
-            color: $color3;
+            color: $color2;
 
             &:hover {
               font-weight: bold;
@@ -1267,9 +1272,9 @@ WooCommerce styles override
         .woocommerce-cart-form {
           padding: 0;
           white-space: normal;
-
+          background-color: $color2;
           table.woocommerce-cart-form__contents {
-            padding: 1em 0;
+            padding: 0;
             width: 100%;
 
             thead {
@@ -1503,14 +1508,18 @@ WooCommerce styles override
           gap: 1em;
           p {
             color: $color7;
+            margin: 1em auto;
+            width: 92%;
           }
 
           .u-column1 {
             width: 49%;
 
-            .woocommerce-form-login {
-              p.form-row {
-                margin: 1.5em 0;
+            .login {
+              background-color: $color2;
+              padding: 0.5em;
+              .form-row {
+                margin: 1em auto;
                 color: $color7;
                 .woocommerce-form__label-for-checkbox {
                   width: 40%;
@@ -1545,12 +1554,15 @@ WooCommerce styles override
               color: $color7;
             }
             .form-row {
+              margin: 1em auto;
               button[name~="register"] {
                 line-height: 35px;
                 width: 30%;
               }
             }
             .woocommerce-form-register {
+              background-color: $color2;
+              padding: 0.5em;
               .woocommerce-privcay-policy-text {
                 color: $color7;
               }
@@ -1641,7 +1653,7 @@ WooCommerce styles override
               color: $color3;
               padding: 1em;
               width: 100%;
-
+              background-color: $color2;
               thead {
                 height: 45px;
                 color: $color2;
@@ -1937,7 +1949,7 @@ WooCommerce styles override
             table.shop_table {
               width: 100%;
               color: $color7;
-
+              background-color: $color2;
               tbody {
                 font-size: 90%;
 

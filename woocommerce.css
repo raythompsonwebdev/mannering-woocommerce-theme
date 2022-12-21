@@ -392,6 +392,10 @@ WooCommerce styles override
 		line-height: 35px;
 		text-indent: 0.5em;
 	}
+	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond .must-log-in a,
+	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond .must-log-in a {
+		display: inline-block;
+	}
 	.product .woocommerce-tabs .panel #reviews div#review_form_wrapper #review_form #respond input#submit,
 	.product .woocommerce-tabs .panel .woocommerce-Reviews div#review_form_wrapper #review_form #respond input#submit {
 		height: 45px;
@@ -1052,7 +1056,7 @@ WooCommerce styles override
 		display: block;
 		height: auto;
 		padding: 0.5em;
-		color: #3a3a3a;
+		color: #ffffff;
 		text-indent: 0.5em;
 		width: 100%;
 		line-height: 35px;
@@ -1061,7 +1065,7 @@ WooCommerce styles override
 		display: inline-block;
 		padding: 0 0.5em;
 		line-height: 40px;
-		color: #3a3a3a;
+		color: #ffffff;
 	}
 	#content .entry-content .woocommerce .woocommerce-info a:hover {
 		font-weight: bold;
@@ -1172,9 +1176,10 @@ WooCommerce styles override
 	#content .entry-content .woocommerce .woocommerce-cart-form {
 		padding: 0;
 		white-space: normal;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents {
-		padding: 1em 0;
+		padding: 0;
 		width: 100%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents thead {
@@ -1368,32 +1373,38 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce #customer_login p {
 		color: #181818;
+		margin: 1em auto;
+		width: 92%;
 	}
 	#content .entry-content .woocommerce #customer_login .u-column1 {
 		width: 49%;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row {
-		margin: 1.5em 0;
+	#content .entry-content .woocommerce #customer_login .u-column1 .login {
+		background-color: #ffffff;
+		padding: 0.5em;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column1 .login .form-row {
+		margin: 1em auto;
 		color: #181818;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login .form-row .woocommerce-form__label-for-checkbox {
 		width: 40%;
 		display: flex;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox input#rememberme {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login .form-row .woocommerce-form__label-for-checkbox input#rememberme {
 		width: 10%;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row .woocommerce-form__label-for-checkbox span {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login .form-row .woocommerce-form__label-for-checkbox span {
 		line-height: 15px;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.form-row button[name~="login"] {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login .form-row button[name~="login"] {
 		line-height: 35px;
 		width: 30%;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.woocommerce-LostPassword {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login p.woocommerce-LostPassword {
 		height: 35px;
 	}
-	#content .entry-content .woocommerce #customer_login .u-column1 .woocommerce-form-login p.woocommerce-LostPassword a {
+	#content .entry-content .woocommerce #customer_login .u-column1 .login p.woocommerce-LostPassword a {
 		display: block;
 		line-height: 35px;
 	}
@@ -1403,9 +1414,16 @@ WooCommerce styles override
 	#content .entry-content .woocommerce #customer_login .u-column2 label {
 		color: #181818;
 	}
+	#content .entry-content .woocommerce #customer_login .u-column2 .form-row {
+		margin: 1em auto;
+	}
 	#content .entry-content .woocommerce #customer_login .u-column2 .form-row button[name~="register"] {
 		line-height: 35px;
 		width: 30%;
+	}
+	#content .entry-content .woocommerce #customer_login .u-column2 .woocommerce-form-register {
+		background-color: #ffffff;
+		padding: 0.5em;
 	}
 	#content .entry-content .woocommerce #customer_login .u-column2 .woocommerce-form-register .woocommerce-privcay-policy-text {
 		color: #181818;
@@ -1479,6 +1497,7 @@ WooCommerce styles override
 		color: #3a3a3a;
 		padding: 1em;
 		width: 100%;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table thead {
 		height: 45px;
@@ -1729,6 +1748,7 @@ WooCommerce styles override
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table {
 		width: 100%;
 		color: #181818;
+		background-color: #ffffff;
 	}
 	#content .entry-content .woocommerce .cart-collaterals .cart_totals table.shop_table tbody {
 		font-size: 90%;

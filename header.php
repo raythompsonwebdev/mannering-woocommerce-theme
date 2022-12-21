@@ -132,4 +132,4 @@
 			?>
 		</nav>
 
-		<div id="content" class="group">
+		<div id="content">
