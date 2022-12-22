@@ -8327,7 +8327,7 @@ WooCommerce styles override
               /*cart*/
               tr.cart_item {
                 padding: 0;
-
+                font-size: 0.75em;
                 td {
                   padding: 0.25em;
                   width: 10%;
@@ -8352,14 +8352,13 @@ WooCommerce styles override
                 td.product-name {
                   a {
                     line-height: 15px;
-                    font-size: 0.8em;
                   }
                 }
 
                 td.product-quantity {
                   .quantity {
                     label {
-                      font-size: 0.85em;
+                      margin: 0;
                     }
 
                     input[type="number"] {
@@ -8369,12 +8368,10 @@ WooCommerce styles override
                 }
 
                 td.product-price {
-                  font-size: 0.75em;
                   width: 14%;
                   span.woocommerce-Price-currencySymbol {
-                    display: block;
+                    display: inline-block;
                     line-height: 15px;
-                    width: 100%;
                   }
 
                   span.woocommerce-Price-amount {
@@ -8385,7 +8382,6 @@ WooCommerce styles override
 
                 td.product-subtotal,
                 td.product-total {
-                  font-size: 0.9em;
                   width: 14%;
                   span.woocommerce-Price-amount {
                     line-height: 15px;
@@ -8393,8 +8389,7 @@ WooCommerce styles override
                     text-align: left;
 
                     span.woocommerce-Price-currencySymbol {
-                      width: 100%;
-                      display: block;
+                      display: inline-block;
                       text-align: left;
                     }
                   }
@@ -8414,18 +8409,18 @@ WooCommerce styles override
                   }
 
                   div.coupon {
-                    width: 73%;
+                    width: 100%;
 
                     label[for~="coupon_code"] {
-                      width: 25%;
+                      width: 15%;
                     }
 
                     #coupon_code {
-                      font-size: 0.9em;
+                      font-size: 0.75em;
                     }
 
                     .wp-element-button {
-                      font-size: 0.9em;
+                      font-size: 0.75em;
                     }
                   }
                 }
@@ -9064,18 +9059,20 @@ WooCommerce styles override
                   }
 
                   div.coupon {
-                    width: 73%;
+                    width: 100%;
 
                     label[for~="coupon_code"] {
-                      width: 25%;
+                      width: 15%;
                     }
 
                     #coupon_code {
-                      font-size: 0.9em;
+                      font-size: 0.75em;
+                      width: 40%;
                     }
 
                     .wp-element-button {
-                      font-size: 0.9em;
+                      font-size: 0.75em;
+                      width: 30%;
                     }
                   }
                 }

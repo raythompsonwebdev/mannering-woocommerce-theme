@@ -1,4 +1,3 @@
-// Hide/show toggle button on scroll
 jQuery(document).ready(($) => {
 	let position, direction, previous;
 
@@ -23,8 +22,8 @@ jQuery(document).ready(($) => {
 		event.preventDefault();
 
 		// create menu variables
-		const slideoutMenu = $('nav ');
-		const slideoutMenuWidth = $('nav ').width();
+		const slideoutMenu = $('#mannering-main-nav');
+		const slideoutMenuWidth = slideoutMenu.width();
 
 		// toggle open class
 		slideoutMenu.toggleClass('open');
@@ -39,6 +38,7 @@ jQuery(document).ready(($) => {
 				{
 					left: -slideoutMenuWidth,
 				},
+				// eslint-disable-next-line comma-dangle
 				500
 			);
 		}

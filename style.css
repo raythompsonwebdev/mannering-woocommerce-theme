@@ -5637,7 +5637,7 @@ body {
 		display: block;
 	}
 	.menu-toggle {
-		position: fixed;
+		position: absolute;
 		z-index: 100;
 		top: 53px;
 		left: 82vw;

@@ -6,7 +6,8 @@
         "browser": true,
         "commonjs":true,
         "es6": true,
-        "node":true
+        "node":true,
+				"jquery": true
     },
     "parserOptions": {
         "ecmaVersion": 12,
@@ -20,14 +21,14 @@
           "strict" : ["error","global"],
       "prefer-destructuring":["error",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
       "new-cap": "error",
-      "no-invalid-this": "error",
+      "no-invalid-this": "off",
       "prefer-const":"error",
       "func-style":["error", "expression"],
       "no-new-func":"error",
       "prettier/prettier": "error",
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "func-names": "warn",
+      "func-names": "off",
       "no-process-exit": "warn",
       "object-shorthand": "warn",
       "class-methods-use-this": "error",
@@ -42,6 +43,13 @@
       "eqeqeq":"error",
       "no-with":"error",
       "no-plusplus":"error",
-			"indent": ["error", "tab"]
+			"indent": ["error", "tab"],
+			"space-in-parens": ["error", "never"],
+			"space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "always",
+        "asyncArrow": "always"
+    }]
+
     }
 }

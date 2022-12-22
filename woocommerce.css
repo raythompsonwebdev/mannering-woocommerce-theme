@@ -6602,6 +6602,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item {
 		padding: 0;
+		font-size: 0.75em;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td {
 		padding: 0.25em;
@@ -6618,22 +6619,19 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-name a {
 		line-height: 15px;
-		font-size: 0.8em;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-quantity .quantity label {
-		font-size: 0.85em;
+		margin: 0;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-quantity .quantity input[type="number"] {
 		height: 35px;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-price {
-		font-size: 0.75em;
 		width: 14%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-price span.woocommerce-Price-currencySymbol {
-		display: block;
+		display: inline-block;
 		line-height: 15px;
-		width: 100%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-price span.woocommerce-Price-amount {
 		line-height: 15px;
@@ -6641,7 +6639,6 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-subtotal,
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-total {
-		font-size: 0.9em;
 		width: 14%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-subtotal span.woocommerce-Price-amount,
@@ -6652,8 +6649,7 @@ WooCommerce styles override
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-subtotal span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol,
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr.cart_item td.product-total span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol {
-		width: 100%;
-		display: block;
+		display: inline-block;
 		text-align: left;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr {
@@ -6667,16 +6663,16 @@ WooCommerce styles override
 		cursor: pointer;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon {
-		width: 73%;
+		width: 100%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon label[for~="coupon_code"] {
-		width: 25%;
+		width: 15%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon #coupon_code {
-		font-size: 0.9em;
+		font-size: 0.75em;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon .wp-element-button {
-		font-size: 0.9em;
+		font-size: 0.75em;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout {
 		/*woocommerce-checkoutform*/
@@ -7118,16 +7114,18 @@ WooCommerce styles override
 		cursor: pointer;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon {
-		width: 73%;
+		width: 100%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon label[for~="coupon_code"] {
-		width: 25%;
+		width: 15%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon #coupon_code {
-		font-size: 0.9em;
+		font-size: 0.75em;
+		width: 40%;
 	}
 	#content .entry-content .woocommerce .woocommerce-cart-form table.woocommerce-cart-form__contents tbody tr td.actions div.coupon .wp-element-button {
-		font-size: 0.9em;
+		font-size: 0.75em;
+		width: 30%;
 	}
 	#content .entry-content .woocommerce form.woocommerce-checkout {
 		/*woocommerce-checkoutform*/
