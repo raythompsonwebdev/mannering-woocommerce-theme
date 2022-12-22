@@ -19,9 +19,9 @@ License: GNU General Public License v2 or later
 
 */
 
-@import 'partials/base';
-@import 'partials/fonts';
-@import 'partials/variables';
+@import "partials/base";
+@import "partials/fonts";
+@import "partials/variables";
 
 #wrapper {
 	width: 98%;
@@ -87,7 +87,7 @@ License: GNU General Public License v2 or later
 					display: block;
 					font-size: 14px;
 					font-size: 0.875rem;
-					font-weight: bold;
+					font-weight: 700;
 					height: auto;
 					left: 5px;
 					line-height: normal;
@@ -96,13 +96,14 @@ License: GNU General Public License v2 or later
 					top: 5px;
 					width: auto;
 					z-index: 100000;
+
 					/* Above WP toolbar. */
 				}
 			}
 
 			.site-firstletter {
 				font-size: 1em;
-				font-weight: normal;
+				font-weight: 400;
 				text-align: center;
 				margin: 0;
 				padding: 0;
@@ -120,7 +121,7 @@ License: GNU General Public License v2 or later
 	.site-logo a:hover .site-firstletter {
 		background: $color4;
 		color: $color8;
-		font-weight: normal;
+		font-weight: 400;
 		text-align: center;
 	}
 
@@ -135,7 +136,7 @@ License: GNU General Public License v2 or later
 			margin: 0;
 			width: 100%;
 			height: 40px;
-			font-weight: bold;
+			font-weight: 700;
 			text-shadow: 1px 1px $color7;
 			line-height: 40px;
 			display: block;
@@ -161,9 +162,8 @@ License: GNU General Public License v2 or later
 			font-size: 1.1em;
 			margin: 0;
 			height: 40px;
-			font-weight: bold;
+			font-weight: 700;
 			line-height: 40px;
-			color: $color10;
 			text-shadow: 1px 1px $color7;
 			display: block;
 			letter-spacing: 0.03em;
@@ -193,7 +193,7 @@ License: GNU General Public License v2 or later
 			letter-spacing: 0.1em;
 			text-shadow: 1px 1px $color7;
 			line-height: 20px;
-			font-weight: normal;
+			font-weight: 400;
 			padding: 0;
 			clear: left;
 			color: $color10;
@@ -305,26 +305,26 @@ License: GNU General Public License v2 or later
 			box-sizing: border-box;
 
 			&:hover {
-				font-weight: bold;
+				font-weight: 700;
 				background-color: $color2;
 				color: $color9;
 			}
 
 			a {
-				font-size: 0.85em;
+				font-size: 0.75em;
 				width: 100%;
 				line-height: 45px;
 				color: $color2;
 				background-color: $color9;
 				display: block;
 				letter-spacing: 0.1em;
-				font-weight: normal;
+				font-weight: 400;
 				text-align: center;
 				text-decoration: none;
 
 				&:hover {
 					letter-spacing: 0.2em;
-					font-weight: bold;
+					font-weight: 700;
 					background-color: $color2;
 					color: $color9;
 				}
@@ -362,12 +362,12 @@ License: GNU General Public License v2 or later
 		}
 
 		.wp-block-search {
-			input[type='text'] {
+			input[type="text"] {
 				width: 75%;
 				height: 35px;
 			}
 
-			input[type='submit'] {
+			input[type="submit"] {
 				width: 20%;
 			}
 		}
@@ -395,7 +395,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		ul.product_list_widget {
+		.product_list_widget {
 			li {
 				margin: 0.5em;
 				background-color: $color3;
@@ -538,7 +538,7 @@ License: GNU General Public License v2 or later
 				height: 40px;
 			}
 			a,
-			a[rel~='tag'] {
+			a[rel~="tag"] {
 				display: inline-block;
 				width: auto;
 				line-height: 40px;
@@ -551,7 +551,7 @@ License: GNU General Public License v2 or later
 
 				&:hover {
 					color: $color10;
-					font-weight: bold;
+					font-weight: 700;
 					cursor: pointer;
 				}
 			}
@@ -576,12 +576,12 @@ License: GNU General Public License v2 or later
 		line-height: 60px;
 		text-align: center;
 		padding: 0.5em 0;
-		font-weight: normal;
+		font-weight: 400;
 	}
 
 	p {
 		font-size: 0.8em;
-		font-weight: normal;
+		font-weight: 400;
 		display: block;
 	}
 
@@ -620,7 +620,7 @@ License: GNU General Public License v2 or later
 
 			&:hover {
 				color: $color1;
-				font-weight: bold;
+				font-weight: 700;
 			}
 		}
 	}
@@ -695,8 +695,8 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type='text'],
-			input[type='email'] {
+			input[type="text"],
+			input[type="email"] {
 				width: 100%;
 				display: block;
 				padding: 0.2em;
@@ -715,7 +715,7 @@ License: GNU General Public License v2 or later
 				width: 98%;
 				height: 40px;
 				font-size: 0.8em;
-				font-weight: bold;
+				font-weight: 700;
 			}
 
 			#contact_btn {
@@ -732,7 +732,7 @@ License: GNU General Public License v2 or later
 					width: 50%;
 					height: 35px;
 					color: $color9;
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -745,7 +745,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		/*contact-page-map*/
+		/* contact-page-map */
 		#mapcontainer {
 			display: block;
 		}
@@ -770,7 +770,6 @@ License: GNU General Public License v2 or later
 		}
 
 		.entry-content {
-			padding: 0.25em;
 			background-color: $color2;
 			margin: 0;
 			color: $color7;
@@ -786,7 +785,7 @@ License: GNU General Public License v2 or later
 				height: 40px;
 			}
 			a,
-			a[rel~='tag'] {
+			a[rel~="tag"] {
 				display: inline-block;
 				&:visited {
 					color: $color10;
@@ -903,7 +902,6 @@ License: GNU General Public License v2 or later
 
 			.album-product {
 				width: 80%;
-				margin: 4em auto;
 				flex: 0 1 auto;
 				margin: 0.25em;
 				transition: all 0.5s ease-in-out;
@@ -937,7 +935,7 @@ License: GNU General Public License v2 or later
 						font-size: 0.65em;
 						color: $color2;
 						text-transform: uppercase;
-						font-weight: normal;
+						font-weight: 400;
 						letter-spacing: 0.1em;
 					}
 
@@ -1024,7 +1022,7 @@ License: GNU General Public License v2 or later
 			clear: both;
 			text-align: center;
 			background-color: $color4;
-			font-weight: normal;
+			font-weight: 400;
 			line-height: 40px;
 		}
 
@@ -1089,13 +1087,13 @@ License: GNU General Public License v2 or later
 						text-decoration: none;
 						display: block;
 						line-height: 45px;
-						font-weight: normal;
+						font-weight: 400;
 
 						&:hover {
 							background-color: $color9;
 							color: $color1;
 
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -1209,7 +1207,7 @@ License: GNU General Public License v2 or later
 
 				&:hover {
 					color: $color1;
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -1231,9 +1229,10 @@ License: GNU General Public License v2 or later
 	}
 }
 
-/*1920*/
+/* 1920 */
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-	/*wrapper*/
+
+	/* wrapper */
 	#wrapper {
 		margin-left: auto;
 		margin-right: auto;
@@ -1266,7 +1265,7 @@ License: GNU General Public License v2 or later
 						display: block;
 						font-size: 14px;
 						font-size: 0.875rem;
-						font-weight: bold;
+						font-weight: 700;
 						height: auto;
 						left: 5px;
 						line-height: normal;
@@ -1275,6 +1274,7 @@ License: GNU General Public License v2 or later
 						top: 5px;
 						width: auto;
 						z-index: 100000;
+
 						/* Above WP toolbar. */
 					}
 				}
@@ -1292,7 +1292,7 @@ License: GNU General Public License v2 or later
 
 		.site-logo a:focus .site-firstletter,
 		.site-logo a:hover .site-firstletter {
-			font-weight: normal;
+			font-weight: 400;
 			text-align: center;
 		}
 
@@ -1335,7 +1335,7 @@ License: GNU General Public License v2 or later
 				text-shadow: 1px 1px $color7;
 				line-height: 20px;
 				font-size: 0.7em;
-				font-weight: normal;
+				font-weight: 400;
 				padding: 0;
 				clear: left;
 				color: $color10;
@@ -1392,7 +1392,7 @@ License: GNU General Public License v2 or later
 				a {
 					font-size: 0.9em;
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -1414,12 +1414,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -1438,7 +1438,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -1551,7 +1551,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -1574,12 +1574,12 @@ License: GNU General Public License v2 or later
 		}
 
 		p {
-			font-weight: normal;
+			font-weight: 400;
 			display: block;
 		}
 
 		form {
-			font-weight: normal;
+			font-weight: 400;
 
 			label {
 				display: block;
@@ -1591,17 +1591,17 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type='text'],
-			input[type='password'],
-			input[type='submit'] {
+			input[type="text"],
+			input[type="password"],
+			input[type="submit"] {
 				display: block;
-				font-weight: normal;
+				font-weight: 400;
 			}
 
-			input[type='text'],
-			input[type='password'],
-			input[type='email'],
-			input[type='tel'] {
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			input[type="tel"] {
 				width: 100%;
 				border: 2px solid $color8;
 				border-radius: 5px;
@@ -1623,12 +1623,12 @@ License: GNU General Public License v2 or later
 				line-height: 40px;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
 
-		/*front-page slider*/
+		/* front-page slider */
 		#slider {
 			width: 94%;
 			height: 450px;
@@ -1662,8 +1662,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					font-size: 1em;
 				}
 
@@ -1679,12 +1679,12 @@ License: GNU General Public License v2 or later
 					font-size: 1em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
 
-			/*contact-page-details*/
+			/* contact-page-details */
 			#contact-details {
 				display: inline-block;
 
@@ -1693,13 +1693,13 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
 		}
 
-		/*blog comments section*/
+		/* blog comments section */
 		#mannering-comments {
 			.commentlist {
 				width: 100%;
@@ -1750,14 +1750,14 @@ License: GNU General Public License v2 or later
 							display: block;
 							width: 100%;
 							text-align: center;
-							margin: 0px;
-							padding: 0px;
+							margin: 0;
+							padding: 0;
 							border: 2px solid $comment-border;
 							border-radius: 5px;
 							box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
 							color: $color2;
 							background: $color1;
-							font-weight: bold;
+							font-weight: 700;
 							height: 35px;
 						}
 					}
@@ -1787,7 +1787,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		/*front-page grid*/
+		/* front-page grid */
 		.featured-section:last-of-type {
 			margin-bottom: 0%;
 		}
@@ -1905,7 +1905,7 @@ License: GNU General Public License v2 or later
 				clear: both;
 				text-align: center;
 				background-color: $color4;
-				font-weight: normal;
+				font-weight: 400;
 				line-height: 40px;
 			}
 
@@ -1970,13 +1970,13 @@ License: GNU General Public License v2 or later
 							text-decoration: none;
 							display: block;
 							line-height: 45px;
-							font-weight: normal;
+							font-weight: 400;
 
 							&:hover {
 								background-color: $color9;
 								color: $color1;
 
-								font-weight: bold;
+								font-weight: 700;
 							}
 						}
 					}
@@ -2045,10 +2045,10 @@ License: GNU General Public License v2 or later
 				display: block;
 
 				a {
-					font-size: 2em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -2066,7 +2066,7 @@ License: GNU General Public License v2 or later
 	}
 }
 
-/*1440*/
+/* 1440 */
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
 	#wrapper {
 		width: 96%;
@@ -2110,7 +2110,7 @@ License: GNU General Public License v2 or later
 				margin: 0;
 				width: 100%;
 				height: 40px;
-				font-weight: bold;
+				font-weight: 700;
 				text-shadow: 1px 1px $color7;
 				line-height: 40px;
 				display: block;
@@ -2184,7 +2184,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -2205,12 +2205,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -2229,7 +2229,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -2343,7 +2343,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -2388,7 +2388,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -2414,8 +2414,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 					font-size: 1.2em;
@@ -2448,7 +2448,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -2641,7 +2641,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -2681,10 +2681,10 @@ License: GNU General Public License v2 or later
 				height: 30px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -2700,7 +2700,7 @@ License: GNU General Public License v2 or later
 	}
 }
 
-/*1280*/
+/* 1280 */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 	#wrapper {
 		width: 96%;
@@ -2804,10 +2804,10 @@ License: GNU General Public License v2 or later
 				flex: 0 1 auto;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -2828,12 +2828,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -2852,7 +2852,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -2964,7 +2964,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -3009,7 +3009,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -3036,8 +3036,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -3067,7 +3067,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -3261,7 +3261,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -3302,10 +3302,10 @@ License: GNU General Public License v2 or later
 				height: 30px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -3321,7 +3321,7 @@ License: GNU General Public License v2 or later
 	}
 }
 
-/*1024*/
+/* 1024 */
 @media only screen and (min-width: 801px) and (max-width: 1024px) {
 	#wrapper {
 		width: 98%;
@@ -3425,10 +3425,10 @@ License: GNU General Public License v2 or later
 				flex: 0 1 auto;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -3449,12 +3449,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -3473,7 +3473,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -3587,7 +3587,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -3632,7 +3632,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -3659,8 +3659,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -3690,7 +3690,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -3884,7 +3884,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -3926,10 +3926,10 @@ License: GNU General Public License v2 or later
 				height: 30px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.85em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -3946,7 +3946,7 @@ License: GNU General Public License v2 or later
 	}
 }
 
-/*800*/
+/* 800 */
 @media only screen and (min-width: 601px) and (max-width: 800px) {
 	#wrapper {
 		width: 98%;
@@ -4052,10 +4052,10 @@ License: GNU General Public License v2 or later
 				flex: 0 1 auto;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.8em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -4076,12 +4076,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -4100,7 +4100,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -4213,7 +4213,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4258,7 +4258,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -4286,8 +4286,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -4317,7 +4317,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -4511,7 +4511,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -4554,7 +4554,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.8em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -4676,10 +4676,10 @@ License: GNU General Public License v2 or later
 				flex: 0 1 auto;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.8em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -4700,12 +4700,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -4724,7 +4724,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -4837,7 +4837,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4882,7 +4882,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -4909,8 +4909,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -4940,7 +4940,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -5134,7 +5134,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -5179,7 +5179,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.8em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -5369,12 +5369,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -5393,7 +5393,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -5506,7 +5506,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -5551,7 +5551,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -5578,8 +5578,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -5609,7 +5609,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -5803,7 +5803,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -5845,10 +5845,10 @@ License: GNU General Public License v2 or later
 				height: 30px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.75em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
@@ -6029,12 +6029,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -6053,7 +6053,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			ul.product_list_widget {
+			.product_list_widget {
 				li {
 					margin: 0.5em;
 					padding: 0.5em;
@@ -6166,7 +6166,7 @@ License: GNU General Public License v2 or later
 					height: 40px;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -6211,7 +6211,7 @@ License: GNU General Public License v2 or later
 				margin: 0 auto;
 
 				&:hover {
-					font-weight: bold;
+					font-weight: 700;
 				}
 			}
 		}
@@ -6238,8 +6238,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -6269,7 +6269,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			/*contact-page-map*/
+			/* contact-page-map */
 			#mapcontainer {
 				display: block;
 			}
@@ -6463,7 +6463,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a:hover {
-							font-weight: bold;
+							font-weight: 700;
 						}
 					}
 				}
@@ -6505,10 +6505,10 @@ License: GNU General Public License v2 or later
 				height: 30px;
 
 				a {
-					font-size: 0.8em;
+					font-size: 0.75em;
 
 					&:hover {
-						font-weight: bold;
+						font-weight: 700;
 					}
 				}
 			}
