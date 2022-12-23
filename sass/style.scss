@@ -74,7 +74,7 @@ License: GNU General Public License v2 or later
 			/* Text meant only for screen readers. */
 			.screen-reader-text {
 				clip: rect(1px, 1px, 1px, 1px);
-				position: absolute !important;
+				position: absolute;
 				height: 1px;
 				width: 1px;
 				overflow: hidden;
@@ -83,7 +83,7 @@ License: GNU General Public License v2 or later
 					background-color: $color2;
 					border-radius: 3px;
 					box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-					clip: auto !important;
+					clip: auto;
 					display: block;
 					font-size: 14px;
 					font-size: 0.875rem;
@@ -282,7 +282,7 @@ License: GNU General Public License v2 or later
 	width: 250px;
 	height: auto;
 
-	ul#menu-main {
+	#menu-main {
 		height: 14.1em;
 		list-style: none;
 		margin: 0;
@@ -294,7 +294,7 @@ License: GNU General Public License v2 or later
 		justify-content: flex-start;
 		gap: 0.25em;
 
-		li.menu-item {
+		.menu-item {
 			height: 45px;
 			flex: 0 1 auto;
 			list-style: none;
@@ -413,7 +413,7 @@ License: GNU General Public License v2 or later
 						width: 40%;
 					}
 
-					span.product-title {
+					.product-title {
 						width: 50%;
 						display: inline-block;
 						font-size: 0.9em;
@@ -520,7 +520,7 @@ License: GNU General Public License v2 or later
 			color: $color7;
 
 			p {
-				line-height: 1.7em;
+				line-height: 27px;
 			}
 		}
 
@@ -686,12 +686,12 @@ License: GNU General Public License v2 or later
 			a {
 				color: $color2;
 				text-decoration: none;
-				line-height: 1.5em;
+				line-height: 24px;
 
 				&:hover {
 					color: $color1;
 					text-decoration: none;
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 			}
 
@@ -810,7 +810,7 @@ License: GNU General Public License v2 or later
 					height: 80px;
 
 					.comment-author {
-						b.fn {
+						.fn {
 							display: inline-block;
 						}
 					}
@@ -819,18 +819,18 @@ License: GNU General Public License v2 or later
 						width: 17%;
 					}
 
-					.vcard img.photo {
+					.vcard .photo {
 						width: 20%;
 
 						margin-right: 1em;
 					}
 
-					div.comment-metadata {
+					.comment-metadata {
 						display: block;
 					}
 				}
 
-				div.comment-content {
+				.comment-content {
 					min-height: 150px;
 				}
 
@@ -981,7 +981,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			li a.tab-active {
+			li .tab-active {
 				color: $color1;
 				background-color: $color9;
 				position: relative;
@@ -1026,9 +1026,8 @@ License: GNU General Public License v2 or later
 			line-height: 40px;
 		}
 
-		figure.project-item {
+		.project-item {
 			flex: 0 0 auto;
-			margin-bottom: 30px;
 			position: relative;
 			overflow: hidden;
 			border: 3px solid $color4;
@@ -1045,7 +1044,7 @@ License: GNU General Public License v2 or later
 				display: block;
 			}
 
-			figcaption.overlay {
+			.overlay {
 				position: absolute;
 				width: 100%;
 				height: 100%;
@@ -1063,12 +1062,12 @@ License: GNU General Public License v2 or later
 					cursor: pointer;
 				}
 
-				p.artist_name {
+				.artist_name {
 					display: block;
 					width: 100%;
 					font-size: 0.75em;
 					margin: 1.5em 0;
-					line-height: 1.6em;
+					line-height: 26px;
 					padding: 0.5em;
 				}
 
@@ -1187,7 +1186,7 @@ License: GNU General Public License v2 or later
 		height: 100%;
 		margin: 0;
 
-		li.menu-item {
+		.menu-item {
 			background-color: $color6;
 			width: 100%;
 			height: 30px;
@@ -1261,7 +1260,7 @@ License: GNU General Public License v2 or later
 						background-color: $color2;
 						border-radius: 3px;
 						box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-						clip: auto !important;
+						clip: auto;
 						display: block;
 						font-size: 14px;
 						font-size: 0.875rem;
@@ -1379,14 +1378,14 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			width: 100%;
 			flex-flow: row wrap;
 			align-items: flex-start;
 			justify-content: flex-start;
 			gap: 0.25em;
 
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 				a {
@@ -1451,7 +1450,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -1538,7 +1537,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 				p {
-					line-height: 1.7em;
+					line-height: 26px;
 				}
 			}
 
@@ -1655,10 +1654,10 @@ License: GNU General Public License v2 or later
 				float: left;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -1711,7 +1710,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -1723,19 +1722,19 @@ License: GNU General Public License v2 or later
 							height: 100%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 							float: left;
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							float: right;
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -1864,7 +1863,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 					background-color: $color9;
 					position: relative;
@@ -1909,7 +1908,7 @@ License: GNU General Public License v2 or later
 				line-height: 40px;
 			}
 
-			figure.project-item {
+			.project-item {
 				flex: 0 0 auto;
 				margin-bottom: 30px;
 				position: relative;
@@ -1928,7 +1927,7 @@ License: GNU General Public License v2 or later
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					position: absolute;
 					width: 100%;
 					height: 100%;
@@ -1946,12 +1945,12 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 
-					p.artist_name {
+					.artist_name {
 						display: block;
 						width: 100%;
 						font-size: 0.75em;
 						margin: 1.5em 0;
-						line-height: 1.6em;
+						line-height: 26px;
 						padding: 0.5em;
 					}
 
@@ -2040,7 +2039,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 22%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 				display: block;
 
@@ -2172,11 +2171,11 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 
@@ -2242,7 +2241,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -2329,7 +2328,7 @@ License: GNU General Public License v2 or later
 				padding: 0.5em;
 
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -2407,10 +2406,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -2428,7 +2427,7 @@ License: GNU General Public License v2 or later
 
 				select {
 					font-size: 1.2em;
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -2465,7 +2464,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -2474,18 +2473,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -2591,7 +2590,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -2613,21 +2612,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -2677,7 +2676,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -2795,11 +2794,11 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 
@@ -2865,7 +2864,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -2950,7 +2949,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -3029,10 +3028,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -3047,7 +3046,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -3084,7 +3083,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -3093,18 +3092,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -3211,7 +3210,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -3233,21 +3232,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -3298,7 +3297,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -3416,11 +3415,11 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 
@@ -3486,7 +3485,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -3573,7 +3572,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -3652,10 +3651,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -3670,7 +3669,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -3707,7 +3706,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -3716,18 +3715,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -3834,7 +3833,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -3856,21 +3855,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -3922,7 +3921,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -4043,11 +4042,11 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 
@@ -4113,7 +4112,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -4199,7 +4198,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -4279,10 +4278,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -4297,7 +4296,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -4334,7 +4333,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -4343,18 +4342,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -4461,7 +4460,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -4483,21 +4482,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -4547,7 +4546,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -4667,11 +4666,11 @@ License: GNU General Public License v2 or later
 		margin-bottom: 1em;
 		position: unset;
 
-		ul#menu-main {
+		#menu-main {
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
-			li.menu-item {
+			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
 
@@ -4737,7 +4736,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -4823,7 +4822,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -4902,10 +4901,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -4920,7 +4919,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -4957,7 +4956,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -4966,18 +4965,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -5084,7 +5083,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -5106,21 +5105,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -5172,7 +5171,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -5330,10 +5329,10 @@ License: GNU General Public License v2 or later
 		width: 250px;
 		height: auto;
 
-		ul#menu-main {
+		#menu-main {
 			height: 14.1em;
 
-			li.menu-item {
+			.menu-item {
 				width: 100%;
 
 				&:hover {
@@ -5406,7 +5405,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -5492,7 +5491,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 1em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -5571,10 +5570,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -5589,7 +5588,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -5626,7 +5625,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -5635,18 +5634,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -5753,7 +5752,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -5775,21 +5774,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -5841,7 +5840,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {
@@ -5993,10 +5992,10 @@ License: GNU General Public License v2 or later
 	#mannering-main-nav {
 		top: 7.2em;
 
-		ul#menu-main {
+		#menu-main {
 			height: 14.1em;
 
-			li.menu-item {
+			.menu-item {
 				width: 100%;
 
 				a {
@@ -6066,7 +6065,7 @@ License: GNU General Public License v2 or later
 							width: 40%;
 						}
 
-						span.product-title {
+						.product-title {
 							width: 50%;
 							font-size: 0.9em;
 						}
@@ -6152,7 +6151,7 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 1em;
 				p {
-					line-height: 1.7em;
+					line-height: 27px;
 				}
 			}
 
@@ -6231,10 +6230,10 @@ License: GNU General Public License v2 or later
 				width: 40%;
 
 				a {
-					line-height: 1.5em;
+					line-height: 24px;
 
 					&:hover {
-						line-height: 1.5em;
+						line-height: 24px;
 					}
 				}
 
@@ -6249,7 +6248,7 @@ License: GNU General Public License v2 or later
 				}
 
 				select {
-					line-height: 1.5em;
+					line-height: 24px;
 				}
 
 				#contact_btn {
@@ -6286,7 +6285,7 @@ License: GNU General Public License v2 or later
 						height: 80px;
 
 						.comment-author {
-							b.fn {
+							.fn {
 								display: inline-block;
 							}
 						}
@@ -6295,18 +6294,18 @@ License: GNU General Public License v2 or later
 							width: 17%;
 						}
 
-						.vcard img.photo {
+						.vcard .photo {
 							width: 20%;
 
 							margin-right: 1em;
 						}
 
-						div.comment-metadata {
+						.comment-metadata {
 							display: block;
 						}
 					}
 
-					div.comment-content {
+					.comment-content {
 						min-height: 150px;
 					}
 
@@ -6413,7 +6412,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				li a.tab-active {
+				li .tab-active {
 					color: $color1;
 				}
 			}
@@ -6435,21 +6434,21 @@ License: GNU General Public License v2 or later
 				font-size: 1.15em;
 			}
 
-			figure.project-item {
+			.project-item {
 				min-height: 165px;
 
 				img {
 					display: block;
 				}
 
-				figcaption.overlay {
+				.overlay {
 					opacity: 0;
 
 					&:hover {
 						opacity: 1;
 					}
 
-					p.artist_name {
+					.artist_name {
 						font-size: 0.75em;
 						margin: 3% 0;
 					}
@@ -6501,7 +6500,7 @@ License: GNU General Public License v2 or later
 		#menu-secondary {
 			width: 24%;
 
-			li.menu-item {
+			.menu-item {
 				height: 30px;
 
 				a {

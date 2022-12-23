@@ -51,8 +51,8 @@
 		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
 		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-		"stylelint:scss": "npx stylelint 'sass/**/*.scss'",
-		"postcss": "npx postcss ./style.css --use autoprefixer --replace",
+		"stylelint:scss": "npx stylelint 'sass/**/*.scss' --fix",
+		"postcss": "npx postcss ./*.css --use autoprefixer --replace",
 		"lint:js": "wp-scripts lint-js 'js/*.js'",
 		"bundle": "dir-archiver --src . --dest ../mannering_music.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
 	}

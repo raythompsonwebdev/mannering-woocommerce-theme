@@ -252,7 +252,6 @@ form {
 		}
 
 		a.button {
-			margin-top: 1em;
 			width: 80%;
 			margin: 1em auto;
 			display: block;
@@ -423,7 +422,7 @@ form {
 				img {
 					opacity: 0.5;
 				}
-				img.flex-active {
+				.flex-active {
 					opacity: 1;
 				}
 				&:hover img {
@@ -454,7 +453,7 @@ form {
 			}
 		}
 
-		.tabs li.active {
+		.tabs .active {
 			background: $color2;
 			z-index: 2;
 			border-bottom-color: $color2;
@@ -544,7 +543,7 @@ form {
 								}
 							}
 
-							input#submit {
+							#submit {
 								height: 45px;
 								width: 25%;
 								font-size: 1.4em;
@@ -598,7 +597,7 @@ form {
 								}
 
 								.form-submit {
-									input#submit {
+									#submit {
 										height: 45px;
 										width: 25%;
 										font-size: 1.4em;
@@ -710,7 +709,7 @@ form {
 			p {
 				padding: 0.5em;
 				margin: 0;
-				line-height: 2em;
+				line-height: 30px;
 				background-color: $color2;
 				color: $color7;
 			}
@@ -829,6 +828,21 @@ form {
 				display: inline-block;
 				text-align: center;
 				line-height: 45px;
+			}
+		}
+	}
+	.count {
+		float: none;
+		width: auto;
+		line-height: auto;
+		color: $color7;
+		padding: 0.3em;
+		font-size: 0.75em;
+		a {
+			margin: 0 auto;
+
+			&:hover {
+				font-weight: 700;
 			}
 		}
 	}
@@ -952,7 +966,7 @@ form {
 			.return-to-shop {
 				color: $color3;
 
-				a.wc-backward {
+				.wc-backward {
 					display: block;
 					width: auto;
 					line-height: 40px;
@@ -1356,7 +1370,7 @@ form {
 									}
 								}
 
-								input#woocommerce-cart-nonce {
+								#woocommerce-cart-nonce {
 									margin: 0;
 								}
 
@@ -1472,8 +1486,8 @@ form {
 
 			/* woocommerce-checkout page */
 			.woocommerce-checkout {
-				div.woocommerce-NoticeGroup {
-					ul.woocommerce-error {
+				.woocommerce-NoticeGroup {
+					.woocommerce-error {
 						width: 100%;
 
 						li {
@@ -1745,7 +1759,7 @@ form {
 									background-color: $color3;
 
 									p {
-										line-height: 1.7em;
+										line-height: 27px;
 										padding: 0.5em;
 										color: $color2;
 										background-color: $color3;
@@ -2007,14 +2021,6 @@ form {
 			}
 		}
 	}
-
-	mark.count {
-		float: none;
-		width: auto;
-		line-height: auto;
-		color: $color7;
-		padding: 0.3em;
-	}
 }
 
 /* 1920 */
@@ -2213,7 +2219,7 @@ form {
 					img {
 						opacity: 0.5;
 					}
-					img.flex-active {
+					.flex-active {
 						opacity: 1;
 					}
 					&:hover img {
@@ -2244,7 +2250,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				background: $color2;
 				z-index: 2;
 				border-bottom-color: $color2;
@@ -2332,7 +2338,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.4em;
@@ -2386,7 +2392,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -2499,7 +2505,7 @@ form {
 				p {
 					padding: 0.5em;
 					margin: 0;
-					line-height: 2em;
+					line-height: 30px;
 					background-color: $color2;
 					color: $color7;
 				}
@@ -2673,10 +2679,10 @@ form {
 			.cart_list {
 				margin: 0;
 
-				li.woocommerce-mini-cart-item {
+				.woocommerce-mini-cart-item {
 					display: block;
 
-					a.remove_from_cart_button {
+					.remove_from_cart_button {
 						width: 100%;
 						text-align: center;
 
@@ -2697,7 +2703,7 @@ form {
 						}
 					}
 
-					span.quantity {
+					.quantity {
 						width: 100%;
 						display: flex;
 						line-height: 35px;
@@ -2766,6 +2772,16 @@ form {
 					display: inline-block;
 					text-align: center;
 					line-height: 45px;
+				}
+			}
+		}
+		.count {
+			font-size: 1em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
 				}
 			}
 		}
@@ -2844,7 +2860,7 @@ form {
 				.return-to-shop {
 					color: $color3;
 
-					a.wc-backward {
+					.wc-backward {
 						display: block;
 						line-height: 40px;
 					}
@@ -3182,7 +3198,7 @@ form {
 										}
 									}
 
-									input#woocommerce-cart-nonce {
+									#woocommerce-cart-nonce {
 										margin: 0;
 									}
 
@@ -3269,8 +3285,8 @@ form {
 
 				/* woocommerce-checkout page */
 				.woocommerce-checkout {
-					div.woocommerce-NoticeGroup {
-						ul.woocommerce-error {
+					.woocommerce-NoticeGroup {
+						.woocommerce-error {
 							width: 100%;
 
 							li {
@@ -3503,7 +3519,7 @@ form {
 										background-color: $color3;
 
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 											color: $color2;
 											background-color: $color3;
@@ -3737,14 +3753,6 @@ form {
 				}
 			}
 		}
-
-		mark.count {
-			float: none;
-			width: auto;
-			line-height: auto;
-			color: $color7;
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -3833,7 +3841,6 @@ form {
 			}
 
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -3902,7 +3909,7 @@ form {
 					img {
 						opacity: 0.5;
 					}
-					img.flex-active {
+					.flex-active {
 						opacity: 1;
 					}
 					&:hover img {
@@ -3933,7 +3940,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 			}
@@ -4004,7 +4011,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.4em;
@@ -4058,7 +4065,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -4152,7 +4159,7 @@ form {
 
 				p {
 					padding: 0.5em;
-					line-height: 2em;
+					line-height: 30px;
 				}
 
 				.mejs-container,
@@ -4735,7 +4742,7 @@ form {
 
 								.payment_box {
 									p {
-										line-height: 1.7em;
+										line-height: 27px;
 										padding: 0.5em;
 
 										a {
@@ -4950,7 +4957,7 @@ form {
 					img {
 						opacity: 0.5;
 					}
-					img.flex-active {
+					.flex-active {
 						opacity: 1;
 					}
 					&:hover img {
@@ -4981,7 +4988,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.8em;
 			}
@@ -5053,7 +5060,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.4em;
@@ -5107,7 +5114,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -5201,7 +5208,7 @@ form {
 
 				p {
 					padding: 0.5em;
-					line-height: 2em;
+					line-height: 30px;
 				}
 
 				.mejs-container,
@@ -5327,7 +5334,6 @@ form {
 			}
 
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -5338,6 +5344,16 @@ form {
 		form {
 			button.button {
 				width: 40%;
+			}
+		}
+		.count {
+			font-size: 1em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
+				}
 			}
 		}
 
@@ -5857,7 +5873,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -5988,10 +6004,6 @@ form {
 				}
 			}
 		}
-
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -6073,7 +6085,7 @@ form {
 					img {
 						opacity: 0.5;
 					}
-					img.flex-active {
+					.flex-active {
 						opacity: 1;
 					}
 					&:hover img {
@@ -6104,7 +6116,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.7em;
 				width: 30%;
@@ -6175,7 +6187,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.4em;
@@ -6229,7 +6241,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -6323,7 +6335,7 @@ form {
 
 				p {
 					padding: 0.5em;
-					line-height: 2em;
+					line-height: 30px;
 				}
 
 				.mejs-container,
@@ -6405,7 +6417,6 @@ form {
 			width: 23%;
 
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -6454,7 +6465,6 @@ form {
 				}
 			}
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -6475,8 +6485,7 @@ form {
 		}
 
 		.count {
-			font-size: 0.75em;
-
+			font-size: 0.9em;
 			a {
 				margin: 0 auto;
 
@@ -7001,7 +7010,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -7133,10 +7142,6 @@ form {
 				}
 			}
 		}
-
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -7219,7 +7224,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 				width: 30%;
@@ -7281,7 +7286,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.3em;
@@ -7334,7 +7339,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -7510,7 +7515,6 @@ form {
 				}
 			}
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -7584,8 +7588,7 @@ form {
 		}
 
 		.count {
-			font-size: 0.75em;
-
+			font-size: 0.9em;
 			a {
 				margin: 0 auto;
 
@@ -8115,7 +8118,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -8246,10 +8249,6 @@ form {
 				}
 			}
 		}
-
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -8337,7 +8336,6 @@ form {
 				}
 			}
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -8370,7 +8368,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 				width: 30%;
@@ -8432,7 +8430,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.3em;
@@ -8485,7 +8483,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -8641,6 +8639,17 @@ form {
 				li {
 					width: 13%;
 					line-height: 45px;
+				}
+			}
+		}
+
+		.count {
+			font-size: 0.9em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
 				}
 			}
 		}
@@ -9163,7 +9172,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -9295,11 +9304,6 @@ form {
 				}
 			}
 		}
-
-		/* woo-commerce */
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -9362,7 +9366,6 @@ form {
 				}
 			}
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -9394,7 +9397,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 				width: 30%;
@@ -9456,7 +9459,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.3em;
@@ -9509,7 +9512,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -9654,6 +9657,17 @@ form {
 
 				&:hover {
 					width: 60%;
+				}
+			}
+		}
+
+		.count {
+			font-size: 0.9em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
 				}
 			}
 		}
@@ -10208,7 +10222,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -10342,11 +10356,6 @@ form {
 				}
 			}
 		}
-
-		/* woo-commerce */
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -10423,7 +10432,6 @@ form {
 				}
 			}
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -10455,7 +10463,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 				width: 30%;
@@ -10517,7 +10525,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.3em;
@@ -10570,7 +10578,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -10715,6 +10723,17 @@ form {
 
 				&:hover {
 					width: 60%;
+				}
+			}
+		}
+
+		.count {
+			font-size: 0.9em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
 				}
 			}
 		}
@@ -11010,7 +11029,7 @@ form {
 									.coupon {
 										width: 100%;
 										margin-bottom: 0.5em;
-										label[for~='coupon_code']l {
+										label[for~='coupon_code'] {
 											width: 25%;
 										}
 
@@ -11222,7 +11241,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -11356,11 +11375,6 @@ form {
 				}
 			}
 		}
-
-		/* woo-commerce */
-		mark.count {
-			padding: 0.3em;
-		}
 	}
 }
 
@@ -11437,7 +11451,6 @@ form {
 			}
 
 			a.button {
-				margin-top: 1em;
 				width: 80%;
 				margin: 1em auto;
 			}
@@ -11469,7 +11482,7 @@ form {
 				}
 			}
 
-			.tabs li.active {
+			.tabs .active {
 				z-index: 2;
 				font-size: 0.9em;
 				width: 30%;
@@ -11531,7 +11544,7 @@ form {
 									}
 								}
 
-								input#submit {
+								#submit {
 									height: 45px;
 									width: 25%;
 									font-size: 1.3em;
@@ -11584,7 +11597,7 @@ form {
 									}
 
 									.form-submit {
-										input#submit {
+										#submit {
 											height: 45px;
 											width: 25%;
 											font-size: 1.4em;
@@ -11729,6 +11742,17 @@ form {
 
 				&:hover {
 					width: 60%;
+				}
+			}
+		}
+
+		.count {
+			font-size: 0.9em;
+			a {
+				margin: 0 auto;
+
+				&:hover {
+					font-weight: 700;
 				}
 			}
 		}
@@ -12234,6 +12258,7 @@ form {
 										img {
 											margin: 0 1em;
 										}
+										line-height: 27px;
 
 										.about_paypal {
 											width: 20%;
@@ -12242,7 +12267,7 @@ form {
 
 									.payment_box {
 										p {
-											line-height: 1.7em;
+											line-height: 27px;
 											padding: 0.5em;
 
 											a {
@@ -12375,11 +12400,6 @@ form {
 					}
 				}
 			}
-		}
-
-		/* woo-commerce */
-		mark.count {
-			padding: 0.3em;
 		}
 	}
 }
