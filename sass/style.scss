@@ -19,9 +19,9 @@ License: GNU General Public License v2 or later
 
 */
 
-@import "partials/base";
-@import "partials/fonts";
-@import "partials/variables";
+@import 'partials/base';
+@import 'partials/fonts';
+@import 'partials/variables';
 
 #wrapper {
 	width: 98%;
@@ -352,7 +352,7 @@ License: GNU General Public License v2 or later
 		margin: 0.5em;
 
 		h2 {
-			font-size: 1.2em;
+			font-size: 0.75em;
 			background-color: $color9;
 			color: $color2;
 			height: auto;
@@ -362,12 +362,12 @@ License: GNU General Public License v2 or later
 		}
 
 		.wp-block-search {
-			input[type="text"] {
+			input[type='text'] {
 				width: 75%;
 				height: 35px;
 			}
 
-			input[type="submit"] {
+			input[type='submit'] {
 				width: 20%;
 			}
 		}
@@ -385,7 +385,7 @@ License: GNU General Public License v2 or later
 
 				a {
 					width: 100%;
-					font-size: 1em;
+					font-size: 0.7em;
 					color: $color2;
 					line-height: 40px;
 					text-align: center;
@@ -430,11 +430,16 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment-meta {
 					background-color: $color2;
 					padding: 0.5em;
-					width: 96%;
+					width: 100%;
 					margin: auto;
 					a {
+						color: $color7;
 						width: auto;
 						display: inline-block;
+						&:hover {
+							color: $color10;
+							cursor: pointer;
+						}
 					}
 				}
 			}
@@ -448,7 +453,9 @@ License: GNU General Public License v2 or later
 	.page-header {
 		.page-title {
 			margin: 0;
-			text-indent: 0.5em;
+			text-indent: 0.25em;
+			font-size: 0.9em;
+			font-weight: 400;
 			span {
 				display: inline-block;
 			}
@@ -467,12 +474,15 @@ License: GNU General Public License v2 or later
 		.entry-title {
 			margin: 0;
 			color: $color2;
+			text-indent: 0.2em;
 
 			a {
-				font-size: 1.1em;
+				font-size: 0.75em;
 				text-decoration: none;
 				text-indent: 0.25em;
 				color: $color2;
+				word-wrap: break-word;
+				font-weight: 400;
 
 				&:visited {
 					color: $color10;
@@ -519,15 +529,32 @@ License: GNU General Public License v2 or later
 			margin: 0;
 			color: $color7;
 
+			.jetpack-video-wrapper {
+				display: block;
+				margin: 1em auto;
+				width: 50%;
+			}
+
+			a {
+				width: auto;
+				display: inline-block;
+				color: $color7;
+				line-height: 27px;
+				font-size: 0.75em;
+			}
+
 			p {
 				line-height: 27px;
+				color: $color7;
+				font-size: 0.75em;
+				margin: 0;
 			}
 		}
 
 		.entry-footer {
 			background-color: $color9;
 			clear: both;
-			min-height: 100px;
+			height: auto;
 			width: 100%;
 			margin: 0;
 			padding: 0.5em;
@@ -535,16 +562,17 @@ License: GNU General Public License v2 or later
 			.cat-links,
 			.tag-links,
 			.comments-link {
-				height: 40px;
+				height: auto;
 			}
 			a,
-			a[rel~="tag"] {
+			a[rel~='tag'] {
 				display: inline-block;
 				width: auto;
 				line-height: 40px;
 				text-indent: 0.1em;
 				color: $color2;
 				text-decoration: none;
+				font-size: 0.7em;
 				&:visited {
 					color: $color10;
 				}
@@ -555,6 +583,413 @@ License: GNU General Public License v2 or later
 					cursor: pointer;
 				}
 			}
+		}
+	}
+
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		background-color: $color8;
+		height: 50px;
+		width: 96%;
+		margin: auto;
+		.nav-subtitle {
+			width: auto;
+			display: inline-block;
+		}
+		.nav-title {
+			width: auto;
+			display: inline-block;
+		}
+		.nav-links {
+			height: 100%;
+			a[rel='prev'],
+			a[rel='next'] {
+				line-height: 50px;
+			}
+			.nav-previous {
+				padding-left: 0.5em;
+			}
+			.nav-next {
+				padding-right: 0.5em;
+			}
+		}
+	}
+
+	/* comments */
+	#comments {
+		margin: 0;
+		.comments-title {
+			min-height: 35px;
+			line-height: 35px;
+			text-indent: 0.25em;
+			background-color: $color7;
+			width: 96%;
+			font-size: 1em;
+			margin: 1em auto;
+			display: block;
+			height: auto;
+			span {
+				width: auto;
+				display: inline-block;
+			}
+		}
+
+		.comment-list {
+			padding-left: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.comment {
+			padding: 0;
+		}
+		.even,
+		.pingback {
+			background-color: $color7;
+			padding: 0.25em;
+			margin-bottom: 0.5em;
+		}
+		.odd,
+		.trackback {
+			background-color: $color7;
+			padding: 0.25em;
+			margin-bottom: 0.5em;
+		}
+
+		.children {
+			margin: auto;
+			padding: 0;
+			width: 100%;
+		}
+
+		.comment-body {
+			padding: 0.5em;
+			display: block;
+			background-color: $color2;
+			height: auto;
+			text-indent: 0;
+			width: 100%;
+			margin: 0;
+		}
+		.comment-meta {
+			height: 50px;
+			margin-top: 0;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			.comment-author {
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				justify-content: flex-start;
+				height: auto;
+				width: 25%;
+				font-size: 1em;
+				background-color: $color7;
+				color: $color2;
+				padding: 0;
+				gap: 0.5em;
+
+				img {
+					width: auto;
+					height: auto;
+					margin-right: 0;
+					display: block;
+				}
+
+				.fn,
+				cite.fn {
+					height: auto;
+					width: auto;
+					padding: 0;
+					text-align: left;
+					line-height: 1.5;
+					color: $color2;
+					a,
+					.url {
+						background-color: $color7;
+					}
+				}
+
+				.says {
+					width: auto;
+					height: 100%;
+					color: $color2;
+				}
+			}
+
+			.comment-metadata {
+				line-height: 30px;
+				height: auto;
+				padding: 0 0.5em;
+				width: 25%;
+				display: block;
+				background-color: $color7;
+				font-size: 0.8em;
+				color: $color2;
+				a {
+					color: $color2;
+					width: auto;
+					display: inline-block;
+					time {
+						font-size: 1.1em;
+					}
+				}
+				.edit-link {
+					display: inline-block;
+					width: 30%;
+					padding: 5px;
+					line-height: 5px;
+				}
+			}
+		}
+		.comment-content {
+			p {
+				width: 100%;
+				font-size: 0.9em;
+				line-height: 24px;
+				margin: 0 auto;
+				min-height: 100px;
+				color: $color7;
+				background-color: $color2;
+				text-align: left;
+				padding: 0.25em;
+				a {
+					background-color: $color2;
+					&:hover {
+						color: $color7;
+					}
+				}
+			}
+		}
+
+		.children {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.reply {
+			width: 96%;
+			min-height: 35px;
+			margin: 1em auto;
+
+			.comment-reply-link,
+			.comment-reply-login {
+				display: block;
+				margin: 0;
+				height: 35px;
+				list-style: none;
+				width: 100%;
+				background-color: $color7;
+				padding: 0;
+				border: none;
+				color: $color2;
+				line-height: 35px;
+				text-align: center;
+				font-size: 1em;
+
+				&:hover {
+					color: $color10;
+				}
+			}
+		}
+
+		#respond {
+			display: block;
+			clear: both;
+
+			#reply-title {
+				width: 92%;
+				margin: 1em auto;
+				padding: 0;
+				font-size: 1em;
+				background-color: $color2;
+				color: $color7;
+				line-height: 35px;
+				text-indent: 0.5em;
+
+				small {
+					a {
+						font-size: 1em;
+						transition: all 0.2s ease-in 0s;
+						display: inline-block;
+						padding: 0 2%;
+
+						&:hover {
+							color: $color10;
+						}
+					}
+				}
+			}
+
+			#commentform {
+				width: 90%;
+				height: auto;
+				margin: 2% auto;
+				padding: 0;
+
+				.comment-notes {
+					font-size: 0.9em;
+					width: 95%;
+					line-height: 27px;
+					margin: 0;
+				}
+				#email-notes {
+					display: block;
+				}
+				.required-feild-message {
+					display: block;
+				}
+				.required {
+					font-size: 1em;
+				}
+
+				label[for='wp-comment-cookies-consent'],
+				label[for='url'],
+				label[for='email'],
+				label[for='author'],
+				label[for='comment'] {
+					height: 30px;
+					line-height: 30px;
+					width: 30px;
+				}
+
+				#url,
+				#email,
+				#author,
+				#comment {
+					transition: all 0.2s ease-in 0s;
+					outline: none;
+					padding: 3px 0 3px 3px;
+					margin: 5px 1px 3px 0;
+					border: 1px solid $color2;
+					width: 100%;
+					line-height: 35px;
+				}
+
+				#author:focus,
+				#comment:focus,
+				#email:focus,
+				#url:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
+					padding: 3px 0 3px 3px;
+					margin: 5px 1px 3px 0;
+					border: 1px solid #51cbee;
+				}
+
+				.comment-form-url,
+				.comment-form-email,
+				.comment-form-author,
+				.comment-form-comment {
+					padding: 0;
+					width: 100%;
+				}
+
+				.comment-form-cookies-consent {
+					font-size: 0.9em;
+				}
+
+				.form-submit {
+					margin: 2% 0;
+					width: 100%;
+
+					.submit {
+						height: 35px;
+						list-style: none;
+						background-color: $color7;
+						transition: all 0.2s ease-in 0s;
+						padding: 0;
+						border: none;
+						color: $color2;
+						width: 100%;
+
+						&:hover {
+							color: $color2;
+							font-weight: 700;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		p {
+			padding: 0;
+			a {
+				background-color: unset;
+				width: auto;
+				display: inline-block;
+				color: $color8;
+
+				&:hover {
+					color: $color2;
+				}
+			}
+		}
+
+		.askimet_comment_form_privacy_notice {
+			text-align: center;
+			a {
+				background-color: unset;
+				line-height: 40px;
+				display: inline-block;
+				width: auto;
+				margin: 0 0.25em;
+				color: $color7;
+
+				&:hover {
+					font-weight: 700;
+					color: $color10;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.logged-in-as {
+			a {
+				width: auto;
+				display: inline-block;
+				margin-right: 0.5em;
+				color: $color2;
+				&:active {
+					font-weight: 700;
+				}
+				&:hover {
+					font-weight: 700;
+					cursor: pointer;
+					color: $color10;
+				}
+			}
+		}
+
+		.must-log-in {
+			width: 90%;
+			display: block;
+			line-height: 35px;
+			margin: 1em auto;
+			text-align: center;
+
+			a {
+				display: inline-block;
+				line-height: 25px;
+				width: auto;
+				color: $color2;
+				&:hover {
+					color: $color10;
+				}
+			}
+		}
+
+		.nocomments {
+			display: block;
+			margin: 0 auto;
+			width: 96%;
+			line-height: 40px;
+			margin-bottom: 1em;
+			text-align: center;
+			font-size: 1em;
 		}
 	}
 }
@@ -581,7 +1016,6 @@ License: GNU General Public License v2 or later
 
 	p {
 		font-size: 0.8em;
-		font-weight: 400;
 		display: block;
 	}
 
@@ -695,8 +1129,8 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type="text"],
-			input[type="email"] {
+			input[type='text'],
+			input[type='email'] {
 				width: 100%;
 				display: block;
 				padding: 0.2em;
@@ -755,10 +1189,11 @@ License: GNU General Public License v2 or later
 		padding: 1em;
 		margin: 0;
 		.entry-title {
-			margin-bottom: 0.2em;
+			text-indent: 0.25em;
 
 			a {
 				font-size: 1em;
+				word-wrap: break-word;
 				&:visited {
 					color: $color10;
 				}
@@ -774,6 +1209,13 @@ License: GNU General Public License v2 or later
 			margin: 0;
 			color: $color7;
 			padding: 1em;
+			a {
+				font-size: 1em;
+			}
+
+			p {
+				font-size: 1em;
+			}
 		}
 
 		.entry-footer {
@@ -782,11 +1224,13 @@ License: GNU General Public License v2 or later
 			.cat-links,
 			.tag-links,
 			.comments-link {
-				height: 40px;
+				height: auto;
+				font-size: 1em;
 			}
 			a,
-			a[rel~="tag"] {
+			a[rel~='tag'] {
 				display: inline-block;
+
 				&:visited {
 					color: $color10;
 				}
@@ -1230,7 +1674,6 @@ License: GNU General Public License v2 or later
 
 /* 1920 */
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-
 	/* wrapper */
 	#wrapper {
 		margin-left: auto;
@@ -1384,6 +1827,7 @@ License: GNU General Public License v2 or later
 			align-items: flex-start;
 			justify-content: flex-start;
 			gap: 0.25em;
+			height: auto;
 
 			.menu-item {
 				width: 19%;
@@ -1413,12 +1857,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -1464,7 +1908,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.9em;
 						}
@@ -1480,7 +1924,9 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.2em;
+				font-weight: 400;
 				span {
 					display: inline-block;
 				}
@@ -1497,10 +1943,10 @@ License: GNU General Public License v2 or later
 
 			.entry-title {
 				margin: 0;
-				color: $color2;
 
 				a {
-					font-size: 1em;
+					font-size: 0.9em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -1515,6 +1961,7 @@ License: GNU General Public License v2 or later
 				display: flex;
 				flex-flow: row wrap;
 				align-items: flex-start;
+				font-size: 0.9em;
 				.posted-on,
 				.byline {
 					height: auto;
@@ -1536,8 +1983,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 0.5em;
+				a {
+					font-size: 1em;
+				}
+
 				p {
-					line-height: 26px;
+					font-size: 1em;
 				}
 			}
 
@@ -1547,10 +1998,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.9em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -1563,6 +2015,290 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
+			}
+		}
 	}
 
 	#content {
@@ -1573,8 +2309,8 @@ License: GNU General Public License v2 or later
 		}
 
 		p {
-			font-weight: 400;
 			display: block;
+			font-size: 1em;
 		}
 
 		form {
@@ -1590,17 +2326,17 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type="text"],
-			input[type="password"],
-			input[type="submit"] {
+			input[type='text'],
+			input[type='password'],
+			input[type='submit'] {
 				display: block;
 				font-weight: 400;
 			}
 
-			input[type="text"],
-			input[type="password"],
-			input[type="email"],
-			input[type="tel"] {
+			input[type='text'],
+			input[type='password'],
+			input[type='email'],
+			input[type='tel'] {
 				width: 100%;
 				border: 2px solid $color8;
 				border-radius: 5px;
@@ -1661,8 +2397,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					font-size: 1em;
 				}
 
@@ -1910,13 +2646,12 @@ License: GNU General Public License v2 or later
 
 			.project-item {
 				flex: 0 0 auto;
-				margin-bottom: 30px;
 				position: relative;
 				overflow: hidden;
 				border: 3px solid $color4;
 				backface-visibility: hidden;
 				width: 18%;
-				margin: 1%;
+				margin: 1em;
 				float: left;
 				display: block;
 				min-height: 175px;
@@ -2175,6 +2910,7 @@ License: GNU General Public License v2 or later
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
+			height: auto;
 			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
@@ -2200,16 +2936,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 1em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -2255,7 +2991,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.85em;
 						}
@@ -2271,7 +3007,9 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.1em;
+				font-weight: 400;
 				span {
 					display: inline-block;
 				}
@@ -2287,10 +3025,10 @@ License: GNU General Public License v2 or later
 
 			.entry-title {
 				margin: 0;
-				color: $color2;
 
 				a {
-					font-size: 1.2em;
+					font-size: 0.9em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -2305,6 +3043,7 @@ License: GNU General Public License v2 or later
 				display: flex;
 				flex-flow: row wrap;
 				align-items: flex-start;
+				font-size: 1em;
 				.posted-on,
 				.byline {
 					height: auto;
@@ -2327,8 +3066,12 @@ License: GNU General Public License v2 or later
 			.entry-content {
 				padding: 0.5em;
 
+				a {
+					font-size: 0.9em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.9em;
 				}
 			}
 
@@ -2339,10 +3082,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.85em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -2353,6 +3097,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -2413,8 +3441,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 					font-size: 1.2em;
@@ -2798,6 +3826,7 @@ License: GNU General Public License v2 or later
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
+			height: auto;
 			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
@@ -2823,16 +3852,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.9em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -2845,7 +3874,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					a {
-						font-size: 0.85em;
+						font-size: 0.8em;
 						color: $color2;
 					}
 				}
@@ -2878,7 +3907,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.8em;
 						}
@@ -2894,7 +3923,9 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.1em;
+				font-weight: 400;
 				span {
 					display: inline-block;
 				}
@@ -2912,7 +3943,8 @@ License: GNU General Public License v2 or later
 				margin: 0;
 
 				a {
-					font-size: 1em;
+					font-size: 0.85em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -2927,6 +3959,7 @@ License: GNU General Public License v2 or later
 				display: flex;
 				flex-flow: row wrap;
 				align-items: flex-start;
+				font-size: 0.9em;
 				.posted-on,
 				.byline {
 					height: auto;
@@ -2948,8 +3981,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 0.5em;
+				a {
+					font-size: 0.9em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.9em;
 				}
 			}
 
@@ -2960,10 +3997,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.85em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -2976,6 +4014,290 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
+			}
+		}
 	}
 
 	#content {
@@ -2986,7 +4308,7 @@ License: GNU General Public License v2 or later
 		}
 
 		p {
-			font-size: 0.85em;
+			font-size: 0.9em;
 		}
 
 		form {
@@ -3035,8 +4357,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -3419,6 +4741,7 @@ License: GNU General Public License v2 or later
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
+			height: auto;
 			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
@@ -3444,16 +4767,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.85em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -3466,7 +4789,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					a {
-						font-size: 0.8em;
+						font-size: 0.75em;
 						color: $color2;
 					}
 				}
@@ -3499,7 +4822,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.8em;
 						}
@@ -3515,7 +4838,9 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.1em;
+				font-weight: 400;
 				span {
 					display: inline-block;
 				}
@@ -3531,10 +4856,10 @@ License: GNU General Public License v2 or later
 
 			.entry-title {
 				margin: 0;
-				color: $color2;
 
 				a {
-					font-size: 1em;
+					font-size: 0.8em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -3571,8 +4896,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 0.5em;
+				a {
+					font-size: 0.85em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.85em;
 				}
 			}
 
@@ -3583,10 +4912,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.8em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -3597,6 +4927,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -3658,8 +5272,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -4046,6 +5660,7 @@ License: GNU General Public License v2 or later
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
+			height: auto;
 			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
@@ -4071,16 +5686,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.85em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -4126,7 +5741,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.75em;
 						}
@@ -4142,7 +5757,9 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.1em;
+				font-weight: 400;
 				span {
 					display: inline-block;
 				}
@@ -4160,7 +5777,8 @@ License: GNU General Public License v2 or later
 				margin: 0;
 
 				a {
-					font-size: 1em;
+					font-size: 0.75em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -4197,8 +5815,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 0.5em;
+				a {
+					font-size: 0.85em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.85em;
 				}
 			}
 
@@ -4209,10 +5831,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.8em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4223,6 +5846,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -4285,8 +6192,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -4670,6 +6577,7 @@ License: GNU General Public License v2 or later
 			display: flex;
 			flex-flow: row wrap;
 			align-items: flex-start;
+			height: auto;
 			.menu-item {
 				width: 19%;
 				flex: 0 1 auto;
@@ -4695,16 +6603,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.8em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -4717,7 +6625,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					a {
-						font-size: 1em;
+						font-size: 0.7em;
 						color: $color2;
 					}
 				}
@@ -4750,7 +6658,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.9em;
 						}
@@ -4766,7 +6674,8 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1.1em;
 				span {
 					display: inline-block;
 				}
@@ -4784,7 +6693,8 @@ License: GNU General Public License v2 or later
 				margin: 0;
 
 				a {
-					font-size: 1.1em;
+					font-size: 0.75em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -4821,8 +6731,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 0.5em;
+				a {
+					font-size: 0.85em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.85em;
 				}
 			}
 
@@ -4833,10 +6747,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.8em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4847,6 +6762,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -4908,8 +7107,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -5327,7 +7526,6 @@ License: GNU General Public License v2 or later
 		z-index: 100;
 		left: -250px;
 		width: 250px;
-		height: auto;
 
 		#menu-main {
 			height: 14.1em;
@@ -5364,16 +7562,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.8em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -5386,7 +7584,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					a {
-						font-size: 1em;
+						font-size: 0.7em;
 						color: $color2;
 					}
 				}
@@ -5419,7 +7617,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.9em;
 						}
@@ -5435,7 +7633,8 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 1em;
 				span {
 					display: inline-block;
 				}
@@ -5453,7 +7652,8 @@ License: GNU General Public License v2 or later
 				margin: 0;
 
 				a {
-					font-size: 1em;
+					font-size: 0.75em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -5490,8 +7690,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 1em;
+				a {
+					font-size: 0.8em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.8em;
 				}
 			}
 
@@ -5502,10 +7706,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.75em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -5516,6 +7721,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -5577,8 +8066,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -6024,16 +8513,16 @@ License: GNU General Public License v2 or later
 			margin: 0.5em;
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 0.75em;
 			}
 
 			.wp-block-search {
-				input[type="text"] {
+				input[type='text'] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type="submit"] {
+				input[type='submit'] {
 					width: 20%;
 				}
 			}
@@ -6046,7 +8535,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					a {
-						font-size: 1em;
+						font-size: 0.7em;
 						color: $color2;
 					}
 				}
@@ -6079,7 +8568,7 @@ License: GNU General Public License v2 or later
 				.wp-block-latest-comments__comment {
 					color: $color7;
 					.wp-block-latest-comments__comment-meta {
-						width: 96%;
+						width: 100%;
 						a {
 							font-size: 0.9em;
 						}
@@ -6095,7 +8584,8 @@ License: GNU General Public License v2 or later
 		.page-header {
 			.page-title {
 				margin: 0;
-				text-indent: 0.5em;
+				text-indent: 0.25em;
+				font-size: 0.9em;
 				span {
 					display: inline-block;
 				}
@@ -6113,7 +8603,8 @@ License: GNU General Public License v2 or later
 				margin: 0;
 
 				a {
-					font-size: 1em;
+					font-size: 0.75em;
+					word-wrap: break-word;
 					&:visited {
 						color: $color10;
 					}
@@ -6150,8 +8641,12 @@ License: GNU General Public License v2 or later
 
 			.entry-content {
 				padding: 1em;
+				a {
+					font-size: 0.8em;
+				}
+
 				p {
-					line-height: 27px;
+					font-size: 0.8em;
 				}
 			}
 
@@ -6162,10 +8657,11 @@ License: GNU General Public License v2 or later
 				.cat-links,
 				.tag-links,
 				.comments-link {
-					height: 40px;
+					height: auto;
+					font-size: 0.75em;
 				}
 				a,
-				a[rel~="tag"] {
+				a[rel~='tag'] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -6176,6 +8672,290 @@ License: GNU General Public License v2 or later
 						cursor: pointer;
 					}
 				}
+			}
+		}
+
+		.comment-navigation,
+		.posts-navigation,
+		.post-navigation {
+			background-color: $color8;
+			height: 50px;
+			.nav-subtitle {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-title {
+				width: auto;
+				display: inline-block;
+			}
+			.nav-links {
+				height: 100%;
+				a[rel='prev'],
+				a[rel='next'] {
+					line-height: 50px;
+				}
+				.nav-previous {
+					padding-left: 0.5em;
+				}
+				.nav-next {
+					padding-right: 0.5em;
+				}
+			}
+		}
+
+		#comments {
+			margin: 0;
+			.comments-title {
+				font-size: 1em;
+				span {
+					width: auto;
+				}
+			}
+
+			.comment-list {
+				margin: 0;
+			}
+			.comment {
+				padding: 0;
+			}
+			.even,
+			.pingback {
+				padding: 0.25em;
+			}
+			.odd,
+			.trackback {
+				padding: 0.25em;
+			}
+
+			.children {
+				margin: auto;
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-body {
+				margin: 0;
+			}
+			.comment-meta {
+				height: 50px;
+				flex-flow: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.comment-author {
+					flex-flow: row;
+					align-items: center;
+					justify-content: flex-start;
+					width: 25%;
+					font-size: 1em;
+					gap: 0.5em;
+
+					img {
+						display: block;
+					}
+
+					.fn,
+					cite.fn {
+						padding: 0;
+						a,
+						.url {
+							background-color: $color7;
+						}
+					}
+
+					.says {
+						width: auto;
+					}
+				}
+
+				.comment-metadata {
+					line-height: 30px;
+					font-size: 0.8em;
+
+					a {
+						display: inline-block;
+						time {
+							font-size: 1.1em;
+						}
+					}
+					.edit-link {
+						width: 30%;
+					}
+				}
+			}
+			.comment-content {
+				p {
+					font-size: 0.9em;
+					padding: 0.25em;
+					a {
+						background-color: $color2;
+						&:hover {
+							color: $color7;
+						}
+					}
+				}
+			}
+
+			.children {
+				margin-left: 0;
+			}
+
+			.reply {
+				width: 96%;
+
+				.comment-reply-link,
+				.comment-reply-login {
+					display: block;
+					font-size: 1em;
+
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			#respond {
+				display: block;
+				clear: both;
+
+				#reply-title {
+					width: 92%;
+					font-size: 1em;
+
+					small {
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color10;
+							}
+						}
+					}
+				}
+
+				#commentform {
+					width: 90%;
+					padding: 0;
+
+					.comment-notes {
+						font-size: 0.9em;
+						margin: 0;
+					}
+					#email-notes {
+						display: block;
+					}
+					.required-feild-message {
+						display: block;
+					}
+					.required {
+						font-size: 1em;
+					}
+
+					label[for='wp-comment-cookies-consent'],
+					label[for='url'],
+					label[for='email'],
+					label[for='author'],
+					label[for='comment'] {
+						height: 30px;
+						line-height: 30px;
+						width: 30px;
+					}
+
+					#url,
+					#email,
+					#author,
+					#comment {
+						line-height: 35px;
+					}
+
+					#author:focus,
+					#comment:focus,
+					#email:focus,
+					#url:focus,
+					.comment-form-comment:focus {
+						padding: 3px 0 3px 3px;
+						margin: 5px 1px 3px 0;
+					}
+
+					.comment-form-url,
+					.comment-form-email,
+					.comment-form-author,
+					.comment-form-comment {
+						padding: 0;
+						width: 100%;
+					}
+
+					.comment-form-cookies-consent {
+						font-size: 0.9em;
+					}
+
+					.form-submit {
+						margin: 2% 0;
+						width: 100%;
+
+						.submit {
+							height: 35px;
+
+							&:hover {
+								font-weight: 700;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				padding: 0;
+				a {
+					background-color: unset;
+
+					&:hover {
+						color: $color2;
+					}
+				}
+			}
+
+			.askimet_comment_form_privacy_notice {
+				text-align: center;
+				a {
+					background-color: unset;
+					line-height: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.logged-in-as {
+				a {
+					width: auto;
+					&:active {
+						font-weight: 700;
+					}
+					&:hover {
+						font-weight: 700;
+						cursor: pointer;
+						color: $color10;
+					}
+				}
+			}
+
+			.must-log-in {
+				width: 90%;
+				line-height: 35px;
+
+				a {
+					line-height: 25px;
+					&:hover {
+						color: $color10;
+					}
+				}
+			}
+
+			.nocomments {
+				display: block;
+				font-size: 1em;
 			}
 		}
 	}
@@ -6237,8 +9017,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type="text"],
-				input[type="email"] {
+				input[type='text'],
+				input[type='email'] {
 					padding: 0.2em;
 					height: 35px;
 				}

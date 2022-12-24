@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "155b46cee853495b56d55ba4978132a8",
+    "content-hash": "1bc7ca37dddb82fbab6fa69d8baf34a4",
     "packages": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -685,7 +685,7 @@
         },
         {
             "name": "phpcsstandards/phpcsutils",
-            "version": "dev-stable",
+            "version": "1.0.0-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHPCSUtils.git",
@@ -1254,7 +1254,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpcsstandards/phpcsutils": 20
+        "phpcsstandards/phpcsutils": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,

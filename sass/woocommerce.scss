@@ -123,11 +123,11 @@ form {
 /**
   * Forms
   */
-.form-row.woocommerce-validated input.input-text {
+.form-row.woocommerce-validated .input-text {
 	box-shadow: inset 2px 0 0 #0f834d;
 }
 
-.form-row.woocommerce-invalid input.input-text {
+.form-row.woocommerce-invalid .input-text {
 	box-shadow: inset 2px 0 0 #e2401c;
 }
 
@@ -148,7 +148,7 @@ form {
 	color: $color2;
 	font-size: 1em;
 	z-index: 9999;
-	line-height: 1.8em;
+	line-height: 30px;
 	a {
 		display: inline-block;
 		width: auto;
@@ -798,12 +798,13 @@ form {
 	font-size: 1em;
 }
 
-.woocommerce-account nav.woocommece-MyAccount-navigation {
-	ul {
-		width: 30%;
+.woocommerce-account {
+	.woocommece-MyAccount-navigation {
+		ul {
+			width: 30%;
+		}
 	}
 }
-
 //products
 #woocommerce_product_search-2 {
 	width: 30%;
@@ -963,6 +964,7 @@ form {
 	.entry-content {
 		margin: 0;
 		.woocommerce {
+			margin: 0;
 			.return-to-shop {
 				color: $color3;
 
@@ -1386,7 +1388,7 @@ form {
 			/* login form */
 			#customer_login {
 				display: flex;
-				flex-flow: row;
+				flex-flow: row wrap;
 				align-items: flex-start;
 				justify-content: center;
 				gap: 1em;
@@ -1397,7 +1399,7 @@ form {
 				}
 
 				.u-column1 {
-					width: 49%;
+					width: 90%;
 
 					.login {
 						background-color: $color2;
@@ -1406,7 +1408,7 @@ form {
 							margin: 1em auto;
 							color: $color7;
 							.woocommerce-form__label-for-checkbox {
-								width: 40%;
+								width: 60%;
 								display: flex;
 								#rememberme {
 									width: 10%;
@@ -1448,7 +1450,7 @@ form {
 				}
 
 				.u-column2 {
-					width: 49%;
+					width: 90%;
 					label {
 						color: $color7;
 					}
@@ -1529,7 +1531,7 @@ form {
 									.woocommerce-input-wrapper {
 										margin: 0;
 
-										input.input-text {
+										.input-text {
 											margin-bottom: 0.5em;
 											width: 100%;
 										}
@@ -1804,7 +1806,7 @@ form {
 							}
 
 							#place_order {
-								font-size: 1.3em;
+								font-size: 0.85em;
 								line-height: 45px;
 								border: 2px solid $color8;
 								transition: all 0.2s ease-in-out;
@@ -2089,14 +2091,14 @@ form {
 		margin: 0;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
 		.type-product {
 			flex: 0 0 auto;
 			padding: 0.5em;
-			width: 15.5%;
+			width: 16%;
 			margin-bottom: 2em;
 
 			.attachment-woocommerce_thumbnail {
@@ -2857,6 +2859,7 @@ form {
 		.entry-content {
 			margin: 0;
 			.woocommerce {
+				margin: 0;
 				.return-to-shop {
 					color: $color3;
 
@@ -3214,7 +3217,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -3234,7 +3237,6 @@ form {
 								margin: 1em auto;
 								color: $color7;
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -3328,7 +3330,7 @@ form {
 										.woocommerce-input-wrapper {
 											margin: 0;
 
-											input.input-text {
+											.input-text {
 												margin-bottom: 0.5em;
 											}
 										}
@@ -3564,7 +3566,7 @@ form {
 								}
 
 								#place_order {
-									font-size: 1.3em;
+									font-size: 1.2em;
 									line-height: 45px;
 								}
 
@@ -3803,13 +3805,13 @@ form {
 	.products {
 		margin: 0;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
 		.type-product {
 			flex: 0 0 auto;
-			width: 18.5%;
+			width: 19%;
 
 			.woocommerce-LoopProduct-link {
 				margin: 0 auto;
@@ -4300,6 +4302,7 @@ form {
 		padding: 1em;
 
 		.woocommerce {
+			margin: 0;
 			.woocommerce-info {
 				font-size: 0.9em;
 				padding: 0.5em;
@@ -4551,7 +4554,7 @@ form {
 			/* login form */
 			#customer_login {
 				display: flex;
-				flex-flow: row;
+				flex-flow: row wrap;
 				align-items: flex-start;
 				justify-content: center;
 				gap: 1em;
@@ -4568,7 +4571,6 @@ form {
 							margin: 1em auto;
 
 							.woocommerce-form__label-for-checkbox {
-								width: 40%;
 								display: flex;
 								#rememberme {
 									width: 10%;
@@ -4764,6 +4766,26 @@ form {
 						.form-row,
 						.place-order {
 							padding: 1em;
+							.woocommerce-terms-and-conditions-wrapper {
+								.woocommerce-privacy-policy-text {
+									color: $color7;
+
+									p {
+										font-size: 0.85em;
+										color: $color2;
+
+										a {
+											display: inline-block;
+											width: auto;
+										}
+									}
+								}
+							}
+
+							#place_order {
+								font-size: 1.1em;
+								line-height: 45px;
+							}
 
 							p {
 								label {
@@ -5281,7 +5303,7 @@ form {
 	.products {
 		margin: 0;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
@@ -5430,6 +5452,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 
@@ -5681,7 +5704,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -5698,7 +5721,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -5895,6 +5917,26 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.85em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 1.1em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -6408,7 +6450,7 @@ form {
 	.products {
 		margin: 0;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
@@ -6566,6 +6608,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 
@@ -6818,7 +6861,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -6835,7 +6878,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -7032,6 +7074,26 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.8em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 1em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -7478,7 +7540,7 @@ form {
 
 	.products {
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
@@ -7669,6 +7731,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 
@@ -7926,7 +7989,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -7943,7 +8006,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -8140,6 +8202,26 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.8em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 1em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -8289,7 +8371,7 @@ form {
 	.products {
 		margin: 0;
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: 0.5em;
 		width: 100%;
@@ -8716,6 +8798,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 
@@ -8981,7 +9064,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -8990,7 +9073,7 @@ form {
 					}
 
 					.u-column1 {
-						width: 49%;
+						width: 90%;
 
 						.login {
 							padding: 0.5em;
@@ -8998,7 +9081,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -9026,7 +9108,7 @@ form {
 					}
 
 					.u-column2 {
-						width: 49%;
+						width: 90%;
 						label {
 							color: $color7;
 						}
@@ -9194,6 +9276,27 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.8em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 0.9em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -9744,6 +9847,7 @@ form {
 		.entry-content {
 			padding: 0.5em;
 			.woocommerce {
+				margin: 0;
 				.woocommerce-message {
 					font-size: 0.8em;
 					padding: 0.25em;
@@ -10031,7 +10135,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -10040,7 +10144,7 @@ form {
 					}
 
 					.u-column1 {
-						width: 49%;
+						width: 90%;
 
 						.login {
 							padding: 0.5em;
@@ -10048,7 +10152,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -10076,7 +10179,7 @@ form {
 					}
 
 					.u-column2 {
-						width: 49%;
+						width: 90%;
 						label {
 							color: $color7;
 						}
@@ -10244,6 +10347,27 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.75em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 0.9em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -10784,6 +10908,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 					font-size: 0.7em;
@@ -11050,7 +11175,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -11059,7 +11184,7 @@ form {
 					}
 
 					.u-column1 {
-						width: 49%;
+						width: 90%;
 
 						.login {
 							padding: 0.5em;
@@ -11067,7 +11192,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -11095,7 +11219,7 @@ form {
 					}
 
 					.u-column2 {
-						width: 49%;
+						width: 90%;
 						label {
 							color: $color7;
 						}
@@ -11263,6 +11387,27 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.75em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 0.85em;
+									line-height: 45px;
+								}
 
 								p {
 									label {
@@ -11803,6 +11948,7 @@ form {
 
 		.entry-content {
 			.woocommerce {
+				margin: 0;
 				.woocommerce-info {
 					padding: 0.5em;
 					font-size: 0.6em;
@@ -12071,7 +12217,7 @@ form {
 				/* login form */
 				#customer_login {
 					display: flex;
-					flex-flow: row;
+					flex-flow: row wrap;
 					align-items: flex-start;
 					justify-content: center;
 					gap: 1em;
@@ -12080,7 +12226,7 @@ form {
 					}
 
 					.u-column1 {
-						width: 49%;
+						width: 90%;
 
 						.login {
 							padding: 0.5em;
@@ -12088,7 +12234,6 @@ form {
 								margin: 1em auto;
 
 								.woocommerce-form__label-for-checkbox {
-									width: 40%;
 									display: flex;
 									#rememberme {
 										width: 10%;
@@ -12116,7 +12261,7 @@ form {
 					}
 
 					.u-column2 {
-						width: 49%;
+						width: 90%;
 						label {
 							color: $color7;
 						}
@@ -12289,6 +12434,27 @@ form {
 							.form-row,
 							.place-order {
 								padding: 1em;
+
+								.woocommerce-terms-and-conditions-wrapper {
+									.woocommerce-privacy-policy-text {
+										color: $color7;
+
+										p {
+											font-size: 0.75em;
+											color: $color2;
+
+											a {
+												display: inline-block;
+												width: auto;
+											}
+										}
+									}
+								}
+
+								#place_order {
+									font-size: 0.85em;
+									line-height: 45px;
+								}
 
 								p {
 									label {

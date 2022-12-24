@@ -134,6 +134,8 @@ html {
  */
 body {
 	margin: 0;
+	font-family: $FontList;
+	background: #ffffff;
 }
 
 /**
@@ -248,6 +250,8 @@ sup {
  */
 img {
 	border-style: none;
+	height: auto;
+	max-width: 100%;
 }
 
 /* Forms
@@ -515,9 +519,6 @@ big {
 
 /* Elements
 --------------------------------------------- */
-body {
-	background: #ffffff;
-}
 
 hr {
 	background-color: #cccccc;
@@ -560,11 +561,6 @@ object {
 	max-width: 100%;
 }
 
-img {
-	height: auto;
-	max-width: 100%;
-}
-
 figure {
 	margin: 1em 0;
 }
@@ -577,17 +573,16 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #ffffff;
 }
 
 a:visited {
-	color: #800080;
+	color: #ecac00;
 }
 
-a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #ecac00;
 }
 
 a:focus {
@@ -999,8 +994,4 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
-}
-
-body {
-	font-family: $FontList;
 }

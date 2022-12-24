@@ -57,7 +57,7 @@
 		"color-hex-length": "long",
 		"color-named": null,
 		"selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
-		"declaration-no-important": true,
+		"declaration-no-important": null,
 		"function-url-quotes": "always",
 		"font-family-name-quotes": "always-where-recommended",
 		"comment-whitespace-inside": "always",
@@ -65,7 +65,8 @@
 		"selector-pseudo-element-colon-notation": "double",
 		"media-feature-range-operator-space-before": "always",
 		"media-feature-range-operator-space-after": "always",
-		"keyframe-block-no-duplicate-selectors": true
+		"keyframe-block-no-duplicate-selectors": true,
+		"selector-id-pattern": null
 	},
 	"overrides": [
 		{
