@@ -19,9 +19,9 @@ License: GNU General Public License v2 or later
 
 */
 
-@import 'partials/base';
-@import 'partials/fonts';
-@import 'partials/variables';
+@import "partials/base";
+@import "partials/fonts";
+@import "partials/variables";
 
 #wrapper {
 	width: 98%;
@@ -362,12 +362,12 @@ License: GNU General Public License v2 or later
 		}
 
 		.wp-block-search {
-			input[type='text'] {
+			input[type="text"] {
 				width: 75%;
 				height: 35px;
 			}
 
-			input[type='submit'] {
+			input[type="submit"] {
 				width: 20%;
 			}
 		}
@@ -565,7 +565,7 @@ License: GNU General Public License v2 or later
 				height: auto;
 			}
 			a,
-			a[rel~='tag'] {
+			a[rel~="tag"] {
 				display: inline-block;
 				width: auto;
 				line-height: 40px;
@@ -603,8 +603,8 @@ License: GNU General Public License v2 or later
 		}
 		.nav-links {
 			height: 100%;
-			a[rel='prev'],
-			a[rel='next'] {
+			a[rel="prev"],
+			a[rel="next"] {
 				line-height: 50px;
 			}
 			.nav-previous {
@@ -845,11 +845,11 @@ License: GNU General Public License v2 or later
 					font-size: 1em;
 				}
 
-				label[for='wp-comment-cookies-consent'],
-				label[for='url'],
-				label[for='email'],
-				label[for='author'],
-				label[for='comment'] {
+				label[for="wp-comment-cookies-consent"],
+				label[for="url"],
+				label[for="email"],
+				label[for="author"],
+				label[for="comment"] {
 					height: 30px;
 					line-height: 30px;
 					width: 30px;
@@ -1129,8 +1129,8 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type='text'],
-			input[type='email'] {
+			input[type="text"],
+			input[type="email"] {
 				width: 100%;
 				display: block;
 				padding: 0.2em;
@@ -1228,7 +1228,7 @@ License: GNU General Public License v2 or later
 				font-size: 1em;
 			}
 			a,
-			a[rel~='tag'] {
+			a[rel~="tag"] {
 				display: inline-block;
 
 				&:visited {
@@ -1674,6 +1674,7 @@ License: GNU General Public License v2 or later
 
 /* 1920 */
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
+
 	/* wrapper */
 	#wrapper {
 		margin-left: auto;
@@ -1857,12 +1858,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -2002,7 +2003,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.9em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -2031,8 +2032,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -2191,11 +2192,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -2326,17 +2327,17 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			input[type='text'],
-			input[type='password'],
-			input[type='submit'] {
+			input[type="text"],
+			input[type="password"],
+			input[type="submit"] {
 				display: block;
 				font-weight: 400;
 			}
 
-			input[type='text'],
-			input[type='password'],
-			input[type='email'],
-			input[type='tel'] {
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			input[type="tel"] {
 				width: 100%;
 				border: 2px solid $color8;
 				border-radius: 5px;
@@ -2397,8 +2398,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					font-size: 1em;
 				}
 
@@ -2940,12 +2941,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -3086,7 +3087,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.85em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -3115,8 +3116,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -3275,11 +3276,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -3441,8 +3442,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 					font-size: 1.2em;
@@ -3856,12 +3857,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -4001,7 +4002,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.85em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4030,8 +4031,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -4190,11 +4191,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -4357,8 +4358,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -4771,12 +4772,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -4916,7 +4917,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.8em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -4945,8 +4946,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -5105,11 +5106,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -5272,8 +5273,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -5690,12 +5691,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -5835,7 +5836,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.8em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -5864,8 +5865,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -6024,11 +6025,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -6192,8 +6193,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -6607,12 +6608,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -6751,7 +6752,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.8em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -6780,8 +6781,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -6940,11 +6941,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -7107,8 +7108,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -7566,12 +7567,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -7710,7 +7711,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.75em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -7739,8 +7740,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -7899,11 +7900,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -8066,8 +8067,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
@@ -8517,12 +8518,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type='text'] {
+				input[type="text"] {
 					width: 75%;
 					height: 35px;
 				}
 
-				input[type='submit'] {
+				input[type="submit"] {
 					width: 20%;
 				}
 			}
@@ -8661,7 +8662,7 @@ License: GNU General Public License v2 or later
 					font-size: 0.75em;
 				}
 				a,
-				a[rel~='tag'] {
+				a[rel~="tag"] {
 					display: inline-block;
 					&:visited {
 						color: $color10;
@@ -8690,8 +8691,8 @@ License: GNU General Public License v2 or later
 			}
 			.nav-links {
 				height: 100%;
-				a[rel='prev'],
-				a[rel='next'] {
+				a[rel="prev"],
+				a[rel="next"] {
 					line-height: 50px;
 				}
 				.nav-previous {
@@ -8850,11 +8851,11 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 					}
 
-					label[for='wp-comment-cookies-consent'],
-					label[for='url'],
-					label[for='email'],
-					label[for='author'],
-					label[for='comment'] {
+					label[for="wp-comment-cookies-consent"],
+					label[for="url"],
+					label[for="email"],
+					label[for="author"],
+					label[for="comment"] {
 						height: 30px;
 						line-height: 30px;
 						width: 30px;
@@ -9017,8 +9018,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				input[type='text'],
-				input[type='email'] {
+				input[type="text"],
+				input[type="email"] {
 					padding: 0.2em;
 					height: 35px;
 				}
