@@ -54,11 +54,13 @@ audio:not([controls]) {
 }
 
 :-moz-placeholder {
+
 	/* Firefox 18- */
 	color: #e74c3c;
 }
 
 ::-moz-placeholder {
+
 	/* Firefox 19+ */
 	color: #e74c3c;
 }
@@ -449,8 +451,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family:
+ -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -973,6 +975,7 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
+
 	/* rtl:ignore */
 	float: left;
 
@@ -982,6 +985,7 @@ textarea {
 }
 
 .alignright {
+
 	/* rtl:ignore */
 	float: right;
 
