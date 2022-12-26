@@ -1,7 +1,11 @@
 {
     "extends": [
-        "plugin:@wordpress/eslint-plugin/esnext"
+        "plugin:@wordpress/eslint-plugin/esnext",
+				"plugin:prettier/recommended"
     ],
+		"plugins": [
+			"prettier"
+		],
     "env": {
         "browser": true,
         "commonjs":true,
@@ -18,14 +22,14 @@
       "SharedArrayBuffer": "readonly"
       },
     "rules": {
-          "strict" : ["error","global"],
+			"prettier/prettier": "error",
+			"strict" : ["error","global"],
       "prefer-destructuring":["error",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
       "new-cap": "error",
       "no-invalid-this": "off",
       "prefer-const":"error",
       "func-style":["error", "expression"],
       "no-new-func":"error",
-      "prettier/prettier": "error",
       "no-unused-vars": "warn",
       "no-console": "warn",
       "func-names": "off",

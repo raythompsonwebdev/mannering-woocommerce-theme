@@ -26,7 +26,7 @@ get_header(); ?>
 		<?php the_title(); ?>
 	</h2>
 
-	<?php get_template_part('template-parts/content', 'page'); ?>
+	<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 </main>
 

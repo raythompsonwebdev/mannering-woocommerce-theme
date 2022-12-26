@@ -31,7 +31,7 @@
 	</div>
 	<?php
 
-	//if ( has_nav_menu( 'Secondary Menu' ) ) {
+	// if ( has_nav_menu( 'Secondary Menu' ) ) {
 	// If there is, adds the Top Menu area.
 	wp_nav_menu(
 		array(
@@ -39,7 +39,7 @@
 			'container' => 'ul',
 		)
 	);
-	//}
+	// }
 	?>
 
 
@@ -49,19 +49,19 @@
 <br />
 
 <p id="copyr">
-	<?php esc_html_e('&copy; 2016 - Raymond Thompson - UK :', 'mannering_music'); ?>
-	<a href="<?php echo esc_url(__('https://wordpress.org/', 'mannering_music')); ?>"></a>
+	<?php echo esc_html__( '&copy; 2016 - Raymond Thompson - UK :', 'mannering_music' ); ?>
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mannering_music' ) ); ?>"></a>
 	<span class="sep"> | </span>
 
 	<?php
 	/* translators: %1$s by %2$s: Theme name, mannering_music: Raymond Thompson. */
-	printf(esc_html_e('Theme: %1$s by %2$s.', 'mannering_music'), 'mannering_music', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>');
+	printf( esc_html_e( 'Theme: %1$s by %2$s.', 'mannering_music' ), 'mannering_music', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
 	?>
 
 	<?php
 	$dt             = time();
-	$mysql_datetime = strftime('%Y-%m-%d %H:%M:%S', $dt);
-	printf(esc_html__('Page was last updated :', 'mannering_music'), esc_html($mysql_datetime, 'mannering_music'), 'mannering_music');
+	$mysql_datetime = gmdate( '%Y-%m-%d %H:%M:%S', $dt );
+	printf( esc_html__( 'Page was last updated :', 'mannering_music' ), esc_html__( $mysql_datetime, 'mannering_music' ), 'mannering_music' );
 
 	?>
 

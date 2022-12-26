@@ -15,6 +15,7 @@ if (!function_exists('mannering_music_posted_on')) :
 	function mannering_music_posted_on()
 	{
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
 		if (get_the_time('U') !== get_the_modified_time('U')) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
@@ -53,6 +54,55 @@ if (!function_exists('mannering_music_posted_by')) :
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
+endif;
+
+if (!function_exists('mannering_validate_gravatar')) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function mannering_validate_gravatar()
+	{
+
+		$clashvibes_author_id = get_the_author_meta('ID');
+
+		if (clashvibes_validate_gravatar($clashvibes_author_id)) {
+			echo '<div class="meta-content has-avatar">';
+			echo '<div class="author-avatar">' . get_avatar($clashvibes_author_id) . '</div></div>';
+		} else {
+			echo '<div class="meta-content has-avatar">';
+			echo '<div class="author-avatar">' . get_avatar($clashvibes_author_id) . '</div></div>';
+		}
+	}
+
+endif;
+
+if (!function_exists('mannering_updated')) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function mannering_updated()
+	{
+		$mannering_update_time_string = '<time class="updated" datetime="%3$s">Not updated</time>';
+		if (get_the_time('U') !== get_the_modified_time('U')) {
+			$mannering_update_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
+		}
+		$mannering_update_time_string = sprintf(
+			$mannering_update_time_string,
+			esc_attr(get_the_date(DATE_W3C)),
+			esc_html(get_the_date()),
+			esc_attr(get_the_modified_date(DATE_W3C)),
+			esc_html(get_the_modified_date())
+		);
+
+		$mannering_updated_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x('Updated:  %s', 'post date', 'mannering_music'),
+			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $mannering_update_time_string . '</a>'
+		);
+
+		echo '<span class="updated-on">' . $mannering_updated_on . '</span>';
+	}
+
 endif;
 
 if (!function_exists('mannering_music_entry_footer')) :
