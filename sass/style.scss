@@ -361,14 +361,20 @@ License: GNU General Public License v2 or later
 			margin: 0;
 		}
 
+		.wp-block-search__inside-wrapper {
+			display: block;
+		}
+
 		.wp-block-search {
-			input[type="text"] {
-				width: 75%;
+			input[type="search"] {
+				width: 100%;
 				height: 35px;
 			}
 
-			input[type="submit"] {
-				width: 20%;
+			.wp-block-search__button {
+				display: block;
+				width: 90%;
+				margin: 0.5em auto;
 			}
 		}
 
@@ -475,6 +481,7 @@ License: GNU General Public License v2 or later
 			margin: 0;
 			color: $color2;
 			text-indent: 0.2em;
+			line-height: 45px;
 
 			a {
 				font-size: 0.75em;
@@ -495,31 +502,49 @@ License: GNU General Public License v2 or later
 		}
 
 		.entry-meta {
-			display: flex;
-			flex-flow: row wrap;
-			align-items: flex-start;
+			display: grid;
+			grid-template: 25px 25px 25px / 96px 2fr;
+			gap: 2px 2px;
+			grid-template-areas:
+				"Image posted-on"
+				"Image byline"
+				"Image updated-on";
 			font-size: 0.75em;
-			.posted-on,
+			height: 110px;
+
+			.posted-on {
+				grid-area: posted-on;
+			}
 			.byline {
-				line-height: 35px;
-				text-indent: 0.25em;
-				height: auto;
-				background-color: $color3;
-				margin-bottom: 0.1em;
+				grid-area: byline;
+			}
+			.updated-on {
+				grid-area: updated-on;
+			}
+			.author-avatar {
+				display: grid;
+				grid-template: 4fr / 1fr;
+				grid-template-areas: ".";
+				grid-area: Image;
 				width: 100%;
 			}
-			a,
-			.vcard {
-				width: auto;
-				display: inline-block;
-				color: $color2;
-				&:visited {
-					color: $color10;
-				}
 
-				&:hover {
-					color: $color10;
+			.posted-on,
+			.byline,
+			.updated-on {
+				flex: 0 0 auto;
+				line-height: 25px;
+				text-indent: 0.25em;
+				background-color: $color3;
+				width: 100%;
+				a,
+				.vcard {
+					display: inline-block;
+					width: auto;
 				}
+			}
+			.has-avatar {
+				width: auto;
 			}
 		}
 
@@ -1230,7 +1255,7 @@ License: GNU General Public License v2 or later
 			a,
 			a[rel~="tag"] {
 				display: inline-block;
-
+				font-size: 1em;
 				&:visited {
 					color: $color10;
 				}
@@ -1674,7 +1699,6 @@ License: GNU General Public License v2 or later
 
 /* 1920 */
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-
 	/* wrapper */
 	#wrapper {
 		margin-left: auto;
@@ -1858,13 +1882,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -1959,25 +1982,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
 				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -2005,6 +2025,7 @@ License: GNU General Public License v2 or later
 				a,
 				a[rel~="tag"] {
 					display: inline-block;
+					font-size: 1em;
 					&:visited {
 						color: $color10;
 					}
@@ -2941,13 +2962,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -3041,25 +3061,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
-				font-size: 1em;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
+				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -3084,11 +3101,12 @@ License: GNU General Public License v2 or later
 				.tag-links,
 				.comments-link {
 					height: auto;
-					font-size: 0.85em;
+					font-size: 0.9em;
 				}
 				a,
 				a[rel~="tag"] {
 					display: inline-block;
+
 					&:visited {
 						color: $color10;
 					}
@@ -3857,13 +3875,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -3957,25 +3974,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
-				font-size: 0.9em;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
+				font-size: 0.85em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -4772,13 +4786,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -4872,25 +4885,23 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
-				font-size: 0.9em;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
+				font-size: 0.85em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
+					line-height: 25px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -5691,13 +5702,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -5791,25 +5801,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
 				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -6608,13 +6615,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -6707,25 +6713,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
 				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -7567,13 +7570,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -7666,25 +7668,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
 				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
@@ -8518,13 +8517,12 @@ License: GNU General Public License v2 or later
 			}
 
 			.wp-block-search {
-				input[type="text"] {
-					width: 75%;
+				input[type="search"] {
 					height: 35px;
 				}
 
-				input[type="submit"] {
-					width: 20%;
+				.wp-block-search__button {
+					width: 90%;
 				}
 			}
 
@@ -8617,25 +8615,22 @@ License: GNU General Public License v2 or later
 			}
 
 			.entry-meta {
-				display: flex;
-				flex-flow: row wrap;
-				align-items: flex-start;
+				grid-template: 25px 25px 25px / 96px 2fr;
+				gap: 2px 2px;
+				grid-template-areas:
+					"Image posted-on"
+					"Image byline"
+					"Image updated-on";
 				font-size: 0.9em;
 				.posted-on,
-				.byline {
+				.byline,
+				.updated-on {
 					height: auto;
-					line-height: 40px;
 				}
-				a,
-				.vcard {
+				.has-avatar {
 					width: auto;
-					display: inline-block;
-					&:visited {
-						color: $color10;
-					}
-
-					&:hover {
-						color: $color10;
+					.author-avatar {
+						width: 100%;
 					}
 				}
 			}
