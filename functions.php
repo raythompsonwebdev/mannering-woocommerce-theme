@@ -46,9 +46,9 @@ function jk_dequeue_styles($enqueue_styles)
 add_filter('woocommerce_enqueue_styles', 'jk_dequeue_styles');
 
 
-if (!defined('_S_VERSION')) {
+if (!defined('CLASHIBES_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.0');
+	define('CLASHIBES_VERSION', '1.0.0');
 }
 
 /**
@@ -76,30 +76,18 @@ if (!function_exists('mannering_music_setup')) :
 	 */
 	function mannering_music_setup()
 	{
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on mannering_music, use a find and replace
-		 * to change 'mannering-woocommerce-theme' to the name of your theme in all the template files.
-		 */
+
 		load_theme_textdomain('mannering-woocommerce-theme', get_template_directory() . '/languages');
 
-		// Add default posts and comments RSS feed links to head.
+		// Add block editor styles.
+		$font_url = '//https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap';
+		add_editor_style(array('css/editor-style.css', str_replace(',', '%2C', $font_url)));
+		add_theme_support('editor-styles');
+
 		add_theme_support('automatic-feed-links');
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
 		add_theme_support('title-tag');
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
 		add_theme_support('post-thumbnails');
 
 		// set post thumbnail size.
@@ -119,10 +107,7 @@ if (!function_exists('mannering_music_setup')) :
 			)
 		);
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
+
 		add_theme_support(
 			'html5',
 			array(
@@ -169,11 +154,6 @@ if (!function_exists('mannering_music_setup')) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
 		add_theme_support(
 			'custom-logo',
 			array(
@@ -183,18 +163,22 @@ if (!function_exists('mannering_music_setup')) :
 				'flex-height' => true,
 			)
 		);
+		// Enable block editor styles to match the front end.
+		add_theme_support('wp-block-styles');
+
+		// Enable wide alignments in block editor.
+		add_theme_support('align-wide');
+
+		// Add support for responsive embedded content.
+		add_theme_support('responsive-embeds');
+
+		// Remove feed icon link from legacy RSS widget.
+		add_filter('rss_widget_feed_link', '__return_false');
 	}
 endif;
 add_action('after_setup_theme', 'mannering_music_setup');
 
-// Enable block editor styles to match the front end.
-add_theme_support('wp-block-styles');
 
-// Enable wide alignments in block editor.
-add_theme_support('align-wide');
-
-// allow embeds to be responsive.
-add_theme_support('responsive_embeds');
 
 
 /**
@@ -222,6 +206,19 @@ add_action('init', 'mannering_music_remove_head_links');
 
 // remove version from rss.
 add_filter('the_generator', '__return_empty_string');
+
+
+if (function_exists('register_block_style')) {
+	register_block_style(
+		'core/quote',
+		array(
+			'name'         => 'blue-quote',
+			'label'        => __('Blue Quote', 'clashvibes'),
+			'is_default'   => true,
+			'inline_style' => '.wp-block-quote.is-style-blue-quote { color: blue; }',
+		)
+	);
+}
 
 
 /**
@@ -274,9 +271,7 @@ add_action('widgets_init', 'mannering_music_widgets_init');
  */
 function mannering_music_register_styles()
 {
-	wp_enqueue_style('mannering-music', get_stylesheet_directory_uri() . '/style.css', false, '1.1', 'all');
-
-	wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
+	wp_enqueue_style('mannering-music', get_stylesheet_directory_uri() . '/style.css', false, filemtime(get_template_directory() . '/style.css'), 'all');
 }
 add_action('wp_enqueue_scripts', 'mannering_music_register_styles');
 
@@ -285,9 +280,9 @@ add_action('wp_enqueue_scripts', 'mannering_music_register_styles');
  */
 function mannering_music_scripts()
 {
-	wp_enqueue_script('mannering-music', get_stylesheet_directory_uri() . '/js/index.js', array('jquery'), '20161110', true);
+	wp_enqueue_script('mannering-music', get_stylesheet_directory_uri() . '/js/index.js', array('jquery'), filemtime(get_template_directory() . '/style.css'), false);
 
-	wp_enqueue_script('mannering_music-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	// wp_enqueue_script('mannering_music-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array(), filemtime(get_template_directory() . '/style.css'), false);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

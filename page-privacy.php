@@ -153,7 +153,7 @@ United Kingdom] and governs the privacy of its users who choose to use it.',
 	<p><?php esc_html_e('Resources &amp; Further Information', 'mannering-woocommerce-theme'); ?></p>
 
 	<ul>
-		<li><a href="<?php echo esc_url('https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display'); ?>" alt="<?php esc_attr_e('Overview of the GDPR - General Data Protection Regulation'); ?>" target="new"><?php esc_html_e('Overview of the GDPR - General Data Protection Regulation', 'mannering-woocommerce-theme'); ?></a></li>
+		<li><a href="<?php echo esc_url('https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display'); ?>" alt="<?php esc_attr_e('Overview of the GDPR - General Data Protection Regulation', 'mannering-woocommerce-theme'); ?>" target="new"><?php esc_html_e('Overview of the GDPR - General Data Protection Regulation', 'mannering-woocommerce-theme'); ?></a></li>
 
 		<li><a href="<?php echo esc_url('https://www.gov.uk/data-protection', 'display'); ?>" alt="<?php esc_attr_e('Data Protection Act 1998', 'mannering-woocommerce-theme'); ?>" target="new">Data Protection Act 1998</a></li>
 

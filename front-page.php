@@ -86,9 +86,7 @@ get_header(); ?>
 		</div> -->
 	</article>
 
-	<figure id="ie8-image">
-		<img id="image-5" src="<?php echo esc_url(home_url('/')); ?>/wp-content/themes/mannering-storefront-child/images/sliderimages/manneringhiphop.png" alt="home-page-image">
-	</figure>
+
 
 </section>
 
