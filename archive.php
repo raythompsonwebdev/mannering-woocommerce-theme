@@ -1,18 +1,17 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * Archive page | core/archive.php.
  *
  * @category   Archive_Page
- * @package    mannering_music
+ * @package    mannering-woocommerce-theme
  * @subpackage Archive_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
- * @link       http:www.raythompsonwebdev.co.uk.mannering-music
+ * @version    GIT: https://github.com/raythompsonwebdev/mannering-woocommerce-theme.git
  */
 get_header(); ?>
 
@@ -20,19 +19,19 @@ get_header(); ?>
 <div id="post-content">
 
 	<?php
-	if ( have_posts() ) :
-		?>
+	if (have_posts()) :
+	?>
 
 		<header class="page-header">
 			<?php
-			the_archive_title( '<h2 class="page-title">', '</h2>' );
-			the_archive_description( '<div class="archive-description">', '</div>' );
+			the_archive_title('<h2 class="page-title">', '</h2>');
+			the_archive_description('<div class="archive-description">', '</div>');
 			?>
 		</header><!-- .page-header -->
 
-		<?php
+	<?php
 		/* Start the Loop */
-		while ( have_posts() ) :
+		while (have_posts()) :
 			the_post();
 
 			/*
@@ -40,7 +39,7 @@ get_header(); ?>
 			* If you want to override this in a child theme, then include a file
 			* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 			*/
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part('template-parts/content', get_post_format());
 
 		endwhile;
 
@@ -48,7 +47,7 @@ get_header(); ?>
 
 	else :
 
-		get_template_part( 'template-parts/content', 'none' );
+		get_template_part('template-parts/content', 'none');
 
 	endif;
 	?>

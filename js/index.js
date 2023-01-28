@@ -3,35 +3,35 @@ jQuery(document).ready(($) => {
 
 	$(window).scroll(function () {
 		if ($(this).scrollTop() >= position) {
-			direction = 'down';
+			direction = "down";
 			if (direction !== previous) {
-				$('header button.menu-toggle').addClass('hide');
+				$("header button.menu-toggle").addClass("hide");
 				previous = direction;
 			}
 		} else {
-			direction = 'up';
+			direction = "up";
 			if (direction !== previous) {
-				$('header button.menu-toggle').removeClass('hide');
+				$("header button.menu-toggle").removeClass("hide");
 				previous = direction;
 			}
 		}
 		position = $(this).scrollTop();
 	});
 
-	$('header button.menu-toggle').on('click', (event) => {
+	$("header button.menu-toggle").on("click", (event) => {
 		event.preventDefault();
 
 		// create menu variables
-		const slideoutMenu = $('#mannering-main-nav');
+		const slideoutMenu = $("#mannering-main-nav");
 		const slideoutMenuWidth = slideoutMenu.width();
 
 		// toggle open class
-		slideoutMenu.toggleClass('open');
+		slideoutMenu.toggleClass("open");
 
 		// slide menu
-		if (slideoutMenu.hasClass('open')) {
+		if (slideoutMenu.hasClass("open")) {
 			slideoutMenu.animate({
-				left: '0px',
+				left: "0px",
 			});
 		} else {
 			slideoutMenu.animate(

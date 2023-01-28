@@ -1,0 +1,549 @@
+# Copyright (C) 2023 Raymond Thompson
+# This file is distributed under the GNU General Public License v2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mannering woocommerce Theme 1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mannering-woocommerce-child\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-01-21T16:16:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: mannering-woocommerce-theme\n"
+
+#. Theme Name of the theme
+msgid "Mannering woocommerce Theme"
+msgstr ""
+
+#. Description of the theme
+msgid "Online Music Store"
+msgstr ""
+
+#. Author of the theme
+msgid "Raymond Thompson"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.raythompsonwebdev.co.uk"
+msgstr ""
+
+#: 404.php:23
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:30
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:42
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:62
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:37
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:53
+msgid "&copy; 2016 - Raymond Thompson - UK :"
+msgstr ""
+
+#: footer.php:54
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:57
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: front-page.php:35
+msgid "Check out our end of season sale on the latest Hip Hop music from our vast collection."
+msgstr ""
+
+#: front-page.php:50
+msgid "Check out our end of season sale on the latest Jazz music from our vast collection."
+msgstr ""
+
+#: front-page.php:63
+msgid "Check out our end of season sale on the latest Country music from our vast collection."
+msgstr ""
+
+#: front-page.php:77
+msgid "Check out our end of season sale on the latest Jazz music albums from our vast collection."
+msgstr ""
+
+#: front-page.php:95
+msgid "Welcome to Mannering Music."
+msgstr ""
+
+#: front-page.php:100
+msgid "Featured Hip Hop Albums"
+msgstr ""
+
+#: front-page.php:149
+#: front-page.php:206
+#: front-page.php:260
+msgid "No Products"
+msgstr ""
+
+#: front-page.php:162
+msgid "Featured Country Albums"
+msgstr ""
+
+#: front-page.php:216
+msgid "Featured Jazz Albums"
+msgstr ""
+
+#: functions.php:115
+msgid "Main"
+msgstr ""
+
+#: functions.php:116
+msgid "Secondary"
+msgstr ""
+
+#: functions.php:117
+msgid "Shopper"
+msgstr ""
+
+#: functions.php:258
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:260
+msgid "Add widgets here."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Header"
+msgstr ""
+
+#: header.php:50
+msgid "Menu"
+msgstr ""
+
+#. translators: %1$s:, $site_title
+#: header.php:72
+msgid "Go to the home page of %1$s"
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:50
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:99
+msgctxt "post date"
+msgid "Updated:  %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:117
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:120
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:124
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:127
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:137
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:154
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. Template Name of the theme
+msgid "About"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Contact"
+msgstr ""
+
+#: page-contact.php:26
+msgid "Contact Us"
+msgstr ""
+
+#: page-contact.php:35
+msgid "Full Name"
+msgstr ""
+
+#: page-contact.php:37
+msgid "Please enter your name"
+msgstr ""
+
+#: page-contact.php:42
+msgid "E-mail"
+msgstr ""
+
+#: page-contact.php:44
+msgid "Please Enter Your Email Address"
+msgstr ""
+
+#: page-contact.php:49
+msgid "Message"
+msgstr ""
+
+#: page-contact.php:57
+msgid "Mannering Music Agency"
+msgstr ""
+
+#: page-contact.php:60
+msgid "1 Somewhere"
+msgstr ""
+
+#: page-contact.php:63
+msgid "London"
+msgstr ""
+
+#: page-contact.php:66
+msgid "E8 2GF"
+msgstr ""
+
+#: page-contact.php:69
+msgid "Tel No: 0208 123 4567"
+msgstr ""
+
+#. Template Name of the theme
+#: page-privacy.php:24
+msgid "Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:28
+msgid ""
+"The policy: This privacy policy is for this website; [www.raythompsonwebdev.co.uk] and served by [1&amp;1 Internet Ltd. Discovery House, 154 Southgate Street, Gloucester, GL1 2EX\n"
+"United Kingdom] and governs the privacy of its users who choose to use it."
+msgstr ""
+
+#: page-privacy.php:36
+msgid "It explains how we comply with the GDPR (General Data Protection Regulation), the DPA (Data Protection Act) [pre GDPR enforcement] and the PECR (Privacy and Electronic Communications Regulations)."
+msgstr ""
+
+#: page-privacy.php:38
+msgid "This policy will explain areas of this website that may affect your privacy and personal details, how we process, collect, manage and store those details and how your rights under the GDPR, DPA &amp; PECR are adhere to."
+msgstr ""
+
+#: page-privacy.php:40
+msgid "Additionally it will explain the use of cookies or software, advertising or commercial sponsorship from third parties and the download of any documents, files or software made available to you (if any) on this website. Further explanations may be provided for specific pages or features of this website in order to help you understand how we, this website and its third parties (if any) interact with you and your computer / device in order to serve it to you. Our contact information is provided if you have any questions."
+msgstr ""
+
+#: page-privacy.php:43
+msgid "The DPA &amp; GDPR May 2018"
+msgstr ""
+
+#: page-privacy.php:45
+msgid "We and this website complies to the DPA (Data Protection Act 1998) and already complies to the GDPR (General Data Protection Regulation) which comes into affect from May 2018. We will update this policy accordingly after the completion of the UK's exit from the European Union."
+msgstr ""
+
+#: page-privacy.php:48
+msgid "What data we gather"
+msgstr ""
+
+#: page-privacy.php:50
+msgid "We may collect the following information:"
+msgstr ""
+
+#: page-privacy.php:53
+msgid "Name and job title"
+msgstr ""
+
+#: page-privacy.php:55
+msgid "Contact information including email address"
+msgstr ""
+
+#: page-privacy.php:57
+msgid "Demographic information, such as postcode, preferences and interests"
+msgstr ""
+
+#: page-privacy.php:59
+msgid "Website usage data"
+msgstr ""
+
+#: page-privacy.php:61
+msgid "Other information relevant to client enquiries"
+msgstr ""
+
+#: page-privacy.php:63
+msgid "Other information pertaining to special offers and surveys"
+msgstr ""
+
+#: page-privacy.php:67
+msgid "How we use this data"
+msgstr ""
+
+#: page-privacy.php:69
+msgid "Collecting this data helps us understand what you are looking from the company, enabling us to deliver improved products and services."
+msgstr ""
+
+#: page-privacy.php:71
+msgid "Specifically, we may use data:"
+msgstr ""
+
+#: page-privacy.php:74
+msgid "For our own internal records"
+msgstr ""
+
+#: page-privacy.php:76
+msgid "To improve the products and services we provide"
+msgstr ""
+
+#: page-privacy.php:78
+msgid "To contact you in response to a specific enquiry."
+msgstr ""
+
+#: page-privacy.php:80
+msgid "To customise the website for you"
+msgstr ""
+
+#: page-privacy.php:82
+msgid "To send you promotional emails about products, services, offers and other things we think might be relevant to you."
+msgstr ""
+
+#: page-privacy.php:84
+msgid "To send you promotional mailings or to call you about products, services, offers and other things we think might be relevant to you."
+msgstr ""
+
+#: page-privacy.php:86
+msgid "To contact you via email, telephone or mail for market research reasons."
+msgstr ""
+
+#: page-privacy.php:91
+msgid "Use of Cookies"
+msgstr ""
+
+#: page-privacy.php:93
+msgid "This website uses cookies to better the users experience while visiting the website. As required by legislation, where applicable this website uses a cookie control system, allowing the user to give explicit permission or to deny the use of /saving of cookies on their computer / device."
+msgstr ""
+
+#: page-privacy.php:95
+msgid "What are cookies? Cookies are small files saved to the user's computers hard drive that track, save and store information about the user's interactions and usage of the website. This allows the website, through its server to provide the users with a tailored experience within this website."
+msgstr ""
+
+#: page-privacy.php:99
+msgid "How we use cookies"
+msgstr ""
+
+#: page-privacy.php:101
+#: page-privacy.php:104
+msgid " may use cookies to:"
+msgstr ""
+
+#: page-privacy.php:105
+msgid "Analyse our web traffic using an analytics package. Aggregated usagedata helps us improve the website structure, design, content and functions."
+msgstr ""
+
+#: page-privacy.php:107
+msgid "Identify whether you are signed in to our website.  A cookie allow us to check whether you are signed in to the site."
+msgstr ""
+
+#: page-privacy.php:109
+msgid "Test content on our website. For example, 50% of our might see one piece of content, the other 50% a different piece of content"
+msgstr ""
+
+#: page-privacy.php:111
+msgid "Store information about your preferences. The website can then present you with information you will find more relevant and interesting"
+msgstr ""
+
+#: page-privacy.php:113
+msgid "To recognise when you return to our website. We may show your relevant content, or provide functionality you used previously."
+msgstr ""
+
+#: page-privacy.php:117
+msgid "Cookies do not provide us with access to your computer or any information about you, other than that which you choose to share with us."
+msgstr ""
+
+#: page-privacy.php:119
+msgid "Users are advised that if they wish to deny the use and saving of cookies from this website on to their computers hard drive they should take necessary steps within their web browsers security settings to block all cookies from this website and its external serving vendors or use the cookie control system if available upon their first visit."
+msgstr ""
+
+#: page-privacy.php:121
+msgid "please note that doing this may affect how our website functions. Some pages and services may become unavailable to you."
+msgstr ""
+
+#: page-privacy.php:123
+msgid "We will never lease, distribute or sell your personal information unless we have your permission or the law requires us to.\tAny personal information we hold about you is stored and processed under our data protection policy, in line with the Data Protection Act 1998."
+msgstr ""
+
+#: page-privacy.php:127
+msgid "Downloads &amp; Media Files"
+msgstr ""
+
+#: page-privacy.php:128
+msgid "Any downloadable documents, files or media made available on this website are provided to users at their own risk. While all precautions have been undertaken to ensure only genuine downloads are available users are advised to verify their authenticity using third party anti virus software or similar applications."
+msgstr ""
+
+#: page-privacy.php:131
+msgid "Contact &amp; Communication With us"
+msgstr ""
+
+#: page-privacy.php:132
+msgid "Users contacting this us through this website do so at their own discretion and provide any such personal details requested at their own risk. Your personal information is kept private and stored securely until a time it is no longer required or has no use."
+msgstr ""
+
+#: page-privacy.php:134
+msgid "Where we have clearly stated and made you aware of the fact, and where you have given your express permission, we may use your details to send you products/services information through a mailing list system. This is done in accordance with the regulations named in \"The policy\" above."
+msgstr ""
+
+#: page-privacy.php:138
+msgid "External Website Links &amp; Third Parties"
+msgstr ""
+
+#: page-privacy.php:140
+msgid "Although we only look to include quality, safe and relevant external links, users are advised to adopt a policy of caution before clicking any external web links mentioned throughout this website. (External links are clickable text / banner / image links to other websites, similar to; Church Cottage, Llawhaden or www.celticinst.com.)"
+msgstr ""
+
+#: page-privacy.php:142
+msgid "Always be wary when submitting data to websites. Read the site’s data protection and privacy policies fully."
+msgstr ""
+
+#: page-privacy.php:144
+msgid "Shortened URL's; URL shortening is a technique used on the web to shorten URL's (Uniform Resource Locators) to something substantially shorter. This technique is especially used in social media and looks similar to this (example:"
+msgstr ""
+
+#: page-privacy.php:144
+msgid ". Users should take caution before clicking on shortened URL links and verify their authenticity before proceeding."
+msgstr ""
+
+#: page-privacy.php:146
+msgid "We cannot guarantee or verify the contents of any externally linked website despite our best efforts. Users should therefore note they click on external links at their own risk and we cannot be held liable for any damages or implications caused by visiting any external links mentioned."
+msgstr ""
+
+#: page-privacy.php:148
+msgid "Social Media Policy &amp; Usage"
+msgstr ""
+
+#: page-privacy.php:149
+msgid "We adopt a Social Media Policy to ensure our business and our staff conduct themselves accordingly online. While we may have official profiles on social media platforms users are advised to verify authenticity of such profiles before engaging with, or sharing information with such profiles. We will never ask for user passwords or personal details on social media platforms. Users are advised to conduct themselves appropriately when engaging with us on social media."
+msgstr ""
+
+#: page-privacy.php:151
+msgid "There may be instances where our website features social sharing buttons, which help share web content directly from web pages to the respective social media platforms. You use social sharing buttons at your own discretion and accept that doing so may publish content to your social media profile feed or page. You can find further information about some social media privacy and usage policies in the resources section below."
+msgstr ""
+
+#: page-privacy.php:153
+msgid "Resources &amp; Further Information"
+msgstr ""
+
+#: page-privacy.php:156
+msgid "Overview of the GDPR - General Data Protection Regulation"
+msgstr ""
+
+#: page-privacy.php:158
+msgid "Data Protection Act 1998"
+msgstr ""
+
+#: page-privacy.php:160
+msgid "Privacy and Electronic Communications Regulations 2003"
+msgstr ""
+
+#: page-privacy.php:162
+msgid "The Guide to the PECR 2003"
+msgstr ""
+
+#: page-privacy.php:164
+msgid "Twitter Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:166
+msgid "Facebook Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:168
+msgid "Google Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:170
+msgid "Linkedin Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:172
+msgid "GitHub Privacy Policy"
+msgstr ""
+
+#: page-privacy.php:174
+msgid "Website Privacy Policy Template"
+msgstr ""
+
+#. translators: %s: search query.
+#: search.php:28
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:32
+msgid "Previous:"
+msgstr ""
+
+#: single.php:33
+msgid "Next:"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:45
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:43
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content.php:56
+msgid "Pages:"
+msgstr ""

@@ -55,6 +55,6 @@
 		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss' --fix",
 		"postcss": "npx postcss ./*.css --use autoprefixer --replace",
 		"lint:js": "wp-scripts lint-js 'js/*.js'",
-		"bundle": "dir-archiver --src . --dest ../mannering_music.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+		"bundle": "dir-archiver --src . --dest ../mannering-woocommerce-theme.zip --exclude .DS_Store .vscode .editorconfig .prettierrc .stylelintrc .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json phpcs.xml.dist postcss.config.js sass style.css.map woocommerce.css.map"
 	}
 }

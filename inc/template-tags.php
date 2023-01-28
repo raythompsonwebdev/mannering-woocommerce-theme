@@ -30,7 +30,7 @@ if (!function_exists('mannering_music_posted_on')) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x('Posted on %s', 'post date', 'mannering_music'),
+			esc_html_x('Posted on %s', 'post date', 'mannering-woocommerce-theme'),
 			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -47,7 +47,7 @@ if (!function_exists('mannering_music_posted_by')) :
 	{
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x('by %s', 'post author', 'mannering_music'),
+			esc_html_x('by %s', 'post author', 'mannering-woocommerce-theme'),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
 		);
 
@@ -56,21 +56,21 @@ if (!function_exists('mannering_music_posted_by')) :
 	}
 endif;
 
-if (!function_exists('mannering_validate_gravatar')) :
+if (!function_exists('mannering_display_gravatar')) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function mannering_validate_gravatar()
+	function mannering_display_gravatar()
 	{
 
-		$clashvibes_author_id = get_the_author_meta('ID');
+		$mannering_author_id = get_the_author_meta('ID');
 
-		if (clashvibes_validate_gravatar($clashvibes_author_id)) {
+		if (mannering_display_gravatar($mannering_author_id)) {
 			echo '<div class="meta-content has-avatar">';
-			echo '<div class="author-avatar">' . get_avatar($clashvibes_author_id) . '</div></div>';
+			echo '<div class="author-avatar">' . get_avatar($mannering_author_id) . '</div></div>';
 		} else {
 			echo '<div class="meta-content has-avatar">';
-			echo '<div class="author-avatar">' . get_avatar($clashvibes_author_id) . '</div></div>';
+			echo '<div class="author-avatar">' . get_avatar($mannering_author_id) . '</div></div>';
 		}
 	}
 
@@ -96,7 +96,7 @@ if (!function_exists('mannering_updated')) :
 
 		$mannering_updated_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x('Updated:  %s', 'post date', 'mannering_music'),
+			esc_html_x('Updated:  %s', 'post date', 'mannering-woocommerce-theme'),
 			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $mannering_update_time_string . '</a>'
 		);
 
@@ -114,17 +114,17 @@ if (!function_exists('mannering_music_entry_footer')) :
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list(esc_html__(', ', 'mannering_music'));
+			$categories_list = get_the_category_list(esc_html__(', ', 'mannering-woocommerce-theme'));
 			if ($categories_list) {
 				/* translators: 1: list of categories. */
-				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'mannering_music') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'mannering-woocommerce-theme') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'mannering_music'));
+			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'mannering-woocommerce-theme'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'mannering_music') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'mannering-woocommerce-theme') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -134,7 +134,7 @@ if (!function_exists('mannering_music_entry_footer')) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'mannering_music'),
+						__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'mannering-woocommerce-theme'),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -151,7 +151,7 @@ if (!function_exists('mannering_music_entry_footer')) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Edit <span class="screen-reader-text">%s</span>', 'mannering_music'),
+					__('Edit <span class="screen-reader-text">%s</span>', 'mannering-woocommerce-theme'),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -208,7 +208,7 @@ if (!function_exists('mannering_music_post_thumbnail')) :
 	}
 endif;
 
-if (!function_exists('clashvibes_validate_gravatar')) :
+if (!function_exists('mannering_music_validate_gravatar')) :
 	/**
 	 * Utility function to check if a gravatar exists for a given email or id
 	 *
@@ -216,7 +216,7 @@ if (!function_exists('clashvibes_validate_gravatar')) :
 	 * @return bool if the gravatar exists or not.
 	 * Original found at https://gist.github.com/justinph/5197810.
 	 */
-	function clashvibes_validate_gravatar($id_or_email)
+	function mannering_music_validate_gravatar($id_or_email)
 	{
 
 		// id or email code borrowed from wp-includes/pluggable.php.

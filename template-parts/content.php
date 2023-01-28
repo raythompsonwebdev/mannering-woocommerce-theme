@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mannering_music
+ * @package mannering-woocommerce-theme
  */
 
 ?>
@@ -40,7 +40,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'mannering_music'),
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'mannering-woocommerce-theme'),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -53,7 +53,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__('Pages:', 'mannering_music'),
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'mannering-woocommerce-theme'),
 				'after'  => '</div>',
 			)
 		);
