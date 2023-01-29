@@ -23,7 +23,7 @@
 		?>
 			<div class="entry-meta">
 				<?php
-				mannering_validate_gravatar();
+
 				mannering_music_posted_on();
 				mannering_music_posted_by();
 				mannering_updated();

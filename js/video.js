@@ -1,18 +1,20 @@
 jQuery(document).ready(($) => {
-	const channelTitle = 'MrBullitan';
+	const channelTitle = "MrBullitan";
 
 	$.get(
-		'https://www.googleapis.com/youtube/v3/channels',
+		"https://www.googleapis.com/youtube/v3/channels",
 		{
-			part: 'contentDetails',
+			part: "contentDetails",
 			forUsername: channelTitle,
-			key: '',
+			key: "",
 		}, //
 
 		(data) => {
 			$.each(data.items, (i, item) => {
+				// eslint-disable-next-line no-console
 				console.log(item);
 
+				// eslint-disable-next-line prefer-destructuring
 				const pid = item.contentDetails.relatedPlaylists.uploads;
 
 				getVids(pid);
@@ -20,14 +22,15 @@ jQuery(document).ready(($) => {
 		} //function
 	); //get
 
+	// eslint-disable-next-line func-style, space-before-function-paren
 	function getVids(pid) {
 		$.get(
-			'https://www.googleapis.com/youtube/v3/playlistItems',
+			"https://www.googleapis.com/youtube/v3/playlistItems",
 			{
-				part: 'snippet',
+				part: "snippet",
 				maxResults: 5,
 				playlistId: pid,
-				key: '',
+				key: "",
 			}, ////Api Key
 
 			(data) => {
@@ -36,9 +39,13 @@ jQuery(document).ready(($) => {
 				$.each(data.items, (i, item) => {
 					//console.log(item);
 
-					const {VideoId} = item.snippet.resourceId;
+					// eslint-disable-next-line prefer-destructuring
+					//const {VideoId} = item.snippet.resourceId;
+					// eslint-disable-next-line prefer-destructuring
 					const videTitle = item.snippet.title;
-					const videDesc = item.snippet.description;
+					// eslint-disable-next-line prefer-destructuring
+					//const videDesc = item.snippet.description;
+					// eslint-disable-next-line prefer-destructuring
 					const videThumb = item.snippet.thumbnails.default.url;
 
 					output =
@@ -52,7 +59,7 @@ jQuery(document).ready(($) => {
 					//<p>' +videDesc+ '</p>
 
 					//Append to results listStyleType
-					$('.results').append(output);
+					$(".results").append(output);
 				}); //each
 			} //function
 		); //get

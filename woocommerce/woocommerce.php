@@ -46,7 +46,7 @@ add_action('after_setup_theme', 'mannering_music_woocommerce_setup');
  */
 function mannering_music_woocommerce_scripts()
 {
-	wp_enqueue_style('commerce-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION);
+	wp_enqueue_style('commerce-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), filemtime(get_template_directory() . '/style.css'), false);
 
 	// $font_path   = WC()->plugin_url() . '/assets/fonts/';
 	// $inline_font = '@font-face {
@@ -156,7 +156,7 @@ add_action('woocommerce_after_main_content', 'mannering_music_woocommerce_wrappe
  *
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
-	
+
  * <?php
  * 		if ( function_exists( 'commerce_woocommerce_header_cart' ) ) {
  * 			commerce_woocommerce_header_cart();
