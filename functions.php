@@ -213,7 +213,7 @@ if (function_exists('register_block_style')) {
 		'core/quote',
 		array(
 			'name'         => 'blue-quote',
-			'label'        => __('Blue Quote', 'clashvibes'),
+			'label'        => __('Blue Quote', 'mannering-woocommerce-theme'),
 			'is_default'   => true,
 			'inline_style' => '.wp-block-quote.is-style-blue-quote { color: blue; }',
 		)

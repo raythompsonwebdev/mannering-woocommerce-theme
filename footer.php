@@ -58,12 +58,12 @@
 		?>
 	</a>
 	<span class="sep"> | </span>
-
-	<?php
-	/* translators: %1$s by %2$s: Theme name, mannering-woocommerce-theme: Raymond Thompson. */
-	printf('Theme: %1$s by %2$s.', 'mannering-woocommerce-theme', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>');
-	?>
-
+	<a href="<?php echo esc_url(__('http://www.raythompsonwebdev.co.uk', 'mannering-woocommerce-theme')); ?>" rel="designer">
+		<?php
+		/* translators: %1$s by %2$s: Theme name, mannering-woocommerce-theme: Raymond Thompson. */
+		printf('Theme: %1$s by %2$s.', 'mannering-woocommerce-theme', 'Raymond Thompson');
+		?>
+	</a>
 	<?php
 
 	$dt = current_datetime();

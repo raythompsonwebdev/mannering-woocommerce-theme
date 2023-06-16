@@ -76,7 +76,6 @@ WooCommerce styles override
 
 /* global contact form style */
 form {
-
 	/* Global Button style */
 	button.button {
 		display: block;
@@ -374,6 +373,7 @@ form {
 }
 
 .product {
+	padding-top: 1em;
 	position: relative;
 	display: flex;
 	flex-flow: column;
@@ -2071,7 +2071,6 @@ form {
 	}
 
 	form {
-
 		/* Global Button style */
 		button.button {
 			width: 20%;
@@ -2175,9 +2174,9 @@ form {
 	}
 
 	.product {
-		position: relative;
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.5em;
 
 		.woocommerce-product-gallery,
@@ -2236,7 +2235,7 @@ form {
 		.woocommerce-tabs {
 			margin-top: 0.5em;
 			margin-bottom: 1em;
-			width: 45%;
+			width: 40%;
 
 			.tabs {
 				list-style: none;
@@ -3866,9 +3865,9 @@ form {
 	}
 
 	.product {
-		position: relative;
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.5em;
 
 		.woocommerce-product-gallery,
@@ -4621,7 +4620,6 @@ form {
 			}
 
 			.woocommerce-checkout {
-
 				/* woocommerce-checkoutform */
 				#customer_details {
 					padding: 1em;
@@ -4935,9 +4933,9 @@ form {
 	}
 
 	.product {
-		position: relative;
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.5em;
 
 		.woocommerce-product-gallery,
@@ -5365,7 +5363,6 @@ form {
 		}
 	}
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -5773,7 +5770,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -6085,9 +6081,9 @@ form {
 	}
 
 	.product {
-		position: relative;
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.5em;
 
 		.woocommerce-product-gallery,
@@ -6519,7 +6515,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -6932,7 +6927,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -7269,9 +7263,9 @@ form {
 	}
 
 	.product {
-		padding-top: 1em;
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.5em;
 
 		.woocommerce-tabs {
@@ -7644,7 +7638,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -8062,7 +8055,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -8434,7 +8426,6 @@ form {
 	}
 
 	.product {
-		padding-top: 1em;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
@@ -8712,7 +8703,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -8965,7 +8955,6 @@ form {
 						}
 
 						tbody {
-
 							/* cart */
 							.cart_item {
 								padding: 0;
@@ -9140,7 +9129,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -9176,7 +9164,6 @@ form {
 							}
 
 							tbody {
-
 								/* cart */
 								.cart_item {
 									td {
@@ -9489,7 +9476,6 @@ form {
 	}
 
 	.product {
-		padding-top: 1em;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
@@ -9766,7 +9752,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -10041,7 +10026,6 @@ form {
 						}
 
 						tbody {
-
 							/* cart */
 							.cart_item {
 								padding: 0;
@@ -10215,7 +10199,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -10579,7 +10562,6 @@ form {
 	}
 
 	.product {
-		padding-top: 1em;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
@@ -10856,7 +10838,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -11085,7 +11066,6 @@ form {
 						}
 
 						tbody {
-
 							/* cart */
 							.cart_item {
 								padding: 0;
@@ -11258,7 +11238,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
@@ -11622,7 +11601,6 @@ form {
 	}
 
 	.product {
-		padding-top: 1em;
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
@@ -11899,7 +11877,6 @@ form {
 	}
 
 	#content {
-
 		/* global contact form style */
 		form {
 			button.button {
@@ -12129,7 +12106,6 @@ form {
 						}
 
 						tbody {
-
 							/* cart */
 							.cart_item {
 								padding: 0;
@@ -12303,7 +12279,6 @@ form {
 				}
 
 				.woocommerce-checkout {
-
 					/* woocommerce-checkoutform */
 					#customer_details {
 						padding: 1em;
