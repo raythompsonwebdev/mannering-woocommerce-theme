@@ -23,15 +23,15 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^27.0.0",
-		"@wordpress/stylelint-config": "^21.6.0",
+		"@wordpress/stylelint-config": "^21.32.0",
 		"dir-archiver": "^2.1.0",
-		"node-sass": "^8.0.0",
-		"postcss": "^8.4.31",
-		"postcss-cli": "^10.1.0",
-		"rtlcss": "^4.0.0",
-		"stylelint-config-prettier": "^9.0.4",
-		"stylelint-config-standard": "^29.0.0",
-		"stylelint-prettier": "^2.0.0"
+		"node-sass": "^9.0.0",
+		"postcss": "^8.4.33",
+		"postcss-cli": "^11.0.0",
+		"rtlcss": "^4.1.1",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^36.0.0",
+		"stylelint-prettier": "^5.0.0"
 	},
 	"rtlcssConfig": {
 		"options": {
