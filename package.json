@@ -22,7 +22,7 @@
 		"url": "https://github.com/Automattic/mannering_music/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^25.0.0",
+		"@wordpress/scripts": "^27.0.0",
 		"@wordpress/stylelint-config": "^21.6.0",
 		"dir-archiver": "^2.1.0",
 		"node-sass": "^8.0.0",
