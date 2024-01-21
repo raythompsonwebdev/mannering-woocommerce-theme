@@ -7,7 +7,7 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## Please be aware that this theme has been completed yet. download and use at your own risk.
+=== Please be aware that this theme has been completed yet. download and use at your own risk. ===
 
 E-commerce Wordpess Theme.
 
@@ -15,9 +15,9 @@ E-commerce Wordpess Theme.
 
 Theme was originally a project I completed for a web design exam I took at East London Technology Training in 2012. See the actual brief for the project below:
 
-### Designing and creating advanced websites
+=== Designing and creating advanced websites ===
 
-### lntroduction
+=== lntroduction ===
 
 - lnformation for Candidates
 - About this document
@@ -25,23 +25,23 @@ Theme was originally a project I completed for a web design exam I took at East 
 
 You are asked to.consider the importance of safe working practices at all times. Your are responsible for maintaining the safety of others as well as your own. Anyone behaving in an unsafe fashion will be stopped and suitable warning given.You will not be allowed to continue with the assignment if you compromise any of the Health will and.Safety requirements. This may seem rather strict but, apart from the potentially unpleasant consequences, you must acquire the habits required for the workplace. Websites are to be submitted by 16th April 2O12
 
-### Assignment set up:
+=== Assignment set up: ===
 
 The assignment is made up of three tasks
 
-### Task A
+=== Task A ===
 
 - Plan the website
 
-### Task B
+=== Task ===
 
 - lmplement your website plan
 
-### Task C
+=== Task ===
 
 - Test and evaluate your website
 
-### Scenario:
+=== Scenario: ===
 
 You work for Mannerings Music Agency which is a company that advertises music for sale on the lnternet. As a web designei for the company you have been asked to design a website to advertise the available music for sale.
 
@@ -49,7 +49,7 @@ The minimum specification is detailed below and you have been given full artisti
 
 You have been asked to demonstrate your knowledge and eipertise and provide a wide-ranging website demonstrating these services. Also to advise on what content is permissible and how best to create their site to enable a quick download on the internet and maintain as small a storage requirement as possible. The site must have a minimum of six pages including both internal and external links and a variety of other advanced features, such as rnouse roll-over and links to audio/video features (whether these are stored within the website or externally).
 
-### Task A:
+=== Task A: ===
 
 ln this task you are required to produce brief design clocumentation for the development of the website. You can use the storyboard provided in Appendix A or any other documentation you may have designed previously for this purpose. Ensure that your storyboard or similar, includes the details of the minimum specification provided.
 
@@ -85,7 +85,7 @@ Produce a:
 
 8. Give an explanation for your six chosen web features.
 
-### Task B:
+=== Task B: ===
 
 You are required to implement the website you have previously designed.
 
@@ -111,7 +111,7 @@ You are required to implement the website you have previously designed.
 12. Edit and format the content (in line with your plan) to ensure the design is consistent. lnclude any audio/video files eniuring copyright constraints are met.
 13. Check the functionality of your links and embedded content, editing any code as required and check with the Assessor to verify they meet the customer needs.
 
-### Task C- Testing
+=== Task C- Testing ===
 
 ln this task you are required to test and evatuate the website you have created.
 
@@ -131,21 +131,21 @@ ln this task you are required to test and evatuate the website you have created.
 - What problems (if any) were encountered during implementation and how they were resolved?
 - A list of improvements (minimum of two) which could be made in the future.
 
-### Note
+=== Note ===
 
 At the conclusion of this assignment, hand all paperuvork to assessor and save all files on your m:\Drive.Z
 
-### Available
+=== Available ===
 
 Main Features
 HomePage URL
 Name Cost per month
 
-### Task 5
+=== Task 5 ===
 
 Suggest a domain narne for the website.
 
-### Task 6
+=== Task 6 ===
 
 Having read the scenario and task1 to task5, give a brief description of why using computer and information technology is essential for completing the assignment.
 a. Give a brief description of what skills and resources you will need to complete the task successfully.
@@ -154,7 +154,7 @@ c. Briefly describe what hardware and software you are intending to use for the 
 d. Give one reason why you have chosen that software application.
 e. what legal or local guidelineswould you need to think-about before completing the task?
 
-## Mannering-Woocommerce Theme
+=== Mannering-Woocommerce Theme ===
 
 Hi. I'm a starter theme called `mannering-woocommerce-theme`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
@@ -172,14 +172,14 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 - Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 - Licensed under GPLv2 or later. :) Use it to make something cool.
 
-### Requirements
+=== Requirements ===
 
 `mannering-woocommerce-theme` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
 
-### Quick Start
+=== Quick Start ===
 
 Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
@@ -192,44 +192,33 @@ Clone or download this repository, change its name to something else (like, say,
 
 Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `mannering-woocommerce-theme.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-## Setup
-
-### Installation
+=== Setup ===
 
 Clone the repo
 
-```sh
 git clone git@github.com:raythompsonwebdev/mannering-woocommerce-theme.git
-```
 
 To start using all the tools that come with `mannering-woocommerce-theme` you need to install the necessary Node.js and Composer dependencies :
 
-Install NPM packages :
+=== Install NPM packages : ===
 
-```sh
 npm install
-```
 
 ### or
 
-```sh
 yarn install
-```
 
 ### or
 
-```sh
 pnpm install
-```
 
-Install Composer packages :
 
-```sh
+=== Install Composer packages : ===
+
 $ composer install
 $ npm install
-```
 
-### Available CLI commands
+=== Available CLI commands ===
 
 `mannering-woocommerce-theme` comes packed with CLI commands tailored for WordPress theme development :
 
@@ -247,16 +236,16 @@ Now you're ready to go! The next step is easy to say, but harder to do: make an 
 
 Good luck!
 
-## Frequently Asked Questions
+=== Frequently Asked Questions ===
 
 = Does this theme support any plugins? = Yes
 
-## Changelog
+=== Changelog ===
 
 - 1.0.0- Jan 21 2024 =
 - Initial release
 
-## Credits
+=== Credits ===
 
 - Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
