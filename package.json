@@ -23,7 +23,7 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.17.0",
-		"@wordpress/stylelint-config": "^23.16.0",
+		"@wordpress/stylelint-config": "^22.1.0",
 		"dir-archiver": "^2.1.0",
 		"node-sass": "^9.0.0",
 		"postcss": "^8.5.3",
