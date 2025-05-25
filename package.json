@@ -22,16 +22,16 @@
 		"url": "https://github.com/Automattic/mannering_music/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^28.1.0",
-		"@wordpress/stylelint-config": "^22.1.0",
+		"@wordpress/scripts": "^30.17.0",
+		"@wordpress/stylelint-config": "^23.16.0",
 		"dir-archiver": "^2.1.0",
 		"node-sass": "^9.0.0",
-		"postcss": "^8.4.38",
-		"postcss-cli": "^11.0.0",
-		"rtlcss": "^4.1.1",
+		"postcss": "^8.5.3",
+		"postcss-cli": "^11.0.1",
+		"rtlcss": "^4.3.0",
 		"stylelint-config-prettier": "^9.0.5",
-		"stylelint-config-standard": "^36.0.1",
-		"stylelint-prettier": "^5.0.0"
+		"stylelint-config-standard": "^38.0.0",
+		"stylelint-prettier": "^5.0.3"
 	},
 	"rtlcssConfig": {
 		"options": {
